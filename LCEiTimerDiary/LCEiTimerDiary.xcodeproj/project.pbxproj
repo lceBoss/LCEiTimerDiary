@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F36A3EF6491DB4901EF2D09 /* libPods-LCEiTimerDiaryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E21BF16BC81CE234D71DA4 /* libPods-LCEiTimerDiaryUITests.a */; };
 		C38505051F7A2EF30009B64B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C38505041F7A2EF30009B64B /* AppDelegate.m */; };
 		C38505081F7A2EF40009B64B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38505071F7A2EF40009B64B /* ViewController.m */; };
 		C385050B1F7A2EF40009B64B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38505091F7A2EF40009B64B /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 		C38505161F7A2EF40009B64B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C38505151F7A2EF40009B64B /* main.m */; };
 		C38505201F7A2EF40009B64B /* LCEiTimerDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C385051F1F7A2EF40009B64B /* LCEiTimerDiaryTests.m */; };
 		C385052B1F7A2EF40009B64B /* LCEiTimerDiaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C385052A1F7A2EF40009B64B /* LCEiTimerDiaryUITests.m */; };
+		D026B2FC07BE8560DFA846DD /* libPods-LCEiTimerDiaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */; };
+		EC5DBABECEE6870FAE98B44B /* libPods-LCEiTimerDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E21BF16BC81CE234D71DA4 /* libPods-LCEiTimerDiaryUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiaryUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04CFB8F3E0ED7EB47F42DEC1 /* Pods-LCEiTimerDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		7D369D73D99D3DC31D42E31D /* Pods-LCEiTimerDiaryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryUITests/Pods-LCEiTimerDiaryUITests.release.xcconfig"; sourceTree = "<group>"; };
+		92E220514BD85F9D4DF34FC7 /* Pods-LCEiTimerDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary.release.xcconfig"; sourceTree = "<group>"; };
+		AC943744FD5A3449E02CABCA /* Pods-LCEiTimerDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF97D9A4D51F18AB1E269BEE /* Pods-LCEiTimerDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryUITests/Pods-LCEiTimerDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C2350190583B73368512AA99 /* Pods-LCEiTimerDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
 		C38505001F7A2EF30009B64B /* LCEiTimerDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LCEiTimerDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38505031F7A2EF30009B64B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C38505041F7A2EF30009B64B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +63,8 @@
 		C38505261F7A2EF40009B64B /* LCEiTimerDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LCEiTimerDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C385052A1F7A2EF40009B64B /* LCEiTimerDiaryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEiTimerDiaryUITests.m; sourceTree = "<group>"; };
 		C385052C1F7A2EF40009B64B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5DBABECEE6870FAE98B44B /* libPods-LCEiTimerDiary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D026B2FC07BE8560DFA846DD /* libPods-LCEiTimerDiaryTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F36A3EF6491DB4901EF2D09 /* libPods-LCEiTimerDiaryUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95F73AAB57257BCAA0C7B4F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04CFB8F3E0ED7EB47F42DEC1 /* Pods-LCEiTimerDiary.debug.xcconfig */,
+				92E220514BD85F9D4DF34FC7 /* Pods-LCEiTimerDiary.release.xcconfig */,
+				AC943744FD5A3449E02CABCA /* Pods-LCEiTimerDiaryTests.debug.xcconfig */,
+				C2350190583B73368512AA99 /* Pods-LCEiTimerDiaryTests.release.xcconfig */,
+				AF97D9A4D51F18AB1E269BEE /* Pods-LCEiTimerDiaryUITests.debug.xcconfig */,
+				7D369D73D99D3DC31D42E31D /* Pods-LCEiTimerDiaryUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C38504F71F7A2EF30009B64B = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +115,8 @@
 				C385051E1F7A2EF40009B64B /* LCEiTimerDiaryTests */,
 				C38505291F7A2EF40009B64B /* LCEiTimerDiaryUITests */,
 				C38505011F7A2EF30009B64B /* Products */,
+				95F73AAB57257BCAA0C7B4F6 /* Pods */,
+				FD5B7AA9E607AD216431A9A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +165,16 @@
 			path = LCEiTimerDiaryUITests;
 			sourceTree = "<group>";
 		};
+		FD5B7AA9E607AD216431A9A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */,
+				D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */,
+				02E21BF16BC81CE234D71DA4 /* libPods-LCEiTimerDiaryUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C385052F1F7A2EF40009B64B /* Build configuration list for PBXNativeTarget "LCEiTimerDiary" */;
 			buildPhases = (
+				B4DD253F39178BD866633699 /* [CP] Check Pods Manifest.lock */,
 				C38504FC1F7A2EF30009B64B /* Sources */,
 				C38504FD1F7A2EF30009B64B /* Frameworks */,
 				C38504FE1F7A2EF30009B64B /* Resources */,
+				9B101AAE8A625AD2988E7BF1 /* [CP] Embed Pods Frameworks */,
+				5762A295F605BCDD0C496837 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,9 +202,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C38505321F7A2EF40009B64B /* Build configuration list for PBXNativeTarget "LCEiTimerDiaryTests" */;
 			buildPhases = (
+				D2A530EEBF4D1FC52C6A5BCF /* [CP] Check Pods Manifest.lock */,
 				C38505171F7A2EF40009B64B /* Sources */,
 				C38505181F7A2EF40009B64B /* Frameworks */,
 				C38505191F7A2EF40009B64B /* Resources */,
+				0F1C2343BB5A78CED8187640 /* [CP] Embed Pods Frameworks */,
+				0C487AF8F870E9961E71A174 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,9 +223,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C38505351F7A2EF40009B64B /* Build configuration list for PBXNativeTarget "LCEiTimerDiaryUITests" */;
 			buildPhases = (
+				778CB637F8DD2F3A82929443 /* [CP] Check Pods Manifest.lock */,
 				C38505221F7A2EF40009B64B /* Sources */,
 				C38505231F7A2EF40009B64B /* Frameworks */,
 				C38505241F7A2EF40009B64B /* Resources */,
+				218D21C9572B9C4F0F8E964B /* [CP] Embed Pods Frameworks */,
+				9AA39060B975C9A99CB6DA2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +311,157 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C487AF8F870E9961E71A174 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F1C2343BB5A78CED8187640 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		218D21C9572B9C4F0F8E964B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiaryUITests/Pods-LCEiTimerDiaryUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5762A295F605BCDD0C496837 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary-resources.sh",
+				"${PODS_ROOT}/LCProgressHUD/LCProgressHUD/LCProgressHUD.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		778CB637F8DD2F3A82929443 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCEiTimerDiaryUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AA39060B975C9A99CB6DA2A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiaryUITests/Pods-LCEiTimerDiaryUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B101AAE8A625AD2988E7BF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4DD253F39178BD866633699 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCEiTimerDiary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A530EEBF4D1FC52C6A5BCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LCEiTimerDiaryTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C38504FC1F7A2EF30009B64B /* Sources */ = {
@@ -432,6 +632,7 @@
 		};
 		C38505301F7A2EF40009B64B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04CFB8F3E0ED7EB47F42DEC1 /* Pods-LCEiTimerDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +647,7 @@
 		};
 		C38505311F7A2EF40009B64B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92E220514BD85F9D4DF34FC7 /* Pods-LCEiTimerDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,6 +662,7 @@
 		};
 		C38505331F7A2EF40009B64B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC943744FD5A3449E02CABCA /* Pods-LCEiTimerDiaryTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -475,6 +678,7 @@
 		};
 		C38505341F7A2EF40009B64B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2350190583B73368512AA99 /* Pods-LCEiTimerDiaryTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -490,6 +694,7 @@
 		};
 		C38505361F7A2EF40009B64B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF97D9A4D51F18AB1E269BEE /* Pods-LCEiTimerDiaryUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZYDYW676;
@@ -504,6 +709,7 @@
 		};
 		C38505371F7A2EF40009B64B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D369D73D99D3DC31D42E31D /* Pods-LCEiTimerDiaryUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZYDYW676;
