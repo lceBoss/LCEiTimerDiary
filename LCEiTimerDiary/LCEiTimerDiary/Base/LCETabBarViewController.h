@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LCETabBarViewController.h
 //  LCEiTimerDiary
 //
 //  Created by 妖狐小子 on 2017/9/26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LCETabBarViewController : UITabBarController
 
 @end
-
