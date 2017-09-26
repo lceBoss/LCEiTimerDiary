@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"just do it");
+    NSLog(@"just do it 沃日你祖宗");
 }
 
 @end
