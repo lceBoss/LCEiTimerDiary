@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "LCENavigationController.h"
+#import "LCETabBarViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,6 +17,7 @@
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
+@property (nonatomic, strong) LCETabBarViewController *tabBarController;
 @property (nonatomic, strong) UINavigationController *naviController;
 
 - (void)saveContext;

@@ -35,7 +35,7 @@
             }
         };
 
-    generator.maximumSize = KNB_SCREEN_BOUNDS.size;
+    generator.maximumSize = LCE_SCREEN_BOUNDS.size;
     [generator generateCGImagesAsynchronouslyForTimes:
                    [NSArray arrayWithObject:[NSValue valueWithCMTime:thumbTime]]
                                     completionHandler:handler];

@@ -1,0 +1,59 @@
+//
+//  LCEiTimerDiary.pch
+//  LCEiTimerDiary
+//
+//  Created by 妖狐小子 on 2017/10/31.
+//  Copyright © 2017年 妖狐小子. All rights reserved.
+//
+/*
+ *   #####################################################
+ *   #                                                   #
+ *   #                       _oo0oo_                     #
+ *   #                      o8888888o                    #
+ *   #                      88" . "88                    #
+ *   #                      (| -_- |)                    #
+ *   #                      0\  =  /0                    #
+ *   #                    ___/`---'\___                  #
+ *   #                  .' \\|     |# '.                 #
+ *   #                 / \\|||  :  |||# \                #
+ *   #                / _||||| -:- |||||- \              #
+ *   #               |   | \\\  -  #/ |   |              #
+ *   #               | \_|  ''\---/''  |_/ |             #
+ *   #               \  .-\__  '-'  ___/-. /             #
+ *   #             ___'. .'  /--.--\  `. .'___           #
+ *   #          ."" '<  `.___\_<|>_/___.' >' "".         #
+ *   #         | | :  `- \`.;`\ _ /`;.`/ - ` : | |       #
+ *   #         \  \ `_.   \_ __\ /__ _/   .-` /  /       #
+ *   #     =====`-.____`.___ \_____/___.-`___.-'=====    #
+ *   #                       `=---='                     #
+ *   #     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   #
+ *   #                                                   #
+ *   #               佛祖保佑         永无BUG              #
+ *   #                                                   #
+ *   #####################################################
+ */
+
+#ifndef LCEiTimerDiary_pch
+#define LCEiTimerDiary_pch
+
+//宏
+#import "LCEPrecompile.h"
+#import "LCEUtilExtend.h"
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Masonry.h>
+
+
+#define LCE_MAINCONFIGURL @"https://baidu.com"
+
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__);
+#else
+#define NSLog(...)
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* LCEiTimerDiary_pch */

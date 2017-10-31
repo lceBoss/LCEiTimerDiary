@@ -31,12 +31,7 @@
 + (UIColor *)colorWithHex:(int)hexValue;
 
 
-+ (UIColor *)knBlackColor;
-+ (UIColor *)knLightGrayColor; // 分割线颜色
-+ (UIColor *)knYellowColor;
-+ (UIColor *)knBgColor;    // 灰色背景颜色
-+ (UIColor *)knRedColor;   // 妃子校主题色
-+ (UIColor *)knGrayColor;  //灰色字体
-+ (UIColor *)knWordsColor; //999999灰色的字
+//+ (UIColor *)lceBlackColor;
+
 
 @end

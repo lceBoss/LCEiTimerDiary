@@ -19,8 +19,8 @@ const int wTop = 50;
 @implementation UIImage (WaterMark)
 
 + (UIImage *)imageWithText:(NSString *)text frame:(CGRect)frame {
-    NSUInteger GapH = KNB_SCREEN_WIDTH / 3;
-    NSUInteger GapV = KNB_SCREEN_HEIGHT / 3;
+    NSUInteger GapH = LCE_SCREEN_WIDTH / 3;
+    NSUInteger GapV = LCE_SCREEN_HEIGHT / 3;
 
     UIGraphicsBeginImageContextWithOptions(frame.size, NO, 0.0);
 

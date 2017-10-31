@@ -17,10 +17,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    //适配iOS11导航问题
+    if (@available(iOS 11.0, *)) {
+        if (LCE_SYSTEM_VERSION >= 11.0) {
+            [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+        }
+    }
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    LCEHomeViewController *homeVC = [[LCEHomeViewController alloc] init];
-    self.naviController = [[LCENavigationController alloc] initWithRootViewController:homeVC];
+    self.tabBarController = [[LCETabBarViewController alloc] init];
+    self.naviController = [[LCENavigationController alloc] initWithRootViewController:self.tabBarController];
     self.window.rootViewController = self.naviController;
+    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    NSDictionary *attribute = @{NSFontAttributeName : [UIFont boldSystemFontOfSize:18],
+                                NSForegroundColorAttributeName : [UIColor whiteColor]};
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    [navBar setTitleTextAttributes:attribute];
+    [navBar setTintColor:[UIColor whiteColor]];
+    [navBar setBarTintColor:LCE_NAV_COLOR];
+    
     [self.window makeKeyAndVisible];
     
     return YES;

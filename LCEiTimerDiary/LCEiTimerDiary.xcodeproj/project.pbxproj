@@ -18,6 +18,9 @@
 		C385052B1F7A2EF40009B64B /* LCEiTimerDiaryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C385052A1F7A2EF40009B64B /* LCEiTimerDiaryUITests.m */; };
 		C38505451F7A3A9C0009B64B /* LCEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38505441F7A3A9C0009B64B /* LCEBaseViewController.m */; };
 		C385058A1F7A3C1E0009B64B /* LCETabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38505891F7A3C1E0009B64B /* LCETabBarViewController.m */; };
+		C3E1EC2F1FA80F69008E3E10 /* LCEMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1EC2E1FA80F69008E3E10 /* LCEMeViewController.m */; };
+		C3E1EC311FA81286008E3E10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E1EC301FA81286008E3E10 /* CoreGraphics.framework */; };
+		C3E1EC331FA81447008E3E10 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E1EC321FA81447008E3E10 /* NotificationCenter.framework */; };
 		D026B2FC07BE8560DFA846DD /* libPods-LCEiTimerDiaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */; };
 		EC5DBABECEE6870FAE98B44B /* libPods-LCEiTimerDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */; };
 /* End PBXBuildFile section */
@@ -122,6 +125,13 @@
 		C38505871F7A3AE70009B64B /* NSString+Trim.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
 		C38505881F7A3C1E0009B64B /* LCETabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCETabBarViewController.h; sourceTree = "<group>"; };
 		C38505891F7A3C1E0009B64B /* LCETabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCETabBarViewController.m; sourceTree = "<group>"; };
+		C3E1EC2A1FA80869008E3E10 /* LCEiTimerDiary.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEiTimerDiary.pch; sourceTree = "<group>"; };
+		C3E1EC2B1FA80964008E3E10 /* LCEPrecompile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEPrecompile.h; sourceTree = "<group>"; };
+		C3E1EC2C1FA80AF6008E3E10 /* LCEUtilExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEUtilExtend.h; sourceTree = "<group>"; };
+		C3E1EC2D1FA80F69008E3E10 /* LCEMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEMeViewController.h; sourceTree = "<group>"; };
+		C3E1EC2E1FA80F69008E3E10 /* LCEMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEMeViewController.m; sourceTree = "<group>"; };
+		C3E1EC301FA81286008E3E10 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3E1EC321FA81447008E3E10 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,6 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E1EC331FA81447008E3E10 /* NotificationCenter.framework in Frameworks */,
+				C3E1EC311FA81286008E3E10 /* CoreGraphics.framework in Frameworks */,
 				EC5DBABECEE6870FAE98B44B /* libPods-LCEiTimerDiary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +283,8 @@
 			children = (
 				C359C7661F7A43AF00D9D8BA /* LCEHomeViewController.h */,
 				C359C7671F7A43AF00D9D8BA /* LCEHomeViewController.m */,
+				C3E1EC2D1FA80F69008E3E10 /* LCEMeViewController.h */,
+				C3E1EC2E1FA80F69008E3E10 /* LCEMeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +315,9 @@
 			children = (
 				C385050F1F7A2EF40009B64B /* Assets.xcassets */,
 				C38505141F7A2EF40009B64B /* Info.plist */,
+				C3E1EC2B1FA80964008E3E10 /* LCEPrecompile.h */,
+				C3E1EC2C1FA80AF6008E3E10 /* LCEUtilExtend.h */,
+				C3E1EC2A1FA80869008E3E10 /* LCEiTimerDiary.pch */,
 				C38505151F7A2EF40009B64B /* main.m */,
 				C385050C1F7A2EF40009B64B /* LCEiTimerDiary.xcdatamodeld */,
 			);
@@ -469,6 +486,8 @@
 		FD5B7AA9E607AD216431A9A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3E1EC321FA81447008E3E10 /* NotificationCenter.framework */,
+				C3E1EC301FA81286008E3E10 /* CoreGraphics.framework */,
 				D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */,
 				D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */,
 				02E21BF16BC81CE234D71DA4 /* libPods-LCEiTimerDiaryUITests.a */,
@@ -772,6 +791,7 @@
 				C385050E1F7A2EF40009B64B /* LCEiTimerDiary.xcdatamodeld in Sources */,
 				C359C7651F7A41EB00D9D8BA /* LCENavigationController.m in Sources */,
 				C38505161F7A2EF40009B64B /* main.m in Sources */,
+				C3E1EC2F1FA80F69008E3E10 /* LCEMeViewController.m in Sources */,
 				C385058A1F7A3C1E0009B64B /* LCETabBarViewController.m in Sources */,
 				C38505051F7A2EF30009B64B /* AppDelegate.m in Sources */,
 			);
@@ -921,6 +941,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZYDYW676;
+				GCC_PREFIX_HEADER = "LCEiTimerDiary/Supporting Files/LCEiTimerDiary.pch";
 				INFOPLIST_FILE = "LCEiTimerDiary//Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -938,6 +959,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZYDYW676;
+				GCC_PREFIX_HEADER = "LCEiTimerDiary/Supporting Files/LCEiTimerDiary.pch";
 				INFOPLIST_FILE = "LCEiTimerDiary//Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

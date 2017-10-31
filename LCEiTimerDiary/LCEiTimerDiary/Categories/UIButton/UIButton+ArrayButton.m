@@ -26,7 +26,7 @@ int Top = 0;
         [button setTitle:title forState:UIControlStateNormal];
         button.tag = i + tag;
 
-        button.frame = CGRectMake(0, 0, KNB_SCREEN_WIDTH, ButtonHeight);
+        button.frame = CGRectMake(0, 0, LCE_SCREEN_WIDTH, ButtonHeight);
         [button sizeToFit];
 
         NSUInteger ButtonX = Left + totalX;
@@ -35,7 +35,7 @@ int Top = 0;
         NSUInteger ButtonWidth = button.bounds.size.width;
         totalX += ButtonWidth + gap;
 
-        if (totalX >= KNB_SCREEN_WIDTH) {
+        if (totalX >= LCE_SCREEN_WIDTH) {
             totalX = ButtonWidth + gap;
             ButtonX = Left;
             totalY += ButtonHeight + 5;
