@@ -43,7 +43,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <Masonry.h>
-
+#import "UIColor+Hex.h"
 
 #define LCE_MAINCONFIGURL @"https://baidu.com"
 

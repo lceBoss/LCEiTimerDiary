@@ -1,13 +1,12 @@
 //
 //  UIColor+Hex.h
-//  KenuoTraining
+//  LCEiTimerDiary
 //
-//  Created by Robert on 16/2/22.
-//  Copyright © 2016年 Robert. All rights reserved.
+//  Created by 妖狐小子 on 2017/10/31.
+//  Copyright © 2017年 妖狐小子. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
 
 @interface UIColor (Hex)
 
@@ -30,8 +29,9 @@
  */
 + (UIColor *)colorWithHex:(int)hexValue;
 
+// 主题色 天蓝色 3b9cff
++ (UIColor *)lceMainColor;
 
-//+ (UIColor *)lceBlackColor;
-
++ (UIColor *)lceBgColor;
 
 @end

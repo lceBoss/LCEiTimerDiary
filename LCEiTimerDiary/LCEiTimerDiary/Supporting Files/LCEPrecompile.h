@@ -33,7 +33,12 @@ return instance;                          \
 #define LCE_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
 //导航颜色
-#define LCE_NAV_COLOR [UIColor whiteColor]
+#define LCE_NAV_COLOR [UIColor colorWithRed:59 / 255.0 green:156 / 255.0 blue:255 / 255.0 alpha:1.0]
+//51  163  220
+
+//色值宏定义
+#define LCE_RGBA(r, g, b, a) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
+#define LCE_RGB(r, g, b) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1.0]
 
 //屏幕大小
 #define LCE_SCREEN_BOUNDS [[UIScreen mainScreen] bounds]

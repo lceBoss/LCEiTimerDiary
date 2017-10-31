@@ -39,12 +39,12 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
     self.view.autoresizesSubviews = NO;
     self.tabBar.hidden = YES;
     
-    self.titleDefaultColor = [UIColor blackColor];
-    self.titleSelectColor = [UIColor redColor];
+    self.titleDefaultColor = [UIColor lightGrayColor];
+    self.titleSelectColor = [UIColor lceMainColor];
     
     self.titlesArray = @[ @"首页", @"我的" ];
-    self.selectImgArray = @[ @"nav_home_pre", @"nav_my_pre" ];
-    self.unSelectImgArray = @[ @"bta_home", @"bta_my" ];
+    self.selectImgArray = @[ @"icon_tabbar_home", @"icon_tabbar_me" ];
+    self.unSelectImgArray = @[ @"icon_tabbar_home_no", @"icon_tabbar_me_no" ];
     self.buttonsArray = [NSMutableArray array];
     [self createViewControllers];
     [self.view addSubview:self.customTabBar];
@@ -52,6 +52,7 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     if (LCE_SYSTEM_VERSION < 9.0 && LCE_SYSTEM_VERSION > 7.9) {
         [[UIApplication sharedApplication] setStatusBarHidden:YES];
         [self.navigationController setNavigationBarHidden:YES animated:animated];
@@ -111,7 +112,11 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
 - (UIView *)customTabBar {
     if (!_customTabBar) {
         _customTabBar = [[UIView alloc] initWithFrame:CGRectMake(0, LCE_SCREEN_HEIGHT - 49, LCE_SCREEN_WIDTH, 49)];
-        _customTabBar.backgroundColor = [UIColor whiteColor];
+        _customTabBar.backgroundColor = LCE_RGB(248, 248, 248);
+        _customTabBar.layer.shadowColor = LCE_RGB(230, 230, 230).CGColor;
+        _customTabBar.layer.shadowRadius = 0.5;
+        _customTabBar.layer.shadowOffset = CGSizeMake(0, -0.5); //偏移量
+        _customTabBar.layer.shadowOpacity = 1;
     }
     return _customTabBar;
 }

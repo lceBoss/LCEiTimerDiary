@@ -7,6 +7,7 @@
 //
 
 #import "LCEMeViewController.h"
+#import "LCEMeSettingViewController.h"
 
 @interface LCEMeViewController ()
 
@@ -17,7 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"我的";
-    self.view.backgroundColor = [UIColor greenColor];
+    [self addRightBarItemImageName:@"icon_navi_setup" sel:@selector(rightBarItemAction:)];
+}
+
+- (void)rightBarItemAction:(UIBarButtonItem *)rightItem {
+    LCEMeSettingViewController *meSettingVC = [[LCEMeSettingViewController alloc] init];
+    [self.navigationController pushViewController:meSettingVC animated:YES];
 }
 
 @end

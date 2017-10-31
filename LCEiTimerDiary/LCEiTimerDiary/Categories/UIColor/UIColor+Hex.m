@@ -1,13 +1,12 @@
 //
 //  UIColor+Hex.m
-//  KenuoTraining
+//  LCEiTimerDiary
 //
-//  Created by Robert on 16/2/22.
-//  Copyright © 2016年 Robert. All rights reserved.
+//  Created by 妖狐小子 on 2017/10/31.
+//  Copyright © 2017年 妖狐小子. All rights reserved.
 //
 
 #import "UIColor+Hex.h"
-
 
 @implementation UIColor (Hex)
 
@@ -22,10 +21,12 @@
     return [UIColor colorWithHex:hexValue alpha:1.0];
 }
 
-//+ (UIColor *)lceBlackColor {
-//    return [UIColor colorWithRed:26/255.0 green:26/255.0 blue:26/255.0 alpha:1.0];
-//}
++ (UIColor *)lceMainColor {
+    return [UIColor colorWithRed:59 / 255.0 green:156 / 255.0 blue:255 / 255.0 alpha:1.0];
+}
 
-
++ (UIColor *)lceBgColor {
+    return [UIColor colorWithRed:242 / 255.0 green:242 / 255.0 blue:242 / 255.0 alpha:1.0];
+}
 
 @end

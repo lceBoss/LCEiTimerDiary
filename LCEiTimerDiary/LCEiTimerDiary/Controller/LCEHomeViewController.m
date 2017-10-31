@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"妖狐小子";
-    self.view.backgroundColor = [UIColor orangeColor];
     NSLog(@"Holle world!");
 }
+
 
 @end
