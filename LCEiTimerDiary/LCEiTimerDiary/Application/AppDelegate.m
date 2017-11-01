@@ -40,6 +40,9 @@
     
     [self.window makeKeyAndVisible];
     
+    // 延长启动页时间
+    [NSThread sleepForTimeInterval:0.5];
+    
     return YES;
 }
 

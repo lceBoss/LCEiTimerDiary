@@ -988,7 +988,7 @@
 			baseConfigurationReference = 04CFB8F3E0ED7EB47F42DEC1 /* Pods-LCEiTimerDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZYDYW676;
 				GCC_PREFIX_HEADER = "LCEiTimerDiary/Supporting Files/LCEiTimerDiary.pch";
@@ -1006,7 +1006,7 @@
 			baseConfigurationReference = 92E220514BD85F9D4DF34FC7 /* Pods-LCEiTimerDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZYDYW676;
 				GCC_PREFIX_HEADER = "LCEiTimerDiary/Supporting Files/LCEiTimerDiary.pch";
