@@ -23,6 +23,8 @@
 		C3E1EC331FA81447008E3E10 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E1EC321FA81447008E3E10 /* NotificationCenter.framework */; };
 		C3E1EC361FA85FB5008E3E10 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1EC351FA85FB4008E3E10 /* UIColor+Hex.m */; };
 		C3E1EC391FA86AB8008E3E10 /* LCEMeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1EC381FA86AB8008E3E10 /* LCEMeSettingViewController.m */; };
+		C3E1EC411FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1EC3F1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m */; };
+		C3E1EC421FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E1EC401FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib */; };
 		D026B2FC07BE8560DFA846DD /* libPods-LCEiTimerDiaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */; };
 		EC5DBABECEE6870FAE98B44B /* libPods-LCEiTimerDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */; };
 /* End PBXBuildFile section */
@@ -136,6 +138,9 @@
 		C3E1EC351FA85FB4008E3E10 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		C3E1EC371FA86AB8008E3E10 /* LCEMeSettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEMeSettingViewController.h; sourceTree = "<group>"; };
 		C3E1EC381FA86AB8008E3E10 /* LCEMeSettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEMeSettingViewController.m; sourceTree = "<group>"; };
+		C3E1EC3E1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEMeSettingTableViewCell.h; sourceTree = "<group>"; };
+		C3E1EC3F1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEMeSettingTableViewCell.m; sourceTree = "<group>"; };
+		C3E1EC401FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCEMeSettingTableViewCell.xib; sourceTree = "<group>"; };
 		D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -285,12 +290,8 @@
 		C385053B1F7A39CB0009B64B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C359C7661F7A43AF00D9D8BA /* LCEHomeViewController.h */,
-				C359C7671F7A43AF00D9D8BA /* LCEHomeViewController.m */,
-				C3E1EC2D1FA80F69008E3E10 /* LCEMeViewController.h */,
-				C3E1EC2E1FA80F69008E3E10 /* LCEMeViewController.m */,
-				C3E1EC371FA86AB8008E3E10 /* LCEMeSettingViewController.h */,
-				C3E1EC381FA86AB8008E3E10 /* LCEMeSettingViewController.m */,
+				C3E1EC3A1FA88D4A008E3E10 /* LCEHomeVC */,
+				C3E1EC3B1FA88DAD008E3E10 /* LCEMeVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +299,8 @@
 		C385053C1F7A39D80009B64B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C3E1EC3C1FA95942008E3E10 /* LCEHomeVielw */,
+				C3E1EC3D1FA95A59008E3E10 /* LCEMeView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -489,6 +492,43 @@
 			path = NSString;
 			sourceTree = "<group>";
 		};
+		C3E1EC3A1FA88D4A008E3E10 /* LCEHomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				C359C7661F7A43AF00D9D8BA /* LCEHomeViewController.h */,
+				C359C7671F7A43AF00D9D8BA /* LCEHomeViewController.m */,
+			);
+			path = LCEHomeVC;
+			sourceTree = "<group>";
+		};
+		C3E1EC3B1FA88DAD008E3E10 /* LCEMeVC */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1EC2D1FA80F69008E3E10 /* LCEMeViewController.h */,
+				C3E1EC2E1FA80F69008E3E10 /* LCEMeViewController.m */,
+				C3E1EC371FA86AB8008E3E10 /* LCEMeSettingViewController.h */,
+				C3E1EC381FA86AB8008E3E10 /* LCEMeSettingViewController.m */,
+			);
+			path = LCEMeVC;
+			sourceTree = "<group>";
+		};
+		C3E1EC3C1FA95942008E3E10 /* LCEHomeVielw */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LCEHomeVielw;
+			sourceTree = "<group>";
+		};
+		C3E1EC3D1FA95A59008E3E10 /* LCEMeView */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1EC3E1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.h */,
+				C3E1EC3F1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m */,
+				C3E1EC401FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib */,
+			);
+			path = LCEMeView;
+			sourceTree = "<group>";
+		};
 		FD5B7AA9E607AD216431A9A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38505101F7A2EF40009B64B /* Assets.xcassets in Resources */,
+				C3E1EC421FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +840,7 @@
 				C359C7651F7A41EB00D9D8BA /* LCENavigationController.m in Sources */,
 				C3E1EC361FA85FB5008E3E10 /* UIColor+Hex.m in Sources */,
 				C38505161F7A2EF40009B64B /* main.m in Sources */,
+				C3E1EC411FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m in Sources */,
 				C3E1EC2F1FA80F69008E3E10 /* LCEMeViewController.m in Sources */,
 				C385058A1F7A3C1E0009B64B /* LCETabBarViewController.m in Sources */,
 				C38505051F7A2EF30009B64B /* AppDelegate.m in Sources */,

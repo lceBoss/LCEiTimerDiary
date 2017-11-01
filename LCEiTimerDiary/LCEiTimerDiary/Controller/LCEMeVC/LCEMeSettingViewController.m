@@ -7,6 +7,7 @@
 //
 
 #import "LCEMeSettingViewController.h"
+#import "LCEMeSettingTableViewCell.h"
 
 @interface LCEMeSettingViewController ()
 
@@ -26,9 +27,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
-    cell.textLabel.text = @"妖狐小子";
+    LCEMeSettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCEMeSettingTableViewCell"];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"LCEMeSettingTableViewCell" owner:self options:nil] firstObject];
+    }
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
 }
 
 @end
