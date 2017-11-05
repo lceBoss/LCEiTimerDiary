@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    // 延长启动页时间
+//    [NSThread sleepForTimeInterval:0.5];
+    
     self.title = @"妖狐小子";
     NSLog(@"Holle world!");
 }

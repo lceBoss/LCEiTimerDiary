@@ -112,7 +112,7 @@
 /**
  *  NSDate -> dataStr
  *
- *  @param NSDate
+ *  @param date date
  *  @param dateFormate  exp ("yyyy-MM-dd HH:mm:ss"）
  */
 
@@ -145,8 +145,8 @@
  获取时间date前n天 数据格式 2016-08-12
  
  @param date 哪一天开始
- @param date 前几天
- @return
+ @param numDate 前几天
+ @return Array
  */
 + (NSArray *)getDateToTheDate:(NSDate *)date OfTheDate:(NSInteger)numDate;
 
@@ -154,8 +154,8 @@
  获取时间date后n天 数据格式 2016-08-12
 
  @param date 哪一天开始
- @param date 后几天
- @return
+ @param numDate 后几天
+ @return Array
  */
 + (NSArray *)getDateFromTheDate:(NSDate *)date OfTheDate:(NSInteger)numDate;
 
@@ -172,7 +172,7 @@
 /**
  *  把时间转换为 分钟和秒
  *
- *  @param times 秒
+ *  @param totalSeconds 秒
  *
  *  @return 00:11:40
  */
@@ -183,7 +183,7 @@
  *
  *  @param time 要比较的时间
  *
- *  @return
+ *  @return String
  */
 + (NSString *)getResidualTime:(NSString *)time;
 
@@ -218,7 +218,7 @@
 /**
  *  把时间转换为 天:时:分:秒 / 时:分:秒
  *
- *  @param totalSeconds 秒
+ *  @param totalSecond 秒
  *
  *  @return 天:时:分:秒 / 时:分:秒
  */

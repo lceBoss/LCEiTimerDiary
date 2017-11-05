@@ -32,6 +32,9 @@ return instance;                          \
 //当前系统版本
 #define LCE_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
 
+//App版本
+#define LCE_APP_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
 //导航颜色
 #define LCE_NAV_COLOR [UIColor colorWithRed:59 / 255.0 green:156 / 255.0 blue:255 / 255.0 alpha:1.0]
 //51  163  220
