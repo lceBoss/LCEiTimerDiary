@@ -50,6 +50,10 @@
 		C38B1CD41FAD93D2004FE401 /* KNBMainConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CD31FAD93D2004FE401 /* KNBMainConfigModel.m */; };
 		C38B1CD81FAD9427004FE401 /* LCEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CD71FAD9427004FE401 /* LCEUserInfo.m */; };
 		C38B1CD91FAE0745004FE401 /* FSCalendarScopeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CB41FAD8DC1004FE401 /* FSCalendarScopeHandle.m */; };
+		C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */; };
+		C3DA4FDF1FB060B9007F9411 /* LCESecrecyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */; };
+		C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */; };
+		C3DA4FE51FB14421007F9411 /* LCEApplyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DA4FE31FB14421007F9411 /* LCEApplyCollectionViewCell.xib */; };
 		C3E1EC2F1FA80F69008E3E10 /* LCEMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1EC2E1FA80F69008E3E10 /* LCEMeViewController.m */; };
 		C3E1EC311FA81286008E3E10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E1EC301FA81286008E3E10 /* CoreGraphics.framework */; };
 		C3E1EC331FA81447008E3E10 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E1EC321FA81447008E3E10 /* NotificationCenter.framework */; };
@@ -223,6 +227,12 @@
 		C38B1CD31FAD93D2004FE401 /* KNBMainConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBMainConfigModel.m; sourceTree = "<group>"; };
 		C38B1CD61FAD9427004FE401 /* LCEUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEUserInfo.h; sourceTree = "<group>"; };
 		C38B1CD71FAD9427004FE401 /* LCEUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEUserInfo.m; sourceTree = "<group>"; };
+		C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LCEApply.plist; sourceTree = "<group>"; };
+		C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyViewController.h; sourceTree = "<group>"; };
+		C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyViewController.m; sourceTree = "<group>"; };
+		C3DA4FE11FB14421007F9411 /* LCEApplyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEApplyCollectionViewCell.h; sourceTree = "<group>"; };
+		C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEApplyCollectionViewCell.m; sourceTree = "<group>"; };
+		C3DA4FE31FB14421007F9411 /* LCEApplyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCEApplyCollectionViewCell.xib; sourceTree = "<group>"; };
 		C3E1EC2A1FA80869008E3E10 /* LCEiTimerDiary.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEiTimerDiary.pch; sourceTree = "<group>"; };
 		C3E1EC2B1FA80964008E3E10 /* LCEPrecompile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEPrecompile.h; sourceTree = "<group>"; };
 		C3E1EC2C1FA80AF6008E3E10 /* LCEUtilExtend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEUtilExtend.h; sourceTree = "<group>"; };
@@ -402,6 +412,7 @@
 		C385053C1F7A39D80009B64B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C3DA4FE01FB143BB007F9411 /* LCEApplyView */,
 				C3E1EC3C1FA95942008E3E10 /* LCEHomeVielw */,
 				C3E1EC3D1FA95A59008E3E10 /* LCEMeView */,
 			);
@@ -603,8 +614,11 @@
 		C38B1C6A1FA9ED38004FE401 /* LCEApplyVC */ = {
 			isa = PBXGroup;
 			children = (
+				C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */,
 				C38B1C6B1FA9ED85004FE401 /* LCEApplyViewController.h */,
 				C38B1C6C1FA9ED85004FE401 /* LCEApplyViewController.m */,
+				C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */,
+				C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */,
 			);
 			path = LCEApplyVC;
 			sourceTree = "<group>";
@@ -714,6 +728,16 @@
 				C38B1CD71FAD9427004FE401 /* LCEUserInfo.m */,
 			);
 			path = LCEUserInfo;
+			sourceTree = "<group>";
+		};
+		C3DA4FE01FB143BB007F9411 /* LCEApplyView */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA4FE11FB14421007F9411 /* LCEApplyCollectionViewCell.h */,
+				C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */,
+				C3DA4FE31FB14421007F9411 /* LCEApplyCollectionViewCell.xib */,
+			);
+			path = LCEApplyView;
 			sourceTree = "<group>";
 		};
 		C3E1EC3A1FA88D4A008E3E10 /* LCEHomeVC */ = {
@@ -882,7 +906,9 @@
 			files = (
 				C38505101F7A2EF40009B64B /* Assets.xcassets in Resources */,
 				C3E1EC421FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib in Resources */,
+				C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */,
 				C38B1CC91FAD8DC2004FE401 /* Info.plist in Resources */,
+				C3DA4FE51FB14421007F9411 /* LCEApplyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1070,6 +1096,7 @@
 				C38B1C961FAD8DA6004FE401 /* SDCollectionViewCell.m in Sources */,
 				C38B1CD81FAD9427004FE401 /* LCEUserInfo.m in Sources */,
 				C38B1CBB1FAD8DC2004FE401 /* FSCalendar+DateTools.m in Sources */,
+				C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */,
 				C38B1CC21FAD8DC2004FE401 /* FSCalendarCollectionView.m in Sources */,
 				C38B1CCF1FAD936A004FE401 /* LCEBaseRequest.m in Sources */,
 				C38B1CC61FAD8DC2004FE401 /* FSCalendarHeader.m in Sources */,
@@ -1094,6 +1121,7 @@
 				C38B1C981FAD8DA6004FE401 /* UIView+SDExtension.m in Sources */,
 				C38B1C951FAD8DA6004FE401 /* TAPageControl.m in Sources */,
 				C38B1CC11FAD8DC2004FE401 /* FSCalendarCell.m in Sources */,
+				C3DA4FDF1FB060B9007F9411 /* LCESecrecyViewController.m in Sources */,
 				C38B1C811FAD8D6C004FE401 /* MTLManagedObjectAdapter.m in Sources */,
 				C38B1C801FAD8D6C004FE401 /* EXTRuntimeExtensions.m in Sources */,
 				C38B1CCA1FAD8DC2004FE401 /* UIView+FSExtension.m in Sources */,
