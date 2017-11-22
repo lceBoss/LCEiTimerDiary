@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>icon</key>
+		<string>icon_apply_curriculum</string>
+		<key>type_title</key>
+		<string>账户与密码</string>
+		<key>controller_name</key>
+		<string>LCESecrecyViewController</string>
+	</dict>
+</array>
+</plist>
