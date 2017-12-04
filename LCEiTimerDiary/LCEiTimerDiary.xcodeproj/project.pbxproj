@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6F36A3EF6491DB4901EF2D09 /* libPods-LCEiTimerDiaryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E21BF16BC81CE234D71DA4 /* libPods-LCEiTimerDiaryUITests.a */; };
+		C3598B3C1FC69BA200B0E524 /* LCEAuthManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3598B3B1FC69BA200B0E524 /* LCEAuthManage.m */; };
 		C359C7651F7A41EB00D9D8BA /* LCENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C359C7641F7A41EB00D9D8BA /* LCENavigationController.m */; };
 		C359C7681F7A43AF00D9D8BA /* LCEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C359C7671F7A43AF00D9D8BA /* LCEHomeViewController.m */; };
 		C38505051F7A2EF30009B64B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C38505041F7A2EF30009B64B /* AppDelegate.m */; };
@@ -90,6 +91,8 @@
 		AC943744FD5A3449E02CABCA /* Pods-LCEiTimerDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF97D9A4D51F18AB1E269BEE /* Pods-LCEiTimerDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryUITests/Pods-LCEiTimerDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2350190583B73368512AA99 /* Pods-LCEiTimerDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		C3598B3A1FC69BA200B0E524 /* LCEAuthManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAuthManage.h; sourceTree = "<group>"; };
+		C3598B3B1FC69BA200B0E524 /* LCEAuthManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAuthManage.m; sourceTree = "<group>"; };
 		C359C7631F7A41EB00D9D8BA /* LCENavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCENavigationController.h; sourceTree = "<group>"; };
 		C359C7641F7A41EB00D9D8BA /* LCENavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCENavigationController.m; sourceTree = "<group>"; };
 		C359C7661F7A43AF00D9D8BA /* LCEHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEHomeViewController.h; sourceTree = "<group>"; };
@@ -294,6 +297,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C3598B391FC69AB500B0E524 /* LCEAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				C3598B3A1FC69BA200B0E524 /* LCEAuthManage.h */,
+				C3598B3B1FC69BA200B0E524 /* LCEAuthManage.m */,
+			);
+			path = LCEAuthentication;
+			sourceTree = "<group>";
+		};
 		C38504F71F7A2EF30009B64B = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +444,7 @@
 		C385053E1F7A39FF0009B64B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C3598B391FC69AB500B0E524 /* LCEAuthentication */,
 				C38B1CD51FAD9427004FE401 /* LCEUserInfo */,
 			);
 			path = Utils;
@@ -1097,6 +1110,7 @@
 				C38B1CD81FAD9427004FE401 /* LCEUserInfo.m in Sources */,
 				C38B1CBB1FAD8DC2004FE401 /* FSCalendar+DateTools.m in Sources */,
 				C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */,
+				C3598B3C1FC69BA200B0E524 /* LCEAuthManage.m in Sources */,
 				C38B1CC21FAD8DC2004FE401 /* FSCalendarCollectionView.m in Sources */,
 				C38B1CCF1FAD936A004FE401 /* LCEBaseRequest.m in Sources */,
 				C38B1CC61FAD8DC2004FE401 /* FSCalendarHeader.m in Sources */,

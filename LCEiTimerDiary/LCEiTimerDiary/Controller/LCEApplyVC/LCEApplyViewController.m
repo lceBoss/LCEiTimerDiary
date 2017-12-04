@@ -12,6 +12,7 @@
 #import "LCESecrecyViewController.h"
 
 static NSString *LCEApplyViewIdentifer = @"LCEApplyCollectionViewCell";
+static CGFloat lceCollectionViewCellHeight = 85;
 
 @interface LCEApplyViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -32,7 +33,7 @@ static NSString *LCEApplyViewIdentifer = @"LCEApplyCollectionViewCell";
     [self.dataArray addObjectsFromArray:applyArray];
     
     NSInteger rowNums = ceilf(self.dataArray.count / 4.0); //向上取整
-    self.collectionView.frame = CGRectMake(0, 64, LCE_SCREEN_WIDTH, rowNums * 80);
+    self.collectionView.frame = CGRectMake(0, 64, LCE_SCREEN_WIDTH, rowNums * lceCollectionViewCellHeight);
     [self.collectionView reloadData];
     
 }
@@ -80,7 +81,7 @@ static NSString *LCEApplyViewIdentifer = @"LCEApplyCollectionViewCell";
 - (UICollectionViewFlowLayout *)collectionViewFlowLayout {
     if (!_collectionViewFlowLayout) {
         _collectionViewFlowLayout = [[UICollectionViewFlowLayout alloc] init];
-        _collectionViewFlowLayout.itemSize = CGSizeMake((LCE_SCREEN_WIDTH - 3) / 4, 80);
+        _collectionViewFlowLayout.itemSize = CGSizeMake((LCE_SCREEN_WIDTH - 3) / 4, lceCollectionViewCellHeight);
         _collectionViewFlowLayout.minimumInteritemSpacing = 0;
         _collectionViewFlowLayout.minimumLineSpacing = 0;
         _collectionViewFlowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);

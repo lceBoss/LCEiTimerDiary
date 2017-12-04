@@ -7,6 +7,7 @@
 //
 
 #import "LCEHomeViewController.h"
+#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface LCEHomeViewController ()
 
@@ -21,6 +22,7 @@
     
     self.title = @"妖狐小子";
     NSLog(@"Holle world!");
+    
 }
 
 
