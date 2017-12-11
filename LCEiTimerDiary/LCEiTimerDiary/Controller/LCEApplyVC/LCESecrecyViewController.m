@@ -7,10 +7,8 @@
 //
 
 #import "LCESecrecyViewController.h"
-#import "LCEAuthManage.h"
-#import <LCProgressHUD.h>
 
-@interface LCESecrecyViewController ()<LCEAuthManageDelegate>
+@interface LCESecrecyViewController ()
 
 @end
 
@@ -25,7 +23,7 @@
 
 #pragma mark - Action
 - (void)rightBarItemAddCipher {
-    [[LCEAuthManage shareInstance] startAuthenticateWithDelegate:self];
+    
 }
 
 #pragma mark - UITableViewCellDataSource & Delegate
@@ -43,16 +41,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
 }
-
-#pragma mark - LCEAuthManageDelegate
-- (void)authManageVerifyByFingerprintWithAuthResult:(LCEAuthManageResult)result {
-    if (result == LCEAuthManageResultSuccess) {
-        NSLog(@"what the fuck！")
-    }else if (result == LCEAuthManageResultUserFallback) {
-        NSLog(@"用户选择忘记密码");
-    }
-}
-
 
 
 @end

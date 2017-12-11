@@ -10,11 +10,12 @@
 #import <UIImageView+WebCache.h>
 #import "LCEApplyCollectionViewCell.h"
 #import "LCESecrecyViewController.h"
+#import "LCEAuthManage.h"
 
 static NSString *LCEApplyViewIdentifer = @"LCEApplyCollectionViewCell";
 static CGFloat lceCollectionViewCellHeight = 85;
 
-@interface LCEApplyViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface LCEApplyViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, LCEAuthManageDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *collectionViewFlowLayout;
@@ -60,11 +61,27 @@ static CGFloat lceCollectionViewCellHeight = 85;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     NSDictionary *info = self.dataArray[indexPath.row];
-    Class cls = NSClassFromString(info[@"controller_name"]);
+    NSString *name = info[@"controller_name"];
+    Class cls = NSClassFromString(name);
+    if ([name isEqualToString:@"LCESecrecyViewController"]) { //项目top10
+        [[LCEAuthManage shareInstance] startAuthenticateWithDelegate:self];
+        return;
+    }
     UIViewController *controller = [[cls alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
+
+#pragma mark - LCEAuthManageDelegate
+- (void)authManageVerifyByFingerprintWithAuthResult:(LCEAuthManageResult)result {
+    if (result == LCEAuthManageResultSuccess) {
+        NSLog(@"what the fuck！")
+    }else if (result == LCEAuthManageResultUserFallback) {
+        NSLog(@"用户选择忘记密码");
+    }
+}
+
 
 #pragma mark---- Setter && Getter
 - (UICollectionView *)collectionView {
