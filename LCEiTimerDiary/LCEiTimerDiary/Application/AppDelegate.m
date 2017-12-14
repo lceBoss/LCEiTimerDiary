@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LCEHomeViewController.h"
+#import "LCEAppManager.h"
+#import <MagicalRecord/MagicalRecord.h>
 
 @interface AppDelegate ()
 
@@ -37,6 +39,9 @@
     [navBar setTitleTextAttributes:attribute];
     [navBar setTintColor:[UIColor whiteColor]];
     [navBar setBarTintColor:LCE_NAV_COLOR];
+    
+    // 配置文件
+    [LCEAppManager shareInstance];
     
     [self.window makeKeyAndVisible];
     
@@ -69,6 +74,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
+    [MagicalRecord cleanUp];
     [self saveContext];
 }
 

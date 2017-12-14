@@ -11,6 +11,7 @@
 #import "LCEApplyCollectionViewCell.h"
 #import "LCESecrecyViewController.h"
 #import "LCEAuthManage.h"
+#import "LCEPasswordModel.h"
 
 static NSString *LCEApplyViewIdentifer = @"LCEApplyCollectionViewCell";
 static CGFloat lceCollectionViewCellHeight = 85;
@@ -36,6 +37,20 @@ static CGFloat lceCollectionViewCellHeight = 85;
     NSInteger rowNums = ceilf(self.dataArray.count / 4.0); //向上取整
     self.collectionView.frame = CGRectMake(0, 64, LCE_SCREEN_WIDTH, rowNums * lceCollectionViewCellHeight);
     [self.collectionView reloadData];
+    
+    
+    LCEPasswordModel *model = [[LCEPasswordModel alloc] init];
+    model.password = @"妖狐";
+    
+    [LCEPasswordModel saveWithModel:model resultBlock:^(BOOL success) {
+        if (success) {
+            
+        }
+    }];
+    NSArray *dataArray = [LCEPasswordModel searchAll];
+    for (LCEPasswordModel *models in dataArray) {
+        NSLog(@"%@", models.password);
+    }
     
 }
 
@@ -75,11 +90,14 @@ static CGFloat lceCollectionViewCellHeight = 85;
 
 #pragma mark - LCEAuthManageDelegate
 - (void)authManageVerifyByFingerprintWithAuthResult:(LCEAuthManageResult)result {
-    if (result == LCEAuthManageResultSuccess) {
-        NSLog(@"what the fuck！")
-    }else if (result == LCEAuthManageResultUserFallback) {
-        NSLog(@"用户选择忘记密码");
-    }
+    LCE_PerformOnMainThread(^{
+        if (result == LCEAuthManageResultSuccess) {
+            LCESecrecyViewController *secrecyVC = [[LCESecrecyViewController alloc] init];
+            [self.navigationController pushViewController:secrecyVC animated:YES];
+        }else if (result == LCEAuthManageResultUserFallback) {
+            NSLog(@"用户选择忘记密码");
+        }
+    });
 }
 
 

@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		6F36A3EF6491DB4901EF2D09 /* libPods-LCEiTimerDiaryUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E21BF16BC81CE234D71DA4 /* libPods-LCEiTimerDiaryUITests.a */; };
+		C307E60C1FDE740A000C70FF /* LCEAppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E60B1FDE740A000C70FF /* LCEAppManager.m */; };
+		C307E6111FDEB4A2000C70FF /* LCEMainConfigApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E6101FDEB4A2000C70FF /* LCEMainConfigApi.m */; };
+		C307E62A1FDEB7A8000C70FF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307E6291FDEB7A8000C70FF /* CoreData.framework */; };
+		C307E6481FDF6CC2000C70FF /* LCEPasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E6471FDF6CC2000C70FF /* LCEPasswordModel.m */; };
+		C307E64B1FDF6E32000C70FF /* LCEAuthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E64A1FDF6E32000C70FF /* LCEAuthModel.m */; };
+		C307E6581FDFE296000C70FF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E6561FDFE296000C70FF /* NSString+MD5.m */; };
+		C340EF751FE2137A007D6E75 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = C340EF6D1FE21379007D6E75 /* NSString+Trim.m */; };
+		C340EF761FE2137A007D6E75 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = C340EF6E1FE21379007D6E75 /* NSString+Size.m */; };
+		C340EF771FE2137A007D6E75 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C340EF6F1FE21379007D6E75 /* GTMNSString+HTML.m */; };
+		C340EF781FE2137A007D6E75 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C340EF721FE21379007D6E75 /* NSString+HTML.m */; };
+		C340EF791FE2137A007D6E75 /* NSString+Contain.m in Sources */ = {isa = PBXBuildFile; fileRef = C340EF741FE21379007D6E75 /* NSString+Contain.m */; };
 		C3598B3C1FC69BA200B0E524 /* LCEAuthManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C3598B3B1FC69BA200B0E524 /* LCEAuthManage.m */; };
 		C359C7651F7A41EB00D9D8BA /* LCENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C359C7641F7A41EB00D9D8BA /* LCENavigationController.m */; };
 		C359C7681F7A43AF00D9D8BA /* LCEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C359C7671F7A43AF00D9D8BA /* LCEHomeViewController.m */; };
@@ -91,6 +102,27 @@
 		AC943744FD5A3449E02CABCA /* Pods-LCEiTimerDiaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF97D9A4D51F18AB1E269BEE /* Pods-LCEiTimerDiaryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryUITests/Pods-LCEiTimerDiaryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2350190583B73368512AA99 /* Pods-LCEiTimerDiaryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LCEiTimerDiaryTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests.release.xcconfig"; sourceTree = "<group>"; };
+		C307E60A1FDE740A000C70FF /* LCEAppManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAppManager.h; sourceTree = "<group>"; };
+		C307E60B1FDE740A000C70FF /* LCEAppManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAppManager.m; sourceTree = "<group>"; };
+		C307E60F1FDEB4A2000C70FF /* LCEMainConfigApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEMainConfigApi.h; sourceTree = "<group>"; };
+		C307E6101FDEB4A2000C70FF /* LCEMainConfigApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEMainConfigApi.m; sourceTree = "<group>"; };
+		C307E6291FDEB7A8000C70FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C307E6461FDF6CC2000C70FF /* LCEPasswordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEPasswordModel.h; sourceTree = "<group>"; };
+		C307E6471FDF6CC2000C70FF /* LCEPasswordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEPasswordModel.m; sourceTree = "<group>"; };
+		C307E6491FDF6E32000C70FF /* LCEAuthModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAuthModel.h; sourceTree = "<group>"; };
+		C307E64A1FDF6E32000C70FF /* LCEAuthModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAuthModel.m; sourceTree = "<group>"; };
+		C307E6561FDFE296000C70FF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		C307E6571FDFE296000C70FF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		C340EF6B1FE21379007D6E75 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		C340EF6C1FE21379007D6E75 /* NSString+Trim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
+		C340EF6D1FE21379007D6E75 /* NSString+Trim.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
+		C340EF6E1FE21379007D6E75 /* NSString+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
+		C340EF6F1FE21379007D6E75 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		C340EF701FE21379007D6E75 /* NSString+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
+		C340EF711FE21379007D6E75 /* NSString+Contain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Contain.h"; sourceTree = "<group>"; };
+		C340EF721FE21379007D6E75 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		C340EF731FE21379007D6E75 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		C340EF741FE21379007D6E75 /* NSString+Contain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contain.m"; sourceTree = "<group>"; };
 		C3598B3A1FC69BA200B0E524 /* LCEAuthManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAuthManage.h; sourceTree = "<group>"; };
 		C3598B3B1FC69BA200B0E524 /* LCEAuthManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAuthManage.m; sourceTree = "<group>"; };
 		C359C7631F7A41EB00D9D8BA /* LCENavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCENavigationController.h; sourceTree = "<group>"; };
@@ -152,18 +184,6 @@
 		C38505771F7A3AE60009B64B /* UINavigationController+StackManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+StackManager.m"; sourceTree = "<group>"; };
 		C38505791F7A3AE70009B64B /* NSTimer+EOCBlocksSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+EOCBlocksSupport.h"; sourceTree = "<group>"; };
 		C385057A1F7A3AE70009B64B /* NSTimer+EOCBlocksSupport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+EOCBlocksSupport.m"; sourceTree = "<group>"; };
-		C385057C1F7A3AE70009B64B /* GTMNSString+HTML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
-		C385057D1F7A3AE70009B64B /* GTMNSString+HTML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
-		C385057E1F7A3AE70009B64B /* NSString+Contain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Contain.h"; sourceTree = "<group>"; };
-		C385057F1F7A3AE70009B64B /* NSString+Contain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Contain.m"; sourceTree = "<group>"; };
-		C38505801F7A3AE70009B64B /* NSString+HTML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
-		C38505811F7A3AE70009B64B /* NSString+HTML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
-		C38505821F7A3AE70009B64B /* NSString+MD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
-		C38505831F7A3AE70009B64B /* NSString+MD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
-		C38505841F7A3AE70009B64B /* NSString+Size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Size.h"; sourceTree = "<group>"; };
-		C38505851F7A3AE70009B64B /* NSString+Size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Size.m"; sourceTree = "<group>"; };
-		C38505861F7A3AE70009B64B /* NSString+Trim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Trim.h"; sourceTree = "<group>"; };
-		C38505871F7A3AE70009B64B /* NSString+Trim.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Trim.m"; sourceTree = "<group>"; };
 		C38505881F7A3C1E0009B64B /* LCETabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCETabBarViewController.h; sourceTree = "<group>"; };
 		C38505891F7A3C1E0009B64B /* LCETabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCETabBarViewController.m; sourceTree = "<group>"; };
 		C38B1C6B1FA9ED85004FE401 /* LCEApplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEApplyViewController.h; sourceTree = "<group>"; };
@@ -259,6 +279,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C307E62A1FDEB7A8000C70FF /* CoreData.framework in Frameworks */,
 				C3E1EC331FA81447008E3E10 /* NotificationCenter.framework in Frameworks */,
 				C3E1EC311FA81286008E3E10 /* CoreGraphics.framework in Frameworks */,
 				EC5DBABECEE6870FAE98B44B /* libPods-LCEiTimerDiary.a in Frameworks */,
@@ -295,6 +316,58 @@
 				7D369D73D99D3DC31D42E31D /* Pods-LCEiTimerDiaryUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C307E60D1FDEB3EB000C70FF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C307E60E1FDEB4A2000C70FF /* LCEMainConfig */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C307E60E1FDEB4A2000C70FF /* LCEMainConfig */ = {
+			isa = PBXGroup;
+			children = (
+				C307E60F1FDEB4A2000C70FF /* LCEMainConfigApi.h */,
+				C307E6101FDEB4A2000C70FF /* LCEMainConfigApi.m */,
+			);
+			path = LCEMainConfig;
+			sourceTree = "<group>";
+		};
+		C307E6121FDEB55E000C70FF /* LCEPasswordModel */ = {
+			isa = PBXGroup;
+			children = (
+				C307E6461FDF6CC2000C70FF /* LCEPasswordModel.h */,
+				C307E6471FDF6CC2000C70FF /* LCEPasswordModel.m */,
+				C307E6491FDF6E32000C70FF /* LCEAuthModel.h */,
+				C307E64A1FDF6E32000C70FF /* LCEAuthModel.m */,
+			);
+			path = LCEPasswordModel;
+			sourceTree = "<group>";
+		};
+		C307E6201FDEB71D000C70FF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C307E6211FDEB71D000C70FF /* Machine */,
+				C307E6241FDEB71D000C70FF /* Human */,
+			);
+			name = CoreData;
+			path = LCEiTimerDiary/CoreData;
+			sourceTree = SOURCE_ROOT;
+		};
+		C307E6211FDEB71D000C70FF /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Machine;
+			sourceTree = "<group>";
+		};
+		C307E6241FDEB71D000C70FF /* Human */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Human;
 			sourceTree = "<group>";
 		};
 		C3598B391FC69AB500B0E524 /* LCEAuthentication */ = {
@@ -337,11 +410,11 @@
 				C385053C1F7A39D80009B64B /* View */,
 				C385053B1F7A39CB0009B64B /* Controller */,
 				C38505411F7A3A270009B64B /* Model */,
-				C38505401F7A3A1E0009B64B /* Network */,
+				C307E60D1FDEB3EB000C70FF /* Network */,
 				C385053F1F7A3A0C0009B64B /* Supporting Files */,
 				C385053E1F7A39FF0009B64B /* Utils */,
 				C385053D1F7A39F70009B64B /* Vendor */,
-				C38505421F7A3A3D0009B64B /* CoreData */,
+				C307E6201FDEB71D000C70FF /* CoreData */,
 			);
 			path = LCEiTimerDiary;
 			sourceTree = "<group>";
@@ -388,6 +461,8 @@
 			children = (
 				C38505031F7A2EF30009B64B /* AppDelegate.h */,
 				C38505041F7A2EF30009B64B /* AppDelegate.m */,
+				C307E60A1FDE740A000C70FF /* LCEAppManager.h */,
+				C307E60B1FDE740A000C70FF /* LCEAppManager.m */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -464,26 +539,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C38505401F7A3A1E0009B64B /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		C38505411F7A3A270009B64B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C38B1CD11FAD93D2004FE401 /* KNBMainConfig */,
+				C307E6121FDEB55E000C70FF /* LCEPasswordModel */,
+				C38B1CD11FAD93D2004FE401 /* LCEMainConfig */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C38505421F7A3A3D0009B64B /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 		C38505461F7A3AE20009B64B /* NSUrl */ = {
@@ -608,18 +670,18 @@
 		C385057B1F7A3AE70009B64B /* NSString */ = {
 			isa = PBXGroup;
 			children = (
-				C385057C1F7A3AE70009B64B /* GTMNSString+HTML.h */,
-				C385057D1F7A3AE70009B64B /* GTMNSString+HTML.m */,
-				C385057E1F7A3AE70009B64B /* NSString+Contain.h */,
-				C385057F1F7A3AE70009B64B /* NSString+Contain.m */,
-				C38505801F7A3AE70009B64B /* NSString+HTML.h */,
-				C38505811F7A3AE70009B64B /* NSString+HTML.m */,
-				C38505821F7A3AE70009B64B /* NSString+MD5.h */,
-				C38505831F7A3AE70009B64B /* NSString+MD5.m */,
-				C38505841F7A3AE70009B64B /* NSString+Size.h */,
-				C38505851F7A3AE70009B64B /* NSString+Size.m */,
-				C38505861F7A3AE70009B64B /* NSString+Trim.h */,
-				C38505871F7A3AE70009B64B /* NSString+Trim.m */,
+				C340EF731FE21379007D6E75 /* GTMNSString+HTML.h */,
+				C340EF6F1FE21379007D6E75 /* GTMNSString+HTML.m */,
+				C340EF711FE21379007D6E75 /* NSString+Contain.h */,
+				C340EF741FE21379007D6E75 /* NSString+Contain.m */,
+				C340EF6B1FE21379007D6E75 /* NSString+HTML.h */,
+				C340EF721FE21379007D6E75 /* NSString+HTML.m */,
+				C340EF701FE21379007D6E75 /* NSString+Size.h */,
+				C340EF6E1FE21379007D6E75 /* NSString+Size.m */,
+				C340EF6C1FE21379007D6E75 /* NSString+Trim.h */,
+				C340EF6D1FE21379007D6E75 /* NSString+Trim.m */,
+				C307E6571FDFE296000C70FF /* NSString+MD5.h */,
+				C307E6561FDFE296000C70FF /* NSString+MD5.m */,
 			);
 			path = NSString;
 			sourceTree = "<group>";
@@ -725,13 +787,13 @@
 			path = FSCalendar;
 			sourceTree = "<group>";
 		};
-		C38B1CD11FAD93D2004FE401 /* KNBMainConfig */ = {
+		C38B1CD11FAD93D2004FE401 /* LCEMainConfig */ = {
 			isa = PBXGroup;
 			children = (
 				C38B1CD21FAD93D2004FE401 /* KNBMainConfigModel.h */,
 				C38B1CD31FAD93D2004FE401 /* KNBMainConfigModel.m */,
 			);
-			path = KNBMainConfig;
+			path = LCEMainConfig;
 			sourceTree = "<group>";
 		};
 		C38B1CD51FAD9427004FE401 /* LCEUserInfo */ = {
@@ -793,6 +855,7 @@
 		FD5B7AA9E607AD216431A9A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C307E6291FDEB7A8000C70FF /* CoreData.framework */,
 				C3E1EC321FA81447008E3E10 /* NotificationCenter.framework */,
 				C3E1EC301FA81286008E3E10 /* CoreGraphics.framework */,
 				D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */,
@@ -815,6 +878,7 @@
 				C38504FE1F7A2EF30009B64B /* Resources */,
 				9B101AAE8A625AD2988E7BF1 /* [CP] Embed Pods Frameworks */,
 				5762A295F605BCDD0C496837 /* [CP] Copy Pods Resources */,
+				C307E6161FDEB601000C70FF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1072,6 +1136,19 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C307E6161FDEB601000C70FF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "MODELS_DIR=\"${PROJECT_DIR}/$PROJECT_NAME\"\nDATA_MODEL_PACKAGE=\"$MODELS_DIR/Supporting Files/LCEiTimerDiary.xcdatamodeld\"\n# - 替换相应的 xxxxx.xcdatamodeld名称\n\nCURRENT_VERSION=`/usr/libexec/PlistBuddy \"$DATA_MODEL_PACKAGE/.xccurrentversion\" -c 'print _XCCurrentVersionName'`\n\n\nif [ -x /usr/local/bin/mogenerator ]; then\necho \"mogenerator exists in /usr/local/bin path\";\nMOGENERATOR_DIR=\"/usr/local/bin\";\nelif [ -x /usr/bin/mogenerator ]; then\necho \"mogenerator exists in /usr/bin path\";\nMOGENERATOR_DIR=\"/usr/bin\";\nelse\necho \"mogenerator not found\"; exit 1;\nfi\n# $MOGENERATOR_DIR/mogenerator -m \"$DATA_MODEL_PACKAGE\" -M \"$MODELS_DIR/CoreData/Machine/\" -H \"$MODELS_DIR/CoreData/Human/\"\n# 如果是ARC工程，加上 --template-var arc=true就行了，即mogenerator命令换成：\n$MOGENERATOR_DIR/mogenerator --template-var arc=true -m \"$DATA_MODEL_PACKAGE\" -M \"$MODELS_DIR/CoreData/Machine/\" -H \"$MODELS_DIR/CoreData/Human/\"";
+		};
 		D2A530EEBF4D1FC52C6A5BCF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1099,10 +1176,13 @@
 			files = (
 				C38B1C6D1FA9ED85004FE401 /* LCEApplyViewController.m in Sources */,
 				C38B1CC31FAD8DC2004FE401 /* FSCalendarConstance.m in Sources */,
+				C307E6581FDFE296000C70FF /* NSString+MD5.m in Sources */,
 				C38B1CBA1FAD8DC2004FE401 /* CALayer+FSExtension.m in Sources */,
 				C38B1CC01FAD8DC2004FE401 /* FSCalendarAppearance.m in Sources */,
 				C38B1CBE1FAD8DC2004FE401 /* FSCalendar.m in Sources */,
 				C38B1C971FAD8DA6004FE401 /* SDCycleScrollView.m in Sources */,
+				C307E6111FDEB4A2000C70FF /* LCEMainConfigApi.m in Sources */,
+				C307E60C1FDE740A000C70FF /* LCEAppManager.m in Sources */,
 				C38B1C941FAD8DA6004FE401 /* TADotView.m in Sources */,
 				C359C7681F7A43AF00D9D8BA /* LCEHomeViewController.m in Sources */,
 				C38B1CC51FAD8DC2004FE401 /* FSCalendarFlowLayout.m in Sources */,
@@ -1110,11 +1190,13 @@
 				C38B1CD81FAD9427004FE401 /* LCEUserInfo.m in Sources */,
 				C38B1CBB1FAD8DC2004FE401 /* FSCalendar+DateTools.m in Sources */,
 				C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */,
+				C340EF751FE2137A007D6E75 /* NSString+Trim.m in Sources */,
 				C3598B3C1FC69BA200B0E524 /* LCEAuthManage.m in Sources */,
 				C38B1CC21FAD8DC2004FE401 /* FSCalendarCollectionView.m in Sources */,
 				C38B1CCF1FAD936A004FE401 /* LCEBaseRequest.m in Sources */,
 				C38B1CC61FAD8DC2004FE401 /* FSCalendarHeader.m in Sources */,
 				C38505451F7A3A9C0009B64B /* LCEBaseViewController.m in Sources */,
+				C340EF781FE2137A007D6E75 /* NSString+HTML.m in Sources */,
 				C3E1EC391FA86AB8008E3E10 /* LCEMeSettingViewController.m in Sources */,
 				C38B1C771FAD8CD7004FE401 /* LCEBaseModel.m in Sources */,
 				C38B1C931FAD8DA6004FE401 /* TAAnimatedDotView.m in Sources */,
@@ -1133,14 +1215,19 @@
 				C38B1CD41FAD93D2004FE401 /* KNBMainConfigModel.m in Sources */,
 				C38B1CC81FAD8DC2004FE401 /* FSCalendarStickyHeader.m in Sources */,
 				C38B1C981FAD8DA6004FE401 /* UIView+SDExtension.m in Sources */,
+				C340EF791FE2137A007D6E75 /* NSString+Contain.m in Sources */,
+				C340EF761FE2137A007D6E75 /* NSString+Size.m in Sources */,
 				C38B1C951FAD8DA6004FE401 /* TAPageControl.m in Sources */,
 				C38B1CC11FAD8DC2004FE401 /* FSCalendarCell.m in Sources */,
+				C340EF771FE2137A007D6E75 /* GTMNSString+HTML.m in Sources */,
 				C3DA4FDF1FB060B9007F9411 /* LCESecrecyViewController.m in Sources */,
 				C38B1C811FAD8D6C004FE401 /* MTLManagedObjectAdapter.m in Sources */,
+				C307E6481FDF6CC2000C70FF /* LCEPasswordModel.m in Sources */,
 				C38B1C801FAD8D6C004FE401 /* EXTRuntimeExtensions.m in Sources */,
 				C38B1CCA1FAD8DC2004FE401 /* UIView+FSExtension.m in Sources */,
 				C3E1EC2F1FA80F69008E3E10 /* LCEMeViewController.m in Sources */,
 				C385058A1F7A3C1E0009B64B /* LCETabBarViewController.m in Sources */,
+				C307E64B1FDF6E32000C70FF /* LCEAuthModel.m in Sources */,
 				C38505051F7A2EF30009B64B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1287,15 +1374,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZYDYW676;
+				ENABLE_BITCODE = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREFIX_HEADER = "LCEiTimerDiary/Supporting Files/LCEiTimerDiary.pch";
 				INFOPLIST_FILE = "LCEiTimerDiary//Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaohuxiaozi.LCEiTimerDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1305,15 +1397,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = NO;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = NO;
+				CLANG_WARN_SUSPICIOUS_MOVE = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ECZYDYW676;
+				ENABLE_BITCODE = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PREFIX_HEADER = "LCEiTimerDiary/Supporting Files/LCEiTimerDiary.pch";
 				INFOPLIST_FILE = "LCEiTimerDiary//Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yaohuxiaozi.LCEiTimerDiary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
