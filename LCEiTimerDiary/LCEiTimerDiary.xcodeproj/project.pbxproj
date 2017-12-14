@@ -12,7 +12,6 @@
 		C307E6111FDEB4A2000C70FF /* LCEMainConfigApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E6101FDEB4A2000C70FF /* LCEMainConfigApi.m */; };
 		C307E62A1FDEB7A8000C70FF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307E6291FDEB7A8000C70FF /* CoreData.framework */; };
 		C307E6481FDF6CC2000C70FF /* LCEPasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E6471FDF6CC2000C70FF /* LCEPasswordModel.m */; };
-		C307E64B1FDF6E32000C70FF /* LCEAuthModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E64A1FDF6E32000C70FF /* LCEAuthModel.m */; };
 		C307E6581FDFE296000C70FF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E6561FDFE296000C70FF /* NSString+MD5.m */; };
 		C340EF751FE2137A007D6E75 /* NSString+Trim.m in Sources */ = {isa = PBXBuildFile; fileRef = C340EF6D1FE21379007D6E75 /* NSString+Trim.m */; };
 		C340EF761FE2137A007D6E75 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = C340EF6E1FE21379007D6E75 /* NSString+Size.m */; };
@@ -109,8 +108,6 @@
 		C307E6291FDEB7A8000C70FF /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C307E6461FDF6CC2000C70FF /* LCEPasswordModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEPasswordModel.h; sourceTree = "<group>"; };
 		C307E6471FDF6CC2000C70FF /* LCEPasswordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEPasswordModel.m; sourceTree = "<group>"; };
-		C307E6491FDF6E32000C70FF /* LCEAuthModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAuthModel.h; sourceTree = "<group>"; };
-		C307E64A1FDF6E32000C70FF /* LCEAuthModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAuthModel.m; sourceTree = "<group>"; };
 		C307E6561FDFE296000C70FF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		C307E6571FDFE296000C70FF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		C340EF6B1FE21379007D6E75 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
@@ -340,8 +337,6 @@
 			children = (
 				C307E6461FDF6CC2000C70FF /* LCEPasswordModel.h */,
 				C307E6471FDF6CC2000C70FF /* LCEPasswordModel.m */,
-				C307E6491FDF6E32000C70FF /* LCEAuthModel.h */,
-				C307E64A1FDF6E32000C70FF /* LCEAuthModel.m */,
 			);
 			path = LCEPasswordModel;
 			sourceTree = "<group>";
@@ -1227,7 +1222,6 @@
 				C38B1CCA1FAD8DC2004FE401 /* UIView+FSExtension.m in Sources */,
 				C3E1EC2F1FA80F69008E3E10 /* LCEMeViewController.m in Sources */,
 				C385058A1F7A3C1E0009B64B /* LCETabBarViewController.m in Sources */,
-				C307E64B1FDF6E32000C70FF /* LCEAuthModel.m in Sources */,
 				C38505051F7A2EF30009B64B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
