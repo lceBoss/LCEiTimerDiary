@@ -8,7 +8,7 @@
 
 #import <YTKRequest.h>
 #import "LCEUserInfo.h"
-#import "KNBMainConfigModel.h"
+#import "LCEMainConfigModel.h"
 
 
 @interface LCEBaseRequest : YTKRequest
@@ -47,6 +47,7 @@
  *  @return 错误信息
  */
 - (NSString *)errMessage;
-
+    
+- (NSDictionary *)appendSecretDic;
 
 @end

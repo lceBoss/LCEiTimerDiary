@@ -45,13 +45,19 @@
 #import <Masonry.h>
 #import "UIColor+Hex.h"
 
-#define LCE_MAINCONFIGURL @"https://baidu.com"
+#define LCE_MAINCONFIGURL @"http://10.10.8.22:8801"
 
 #ifdef DEBUG
 #define NSLog(...) NSLog(__VA_ARGS__);
 #else
 #define NSLog(...)
 #endif
+
+
+typedef NS_ENUM(NSInteger, LCEErrorCode) {
+    LCEError_token = 10014,//token过期
+    LCEError_update = 10017,// 强制更新
+};
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

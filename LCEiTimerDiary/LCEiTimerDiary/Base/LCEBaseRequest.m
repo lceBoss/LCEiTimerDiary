@@ -8,7 +8,7 @@
 
 #import "LCEBaseRequest.h"
 #import "LCEBaseRequestAccessory.h"
-#import "KNBMainConfigModel.h"
+#import "LCEMainConfigModel.h"
 #import "NSString+MD5.h"
 
 
@@ -65,10 +65,10 @@
 //    NSString *userToken = [LCEUserInfo shareInstance].userToken;
 //    NSString *user_id = [LCEUserInfo shareInstance].userId;
     NSDictionary *dic = @{
-//                          @"user_token" : userToken ? userToken : @"",
-//                           @"nowu_id" : user_id ? user_id : @"",
+                           @"user_token" : @"bb90af75-2d37-4883-a769-c8d787bc4c0f",
+                           @"nowu_id" : @"ea6394b3ac5b494eb36d872536c5202b",
                            @"client" : @"ios",
-//                           @"ver_num" : KNB_APP_VERSION
+                           @"ver_num" : LCE_APP_VERSION
                            };
     [_baseMuDic addEntriesFromDictionary:dic];
     return _baseMuDic;
@@ -76,7 +76,7 @@
 
 - (NSDictionary *)appendSecretDic {
     NSString *jsonStr = [LCEBaseRequest changeJsonStr:self.baseMuDic];
-    NSString *saltKey = [[KNBMainConfigModel shareInstance] getRequestUrlWithKey:KNB_SecretSalt];
+    NSString *saltKey = [[LCEMainConfigModel shareInstance] getRequestUrlWithKey:KNB_SecretSalt];
     if (isNullStr(saltKey)) {
         saltKey = @"dengyun2017";
     }

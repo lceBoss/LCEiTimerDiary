@@ -14,10 +14,11 @@
 
 @implementation LCEBaseModel
 
+// 转换（映射）字段
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return [NSDictionary mtl_identityPropertyMapWithModel:self.class];
 }
-
+// 设置主键
 + (NSDictionary *)managedObjectKeysByPropertyKey {
     return [NSDictionary mtl_identityPropertyMapWithModel:self.class];
 }

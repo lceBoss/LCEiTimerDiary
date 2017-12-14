@@ -13,6 +13,7 @@
 #import "YTKNetworkConfig.h"
 #import "AFNetworkReachabilityManager.h"
 #import "LCEMainConfigApi.h"
+#import "LCEMainConfigModel.h"
 
 @implementation LCEAppManager
 
@@ -76,23 +77,24 @@ LCE_DEFINE_SINGLETON_FOR_CLASS(LCEAppManager);
     [mainConfig startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
         
         if (request.responseJSONObject && request.responseStatusCode == 200) {
-//            if (mainConfig.requestSuccess ||
-//                mainConfig.getRequestStatuCode == KNTraingError_token ||
-//                mainConfig.getRequestStatuCode == KNTraingError_update) {
-//                [[KNBMainConfigModel shareInstance] regestMainConfig:request.responseJSONObject];
+            if (mainConfig.requestSuccess ||
+                mainConfig.getRequestStatuCode == LCEError_token ||
+                mainConfig.getRequestStatuCode == LCEError_update) {
+                [[LCEMainConfigModel shareInstance] regestMainConfig:request.responseJSONObject];
 //                [[KNBMainConfigModel shareInstance] newVersion];
-//            }
-//
-//            if (mainConfig.requestSuccess) {
+            }
+
+            if (mainConfig.requestSuccess) {
+                NSLog(@"请求成功了，你个渣渣");
 //                NSString *version = [[KNBMainConfigModel shareInstance] newVersion];
 //                [[KNBRemindUpdate shareInstance] remindUpdateApp:version];
 //                if ([[KNBUserInfo shareInstance] needLoginAgain]) {
 //                    [KNB_AppDelegate presentLoginViewController];
 //                }
-//            } else if (mainConfig.getRequestStatuCode == KNTraingError_update) { // 强制更新
+            } else if (mainConfig.getRequestStatuCode == LCEError_update) { // 强制更新
 //                NSString *version = [[KNBMainConfigModel shareInstance] newVersion];
 //                [[KNBRemindUpdate shareInstance] remindForcedUpdate:version];
-//            }
+            }
         }
     } failure:^(__kindof YTKBaseRequest *request) {
         NSLog(@"mainConfig failed");
