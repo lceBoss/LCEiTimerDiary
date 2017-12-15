@@ -64,6 +64,17 @@
 		C38B1CD41FAD93D2004FE401 /* LCEMainConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CD31FAD93D2004FE401 /* LCEMainConfigModel.m */; };
 		C38B1CD81FAD9427004FE401 /* LCEUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CD71FAD9427004FE401 /* LCEUserInfo.m */; };
 		C38B1CD91FAE0745004FE401 /* FSCalendarScopeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CB41FAD8DC1004FE401 /* FSCalendarScopeHandle.m */; };
+		C39889A21FE368E600219E3B /* MIBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C398899E1FE368E500219E3B /* MIBrowserImageView.m */; };
+		C39889A31FE368E600219E3B /* MIPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C398899F1FE368E500219E3B /* MIPhotoBrowser.m */; };
+		C39889A91FE36A5300219E3B /* LCEFoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39889A51FE36A5300219E3B /* LCEFoundViewController.m */; };
+		C39889AA1FE36A5300219E3B /* LCEArticleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39889A71FE36A5300219E3B /* LCEArticleListViewController.m */; };
+		C39889AF1FE36C0900219E3B /* LCEArticleDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C39889AD1FE36C0900219E3B /* LCEArticleDataManager.m */; };
+		C39889BA1FE3701D00219E3B /* LCEFoundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39889B71FE3701D00219E3B /* LCEFoundTableViewCell.m */; };
+		C39889BD1FE3703700219E3B /* LCENewArticleListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C39889BC1FE3703700219E3B /* LCENewArticleListModel.m */; };
+		C39889C61FE3725600219E3B /* KNBImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39889C31FE3725500219E3B /* KNBImageCollectionViewCell.m */; };
+		C39889C71FE3725600219E3B /* KNBImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39889C51FE3725600219E3B /* KNBImageCollectionViewCell.xib */; };
+		C39889CC1FE3737500219E3B /* LCEArticleCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C39889CA1FE3737400219E3B /* LCEArticleCategoryModel.m */; };
+		C39889D11FE3A1BA00219E3B /* LCEFoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39889B61FE3701C00219E3B /* LCEFoundTableViewCell.xib */; };
 		C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */; };
 		C3DA4FDF1FB060B9007F9411 /* LCESecrecyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */; };
 		C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */; };
@@ -255,6 +266,26 @@
 		C38B1CD31FAD93D2004FE401 /* LCEMainConfigModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEMainConfigModel.m; sourceTree = "<group>"; };
 		C38B1CD61FAD9427004FE401 /* LCEUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEUserInfo.h; sourceTree = "<group>"; };
 		C38B1CD71FAD9427004FE401 /* LCEUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEUserInfo.m; sourceTree = "<group>"; };
+		C398899E1FE368E500219E3B /* MIBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIBrowserImageView.m; sourceTree = "<group>"; };
+		C398899F1FE368E500219E3B /* MIPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIPhotoBrowser.m; sourceTree = "<group>"; };
+		C39889A01FE368E600219E3B /* MIPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIPhotoBrowser.h; sourceTree = "<group>"; };
+		C39889A11FE368E600219E3B /* MIBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIBrowserImageView.h; sourceTree = "<group>"; };
+		C39889A51FE36A5300219E3B /* LCEFoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEFoundViewController.m; sourceTree = "<group>"; };
+		C39889A61FE36A5300219E3B /* LCEFoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEFoundViewController.h; sourceTree = "<group>"; };
+		C39889A71FE36A5300219E3B /* LCEArticleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEArticleListViewController.m; sourceTree = "<group>"; };
+		C39889A81FE36A5300219E3B /* LCEArticleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEArticleListViewController.h; sourceTree = "<group>"; };
+		C39889AD1FE36C0900219E3B /* LCEArticleDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEArticleDataManager.m; sourceTree = "<group>"; };
+		C39889AE1FE36C0900219E3B /* LCEArticleDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEArticleDataManager.h; sourceTree = "<group>"; };
+		C39889B61FE3701C00219E3B /* LCEFoundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCEFoundTableViewCell.xib; sourceTree = "<group>"; };
+		C39889B71FE3701D00219E3B /* LCEFoundTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEFoundTableViewCell.m; sourceTree = "<group>"; };
+		C39889B81FE3701D00219E3B /* LCEFoundTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEFoundTableViewCell.h; sourceTree = "<group>"; };
+		C39889BB1FE3703600219E3B /* LCENewArticleListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCENewArticleListModel.h; sourceTree = "<group>"; };
+		C39889BC1FE3703700219E3B /* LCENewArticleListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCENewArticleListModel.m; sourceTree = "<group>"; };
+		C39889C31FE3725500219E3B /* KNBImageCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNBImageCollectionViewCell.m; sourceTree = "<group>"; };
+		C39889C41FE3725600219E3B /* KNBImageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNBImageCollectionViewCell.h; sourceTree = "<group>"; };
+		C39889C51FE3725600219E3B /* KNBImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KNBImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		C39889C81FE3737400219E3B /* LCEArticleCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEArticleCategoryModel.h; sourceTree = "<group>"; };
+		C39889CA1FE3737400219E3B /* LCEArticleCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEArticleCategoryModel.m; sourceTree = "<group>"; };
 		C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LCEApply.plist; sourceTree = "<group>"; };
 		C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyViewController.h; sourceTree = "<group>"; };
 		C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyViewController.m; sourceTree = "<group>"; };
@@ -513,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				C3E1EC3A1FA88D4A008E3E10 /* LCEHomeVC */,
+				C39889A41FE36A2000219E3B /* LCEFindVC */,
 				C38B1C6A1FA9ED38004FE401 /* LCEApplyVC */,
 				C3E1EC3B1FA88DAD008E3E10 /* LCEMeVC */,
 			);
@@ -522,8 +554,9 @@
 		C385053C1F7A39D80009B64B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C3DA4FE01FB143BB007F9411 /* LCEApplyView */,
 				C3E1EC3C1FA95942008E3E10 /* LCEHomeVielw */,
+				C39889AB1FE36B1800219E3B /* LCEFindView */,
+				C3DA4FE01FB143BB007F9411 /* LCEApplyView */,
 				C3E1EC3D1FA95A59008E3E10 /* LCEMeView */,
 			);
 			path = View;
@@ -532,6 +565,7 @@
 		C385053D1F7A39F70009B64B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C398899D1FE3688500219E3B /* PhotoBrowser */,
 				C38B1C991FAD8DC1004FE401 /* FSCalendar */,
 				C38B1C821FAD8DA6004FE401 /* SDCycleScrollView */,
 				C38B1C781FAD8D6C004FE401 /* MTLManagedObjectAdapter */,
@@ -542,6 +576,7 @@
 		C385053E1F7A39FF0009B64B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C39889AC1FE36C0900219E3B /* LCEFoundDataManger */,
 				C3598B391FC69AB500B0E524 /* LCEAuthentication */,
 				C38B1CD51FAD9427004FE401 /* LCEUserInfo */,
 			);
@@ -565,6 +600,7 @@
 		C38505411F7A3A270009B64B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C39889B51FE36EDA00219E3B /* LCEFindModel */,
 				C340EF801FE24DBB007D6E75 /* LCEUserInfoModel */,
 				C307E6121FDEB55E000C70FF /* LCEPasswordModel */,
 				C38B1CD11FAD93D2004FE401 /* LCEMainConfig */,
@@ -829,6 +865,61 @@
 			path = LCEUserInfo;
 			sourceTree = "<group>";
 		};
+		C398899D1FE3688500219E3B /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				C39889A01FE368E600219E3B /* MIPhotoBrowser.h */,
+				C398899F1FE368E500219E3B /* MIPhotoBrowser.m */,
+				C39889A11FE368E600219E3B /* MIBrowserImageView.h */,
+				C398899E1FE368E500219E3B /* MIBrowserImageView.m */,
+			);
+			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
+		C39889A41FE36A2000219E3B /* LCEFindVC */ = {
+			isa = PBXGroup;
+			children = (
+				C39889A61FE36A5300219E3B /* LCEFoundViewController.h */,
+				C39889A51FE36A5300219E3B /* LCEFoundViewController.m */,
+				C39889A81FE36A5300219E3B /* LCEArticleListViewController.h */,
+				C39889A71FE36A5300219E3B /* LCEArticleListViewController.m */,
+			);
+			path = LCEFindVC;
+			sourceTree = "<group>";
+		};
+		C39889AB1FE36B1800219E3B /* LCEFindView */ = {
+			isa = PBXGroup;
+			children = (
+				C39889B81FE3701D00219E3B /* LCEFoundTableViewCell.h */,
+				C39889B71FE3701D00219E3B /* LCEFoundTableViewCell.m */,
+				C39889B61FE3701C00219E3B /* LCEFoundTableViewCell.xib */,
+				C39889C41FE3725600219E3B /* KNBImageCollectionViewCell.h */,
+				C39889C31FE3725500219E3B /* KNBImageCollectionViewCell.m */,
+				C39889C51FE3725600219E3B /* KNBImageCollectionViewCell.xib */,
+			);
+			path = LCEFindView;
+			sourceTree = "<group>";
+		};
+		C39889AC1FE36C0900219E3B /* LCEFoundDataManger */ = {
+			isa = PBXGroup;
+			children = (
+				C39889AD1FE36C0900219E3B /* LCEArticleDataManager.m */,
+				C39889AE1FE36C0900219E3B /* LCEArticleDataManager.h */,
+			);
+			path = LCEFoundDataManger;
+			sourceTree = "<group>";
+		};
+		C39889B51FE36EDA00219E3B /* LCEFindModel */ = {
+			isa = PBXGroup;
+			children = (
+				C39889BB1FE3703600219E3B /* LCENewArticleListModel.h */,
+				C39889BC1FE3703700219E3B /* LCENewArticleListModel.m */,
+				C39889C81FE3737400219E3B /* LCEArticleCategoryModel.h */,
+				C39889CA1FE3737400219E3B /* LCEArticleCategoryModel.m */,
+			);
+			path = LCEFindModel;
+			sourceTree = "<group>";
+		};
 		C3DA4FE01FB143BB007F9411 /* LCEApplyView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1007,7 +1098,9 @@
 			files = (
 				C38505101F7A2EF40009B64B /* Assets.xcassets in Resources */,
 				C3E1EC421FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib in Resources */,
+				C39889C71FE3725600219E3B /* KNBImageCollectionViewCell.xib in Resources */,
 				C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */,
+				C39889D11FE3A1BA00219E3B /* LCEFoundTableViewCell.xib in Resources */,
 				C38B1CC91FAD8DC2004FE401 /* Info.plist in Resources */,
 				C3DA4FE51FB14421007F9411 /* LCEApplyCollectionViewCell.xib in Resources */,
 			);
@@ -1200,22 +1293,29 @@
 			files = (
 				C38B1C6D1FA9ED85004FE401 /* LCEApplyViewController.m in Sources */,
 				C340EF7D1FE2491E007D6E75 /* LCEUserInfoApi.m in Sources */,
+				C39889BD1FE3703700219E3B /* LCENewArticleListModel.m in Sources */,
 				C38B1CC31FAD8DC2004FE401 /* FSCalendarConstance.m in Sources */,
 				C307E6581FDFE296000C70FF /* NSString+MD5.m in Sources */,
 				C38B1CBA1FAD8DC2004FE401 /* CALayer+FSExtension.m in Sources */,
 				C38B1CC01FAD8DC2004FE401 /* FSCalendarAppearance.m in Sources */,
 				C38B1CBE1FAD8DC2004FE401 /* FSCalendar.m in Sources */,
+				C39889AA1FE36A5300219E3B /* LCEArticleListViewController.m in Sources */,
+				C39889A31FE368E600219E3B /* MIPhotoBrowser.m in Sources */,
 				C38B1C971FAD8DA6004FE401 /* SDCycleScrollView.m in Sources */,
 				C307E6111FDEB4A2000C70FF /* LCEMainConfigApi.m in Sources */,
+				C39889A91FE36A5300219E3B /* LCEFoundViewController.m in Sources */,
 				C307E60C1FDE740A000C70FF /* LCEAppManager.m in Sources */,
 				C38B1C941FAD8DA6004FE401 /* TADotView.m in Sources */,
+				C39889BA1FE3701D00219E3B /* LCEFoundTableViewCell.m in Sources */,
 				C359C7681F7A43AF00D9D8BA /* LCEHomeViewController.m in Sources */,
 				C38B1CC51FAD8DC2004FE401 /* FSCalendarFlowLayout.m in Sources */,
+				C39889CC1FE3737500219E3B /* LCEArticleCategoryModel.m in Sources */,
 				C38B1C961FAD8DA6004FE401 /* SDCollectionViewCell.m in Sources */,
 				C38B1CD81FAD9427004FE401 /* LCEUserInfo.m in Sources */,
 				C38B1CBB1FAD8DC2004FE401 /* FSCalendar+DateTools.m in Sources */,
 				C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */,
 				C340EF751FE2137A007D6E75 /* NSString+Trim.m in Sources */,
+				C39889A21FE368E600219E3B /* MIBrowserImageView.m in Sources */,
 				C3598B3C1FC69BA200B0E524 /* LCEAuthManage.m in Sources */,
 				C38B1CC21FAD8DC2004FE401 /* FSCalendarCollectionView.m in Sources */,
 				C38B1CCF1FAD936A004FE401 /* LCEBaseRequest.m in Sources */,
@@ -1230,7 +1330,9 @@
 				C38B1CBF1FAD8DC2004FE401 /* FSCalendarAnimator.m in Sources */,
 				C359C7651F7A41EB00D9D8BA /* LCENavigationController.m in Sources */,
 				C38B1CD91FAE0745004FE401 /* FSCalendarScopeHandle.m in Sources */,
+				C39889AF1FE36C0900219E3B /* LCEArticleDataManager.m in Sources */,
 				C3E1EC361FA85FB5008E3E10 /* UIColor+Hex.m in Sources */,
+				C39889C61FE3725600219E3B /* KNBImageCollectionViewCell.m in Sources */,
 				C38B1CD01FAD936A004FE401 /* LCEBaseRequestAccessory.m in Sources */,
 				C38505161F7A2EF40009B64B /* main.m in Sources */,
 				C38B1CBD1FAD8DC2004FE401 /* FSCalendar+IBExtension.m in Sources */,

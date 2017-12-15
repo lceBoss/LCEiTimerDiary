@@ -42,9 +42,9 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
     self.titleDefaultColor = [UIColor lightGrayColor];
     self.titleSelectColor = [UIColor lceMainColor];
     
-    self.titlesArray = @[ @"首页", @"应用", @"我的" ];
-    self.selectImgArray = @[ @"icon_tabbar_home", @"icon_tabbar_apply", @"icon_tabbar_me" ];
-    self.unSelectImgArray = @[ @"icon_tabbar_home_no", @"icon_tabbar_apply_no", @"icon_tabbar_me_no" ];
+    self.titlesArray = @[ @"首页", @"发现", @"应用", @"我的" ];
+    self.selectImgArray = @[ @"icon_tabbar_home", @"", @"icon_tabbar_apply", @"icon_tabbar_me" ];
+    self.unSelectImgArray = @[ @"icon_tabbar_home_no", @"", @"icon_tabbar_apply_no", @"icon_tabbar_me_no" ];
     self.buttonsArray = [NSMutableArray array];
     [self createViewControllers];
     [self.view addSubview:self.customTabBar];
@@ -71,9 +71,10 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
 - (void)createViewControllers {
     
     self.homeVC = [[LCEHomeViewController alloc] init];
+    self.findVC = [[LCEFoundViewController alloc] init];
     self.applyVC = [[LCEApplyViewController alloc] init];
     self.meVC = [[LCEMeViewController alloc] init];
-    self.viewControllers = @[self.homeVC, self.applyVC, self.meVC];
+    self.viewControllers = @[self.homeVC, self.findVC, self.applyVC, self.meVC];
     
     NSInteger selectImgCount = self.selectImgArray.count;
     for (int i = 0; i < selectImgCount; i++) {

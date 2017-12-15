@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "LCEHomeViewController.h"
+#import "LCEFoundViewController.h"
 #import "LCEApplyViewController.h"
 #import "LCEMeViewController.h"
 
@@ -16,6 +17,8 @@ typedef void (^LCETabBarViewCurrentSelectIndexBlock)(NSInteger index);
 @interface LCETabBarViewController : UITabBarController
 //首页
 @property (nonatomic, strong) LCEHomeViewController *homeVC;
+//发现
+@property (nonatomic, strong) LCEFoundViewController *findVC;
 //应用
 @property (nonatomic, strong) LCEApplyViewController *applyVC;
 //我的
