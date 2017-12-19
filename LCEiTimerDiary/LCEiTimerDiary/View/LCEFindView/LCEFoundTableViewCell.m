@@ -8,13 +8,12 @@
 
 #import "LCEFoundTableViewCell.h"
 #import "LCENewArticleListModel.h"
-
 #import "KNBImageCollectionViewCell.h"
-
 #import <UIImageView+WebCache.h>
+#import "MIPhotoBrowser.h"
 
 
-@interface LCEFoundTableViewCell () <UICollectionViewDelegate, UICollectionViewDataSource>
+@interface LCEFoundTableViewCell () <UICollectionViewDelegate, UICollectionViewDataSource, MIPhotoBrowserDelegate>
 
 @end
 
@@ -90,9 +89,27 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (_delegate && [_delegate respondsToSelector:@selector(foundTableViewCell:selectIndex:)]) {
-        [_delegate foundTableViewCell:self selectIndex:collectionView.tag];
+    
+    MIPhotoBrowser *photoBrowser = [[MIPhotoBrowser alloc] init];
+    photoBrowser.delegate = self;
+    photoBrowser.sourceImagesContainerView = collectionView;
+    photoBrowser.imageCount = self.listModel.contentslist.count;
+    photoBrowser.currentImageIndex = indexPath.row;
+    [photoBrowser show];
+    
+    if (_delegate && [_delegate respondsToSelector:@selector(foundTableViewCell:selectCellIndex:imageIndex:)]) {
+        [_delegate foundTableViewCell:self selectCellIndex:collectionView.tag imageIndex:indexPath.row];
     }
+}
+
+#pragma mark - MIPhotoBrowserDelegate
+- (UIImage *)photoBrowser:(MIPhotoBrowser *)photoBrowser placeholderImageForIndex:(NSInteger)index{
+    
+    //    NSLog(@"photobrowser index = %d", index);
+    UIImage *cachedImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:self.listModel.contentslist[index]];
+    NSLog(@"index:%@", @(index));
+    
+    return cachedImage;
 }
 
 

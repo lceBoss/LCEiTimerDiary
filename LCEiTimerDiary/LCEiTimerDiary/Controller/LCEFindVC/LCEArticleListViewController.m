@@ -14,6 +14,7 @@
 #import "LCENewArticleListModel.h"
 #import "SDCycleScrollView.h"
 #import "VTMagic.h"
+#import <SDWebImage/SDImageCache.h>
 
 
 @interface LCEArticleListViewController () <SDCycleScrollViewDelegate, LCEFoundTableViewCellDelegate>
@@ -92,10 +93,6 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.articleImageArrs.count == 0) {
         return 125;
@@ -109,41 +106,18 @@
 }
 
 #pragma mark - LCEFoundTableViewCellDelegate
-- (void)foundTableViewCell:(LCEFoundTableViewCell *)cell selectIndex:(NSInteger)index
-{
-//    KNB_WS(weakSelf);
-//    KNBArticleDetailViewController *articleDetailVC = [[KNBArticleDetailViewController alloc] init];
-//    KNBNewArticleListModel *model = self.dataArray[index];
-//    NSInteger comment_num = model.comm_num; // 记录下评论数
-//    articleDetailVC.articleModel = model;
-//    articleDetailVC.block = ^(BOOL isFollow, BOOL isCollect, NSInteger commNum) {
-//        if (commNum != comment_num) {
-//            model.comm_num = commNum;
-//            [weakSelf.dataArray replaceObjectAtIndex:index withObject:model];
-//            [weakSelf.knbTableView reloadData];
-//        } else if (model.attentionstatus != isFollow || model.collectstatus != isCollect) {
-//            model.attentionstatus = isFollow;
-//            model.collectstatus = isCollect;
-//            [weakSelf.dataArray replaceObjectAtIndex:index withObject:model];
-//            [weakSelf.knbTableView reloadData];
-//        }
-//    };
-//    [self.navigationController pushViewController:articleDetailVC animated:YES];
+- (void)foundTableViewCell:(LCEFoundTableViewCell *)cell selectCellIndex:(NSInteger)cellIndex imageIndex:(NSInteger)imageIndex {
+    
+    
+    NSLog(@"点击了第%@行，第%@张图片", @(cellIndex), @(imageIndex));
+
 }
 
 #pragma mark---- SDCycleScrollViewDelegate
 
-- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
-{
-//    NSString *linkStr = self.advertUrlArray[index];
-//    if (!isNullStr(linkStr)) {
-//        // GROWING: 文章发现banner
-//        [[KNBGroManager shareInstance] bannerTouchBannerModel:self.articleModel.advert[index] touchIndex:index bannerPlace:KNBBannerPlaceTypeFound];
-//
-//        KNWebViewController *webVC = [[KNWebViewController alloc] init];
-//        webVC.urlString = linkStr;
-//        [self.navigationController pushViewController:webVC animated:YES];
-//    }
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    
+
 }
 
 
@@ -238,26 +212,6 @@
     [self.dataArray addObjectsFromArray:@[model1, model2, model3]];
     self.categoryModel.lastTime = [[NSDate date] timeIntervalSince1970];
     [self.lceTableView reloadData];
-    
-//    KNB_WS(weakSelf);
-//    KNBArticleCategoryListApi *api = [[KNBArticleCategoryListApi alloc] initWithCategoryId:category_id withPage:page];
-//    api.needHud = YES;
-//    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
-//        if (api.requestSuccess) {
-//            KNBArticleCategoryListModel *model = [KNBArticleCategoryListModel changeResponseJSONObject:request.responseJSONObject];
-//            if (page == 1) {
-//                [self.dataArray removeAllObjects];
-//            }
-//            [self.dataArray addObjectsFromArray:model.data];
-//            self.categoryModel.lastTime = [[NSDate date] timeIntervalSince1970];
-//            [weakSelf requestSuccess:YES requestEnd:model.data.count < 20];
-//        } else {
-//            [weakSelf requestSuccess:NO requestEnd:NO];
-//        }
-//
-//    } failure:^(__kindof YTKBaseRequest *request) {
-//        [weakSelf requestSuccess:NO requestEnd:NO];
-//    }];
 }
 
 @end

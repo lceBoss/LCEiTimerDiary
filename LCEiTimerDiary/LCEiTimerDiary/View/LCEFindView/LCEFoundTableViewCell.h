@@ -10,10 +10,11 @@
 
 @class LCENewArticleListModel;
 @class LCEFoundTableViewCell;
+@class KNBImageCollectionViewCell;
 
 @protocol LCEFoundTableViewCellDelegate <NSObject>
 
-- (void)foundTableViewCell:(LCEFoundTableViewCell *)cell selectIndex:(NSInteger)index;
+- (void)foundTableViewCell:(LCEFoundTableViewCell *)cell selectCellIndex:(NSInteger)cellIndex imageIndex:(NSInteger)imageIndex;
 
 @end
 

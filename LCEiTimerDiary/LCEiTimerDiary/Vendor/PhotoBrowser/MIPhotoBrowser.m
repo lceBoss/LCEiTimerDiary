@@ -75,11 +75,12 @@
     MIBrowserImageView *currentImageView = (MIBrowserImageView *)gesture.view;
     NSInteger currentIndex = currentImageView.tag;
     
-    UIView *sourceView = self.sourceImagesContainerView.subviews[currentIndex];
+    NSArray *containerViews = [self sortedArrayCompareSourceView:self.sourceImagesContainerView.subviews];
+    UIView *sourceView = containerViews[currentIndex];
     CGRect targetTemp = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
     
     UIImageView *tempView = [[UIImageView alloc] init];
-    tempView.contentMode = sourceView.contentMode;
+//    tempView.contentMode = sourceView.contentMode;
     tempView.clipsToBounds = YES;
     tempView.image = currentImageView.image;
     CGFloat h = (self.bounds.size.width / currentImageView.image.size.width) * currentImageView.image.size.height;
@@ -112,11 +113,39 @@
     
     MIBrowserImageView *view = (MIBrowserImageView *)gesture.view;
     
-    [view doubleTapToZoomWithScale:scale ];
+    [view doubleTapToZoomWithScale:scale];
+}
+
+/**
+ subview排序比较
+ @param subviews 图片view容器数组
+ @return 排好序的数组
+ */
+- (NSArray *)sortedArrayCompareSourceView:(NSArray *)subviews {
+    NSArray *resultArr = [subviews sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        UIView *view1 = (UIView *)obj1;
+        UIView *view2 = (UIView *)obj2;
+        
+        if (view1.frame.origin.x < view2.frame.origin.x) {
+            return NSOrderedAscending;
+        }else if (view1.frame.origin.x == view2.frame.origin.x) {
+            if (view1.frame.origin.y < view2.frame.origin.y) {
+                return NSOrderedAscending;
+            }else {
+                return NSOrderedDescending;
+            }
+        }else {
+            return NSOrderedDescending;
+        }
+    }];
+    return resultArr;
 }
 
 - (void)showFirstImage{
-    UIView *source = self.sourceImagesContainerView.subviews[self.currentImageIndex];
+    
+    NSArray *containerViews = [self sortedArrayCompareSourceView:self.sourceImagesContainerView.subviews];
+    
+    UIView *source = containerViews[self.currentImageIndex];
     CGRect rect = [self.sourceImagesContainerView convertRect:source.frame toView:self];
 
     UIImageView *tmpImageView = [[UIImageView alloc] init];
@@ -128,9 +157,9 @@
     CGRect targetTemp = [self.scrollView.subviews[self.currentImageIndex] bounds];
     self.scrollView.hidden = YES;
     
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         tmpImageView.center = self.center;
-        tmpImageView.bounds = CGRectMake(0, 0, targetTemp.size.width,targetTemp.size.height);
+        tmpImageView.bounds = CGRectMake(0, 0, targetTemp.size.width, targetTemp.size.height);
     } completion:^(BOOL finished) {
         _hasShowedFirstView = YES;
         [tmpImageView removeFromSuperview];
