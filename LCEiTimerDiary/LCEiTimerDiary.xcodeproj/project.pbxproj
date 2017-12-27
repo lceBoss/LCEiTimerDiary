@@ -75,6 +75,9 @@
 		C39889C71FE3725600219E3B /* KNBImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39889C51FE3725600219E3B /* KNBImageCollectionViewCell.xib */; };
 		C39889CC1FE3737500219E3B /* LCEArticleCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C39889CA1FE3737400219E3B /* LCEArticleCategoryModel.m */; };
 		C39889D11FE3A1BA00219E3B /* LCEFoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39889B61FE3701C00219E3B /* LCEFoundTableViewCell.xib */; };
+		C3B6BC951FE9094900290744 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC8F1FE9094800290744 /* SDPhotoBrowser.m */; };
+		C3B6BC961FE9094900290744 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC901FE9094900290744 /* SDWaitingView.m */; };
+		C3B6BC971FE9094900290744 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC911FE9094900290744 /* SDBrowserImageView.m */; };
 		C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */; };
 		C3DA4FDF1FB060B9007F9411 /* LCESecrecyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */; };
 		C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */; };
@@ -286,6 +289,13 @@
 		C39889C51FE3725600219E3B /* KNBImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KNBImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		C39889C81FE3737400219E3B /* LCEArticleCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEArticleCategoryModel.h; sourceTree = "<group>"; };
 		C39889CA1FE3737400219E3B /* LCEArticleCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEArticleCategoryModel.m; sourceTree = "<group>"; };
+		C3B6BC8E1FE9094800290744 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		C3B6BC8F1FE9094800290744 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		C3B6BC901FE9094900290744 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
+		C3B6BC911FE9094900290744 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		C3B6BC921FE9094900290744 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		C3B6BC931FE9094900290744 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		C3B6BC941FE9094900290744 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
 		C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LCEApply.plist; sourceTree = "<group>"; };
 		C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyViewController.h; sourceTree = "<group>"; };
 		C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyViewController.m; sourceTree = "<group>"; };
@@ -565,6 +575,7 @@
 		C385053D1F7A39F70009B64B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				C3B6BC8D1FE9094800290744 /* SDPhotoBrowser */,
 				C398899D1FE3688500219E3B /* PhotoBrowser */,
 				C38B1C991FAD8DC1004FE401 /* FSCalendar */,
 				C38B1C821FAD8DA6004FE401 /* SDCycleScrollView */,
@@ -918,6 +929,20 @@
 				C39889CA1FE3737400219E3B /* LCEArticleCategoryModel.m */,
 			);
 			path = LCEFindModel;
+			sourceTree = "<group>";
+		};
+		C3B6BC8D1FE9094800290744 /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				C3B6BC921FE9094900290744 /* SDWaitingView.h */,
+				C3B6BC901FE9094900290744 /* SDWaitingView.m */,
+				C3B6BC931FE9094900290744 /* SDPhotoBrowser.h */,
+				C3B6BC8F1FE9094800290744 /* SDPhotoBrowser.m */,
+				C3B6BC941FE9094900290744 /* SDBrowserImageView.h */,
+				C3B6BC911FE9094900290744 /* SDBrowserImageView.m */,
+				C3B6BC8E1FE9094800290744 /* SDPhotoBrowserConfig.h */,
+			);
+			path = SDPhotoBrowser;
 			sourceTree = "<group>";
 		};
 		C3DA4FE01FB143BB007F9411 /* LCEApplyView */ = {
@@ -1291,6 +1316,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B6BC971FE9094900290744 /* SDBrowserImageView.m in Sources */,
 				C38B1C6D1FA9ED85004FE401 /* LCEApplyViewController.m in Sources */,
 				C340EF7D1FE2491E007D6E75 /* LCEUserInfoApi.m in Sources */,
 				C39889BD1FE3703700219E3B /* LCENewArticleListModel.m in Sources */,
@@ -1302,6 +1328,7 @@
 				C39889AA1FE36A5300219E3B /* LCEArticleListViewController.m in Sources */,
 				C39889A31FE368E600219E3B /* MIPhotoBrowser.m in Sources */,
 				C38B1C971FAD8DA6004FE401 /* SDCycleScrollView.m in Sources */,
+				C3B6BC961FE9094900290744 /* SDWaitingView.m in Sources */,
 				C307E6111FDEB4A2000C70FF /* LCEMainConfigApi.m in Sources */,
 				C39889A91FE36A5300219E3B /* LCEFoundViewController.m in Sources */,
 				C307E60C1FDE740A000C70FF /* LCEAppManager.m in Sources */,
@@ -1339,6 +1366,7 @@
 				C38B1C921FAD8DA6004FE401 /* TAAbstractDotView.m in Sources */,
 				C38B1CBC1FAD8DC2004FE401 /* FSCalendar+Deprecated.m in Sources */,
 				C3E1EC411FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m in Sources */,
+				C3B6BC951FE9094900290744 /* SDPhotoBrowser.m in Sources */,
 				C38B1CD41FAD93D2004FE401 /* LCEMainConfigModel.m in Sources */,
 				C38B1CC81FAD8DC2004FE401 /* FSCalendarStickyHeader.m in Sources */,
 				C38B1C981FAD8DA6004FE401 /* UIView+SDExtension.m in Sources */,

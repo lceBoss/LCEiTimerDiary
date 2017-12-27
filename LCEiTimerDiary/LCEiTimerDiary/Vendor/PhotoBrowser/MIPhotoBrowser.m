@@ -60,13 +60,13 @@
     }
     MIBrowserImageView *imageView = self.scrollView.subviews[index];
     self.currentImageIndex = index;
-//    if (imageView.hasLoadedImage) return;
+    if (imageView.hasLoadedImage) return;
 //    if ([self highQualityImageURLForIndex:index]) {
 //        [imageView setImageWithURL:[self highQualityImageURLForIndex:index] placeholderImage:[self placeholderImageForIndex:index]];
 //    } else {
-        imageView.image = [self placeholderImageForIndex:index];
+    imageView.image = [self placeholderImageForIndex:index];
 //    }
-//    imageView.hasLoadedImage = YES;
+    imageView.hasLoadedImage = YES;
 }
 
 - (void)photoClick:(UIGestureRecognizer *)gesture{
@@ -122,6 +122,7 @@
  @return 排好序的数组
  */
 - (NSArray *)sortedArrayCompareSourceView:(NSArray *)subviews {
+    
     NSArray *resultArr = [subviews sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         UIView *view1 = (UIView *)obj1;
         UIView *view2 = (UIView *)obj2;

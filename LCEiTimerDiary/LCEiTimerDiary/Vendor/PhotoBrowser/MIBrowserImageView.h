@@ -11,6 +11,8 @@
 @interface MIBrowserImageView : UIImageView
 @property(nonatomic, assign) BOOL isScaled;
 
+@property (nonatomic, assign) BOOL hasLoadedImage;
+
 - (void)setImageWithUrl:(NSURL *)url placeholderImage:(UIImage *)placeholder;
 - (void)doubleTapToZoomWithScale:(CGFloat)scale;
 @end

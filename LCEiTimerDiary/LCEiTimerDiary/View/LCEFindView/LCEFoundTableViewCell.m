@@ -12,8 +12,9 @@
 #import <UIImageView+WebCache.h>
 #import "MIPhotoBrowser.h"
 
-
 @interface LCEFoundTableViewCell () <UICollectionViewDelegate, UICollectionViewDataSource, MIPhotoBrowserDelegate>
+
+@property (nonatomic, strong) NSIndexPath *imageIndexPath;
 
 @end
 
@@ -90,6 +91,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    self.imageIndexPath = indexPath;
     MIPhotoBrowser *photoBrowser = [[MIPhotoBrowser alloc] init];
     photoBrowser.delegate = self;
     photoBrowser.sourceImagesContainerView = collectionView;
@@ -110,6 +112,10 @@
     NSLog(@"index:%@", @(index));
     
     return cachedImage;
+}
+- (UIImageView *)photoBrowserImageViewBrowser {
+    KNBImageCollectionViewCell *cell = (KNBImageCollectionViewCell *)[self.imageCollectionView cellForItemAtIndexPath:self.imageIndexPath];
+    return cell.articleImageView;
 }
 
 
