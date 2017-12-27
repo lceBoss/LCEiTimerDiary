@@ -75,12 +75,7 @@
     MIBrowserImageView *currentImageView = (MIBrowserImageView *)gesture.view;
     NSInteger currentIndex = currentImageView.tag;
     
-    NSArray *containerViews = [self sortedArrayCompareSourceView:self.sourceImagesContainerView.subviews];
-    UIView *sourceView = containerViews[currentIndex];
-    CGRect targetTemp = [self.sourceImagesContainerView convertRect:sourceView.frame toView:self];
-    
     UIImageView *tempView = [[UIImageView alloc] init];
-//    tempView.contentMode = sourceView.contentMode;
     tempView.clipsToBounds = YES;
     tempView.image = currentImageView.image;
     CGFloat h = (self.bounds.size.width / currentImageView.image.size.width) * currentImageView.image.size.height;
@@ -95,7 +90,7 @@
     [self addSubview:tempView];
     
     [UIView animateWithDuration:0.3 animations:^{
-        tempView.frame = targetTemp;
+        tempView.frame = [self rectPhotoBrowserImageViewBrowserForIndex:currentIndex];
         self.backgroundColor = [UIColor clearColor];
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
@@ -110,47 +105,16 @@
     } else {
         scale = 2.0;
     }
-    
     MIBrowserImageView *view = (MIBrowserImageView *)gesture.view;
     
     [view doubleTapToZoomWithScale:scale];
 }
 
-/**
- subview排序比较
- @param subviews 图片view容器数组
- @return 排好序的数组
- */
-- (NSArray *)sortedArrayCompareSourceView:(NSArray *)subviews {
-    
-    NSArray *resultArr = [subviews sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        UIView *view1 = (UIView *)obj1;
-        UIView *view2 = (UIView *)obj2;
-        
-        if (view1.frame.origin.x < view2.frame.origin.x) {
-            return NSOrderedAscending;
-        }else if (view1.frame.origin.x == view2.frame.origin.x) {
-            if (view1.frame.origin.y < view2.frame.origin.y) {
-                return NSOrderedAscending;
-            }else {
-                return NSOrderedDescending;
-            }
-        }else {
-            return NSOrderedDescending;
-        }
-    }];
-    return resultArr;
-}
 
 - (void)showFirstImage{
     
-    NSArray *containerViews = [self sortedArrayCompareSourceView:self.sourceImagesContainerView.subviews];
-    
-    UIView *source = containerViews[self.currentImageIndex];
-    CGRect rect = [self.sourceImagesContainerView convertRect:source.frame toView:self];
-
     UIImageView *tmpImageView = [[UIImageView alloc] init];
-    tmpImageView.frame = rect;
+    tmpImageView.frame = [self rectPhotoBrowserImageViewBrowserForIndex:self.currentImageIndex];
     tmpImageView.image = [self placeholderImageForIndex:self.currentImageIndex];
     tmpImageView.contentMode = self.scrollView.subviews[self.currentImageIndex].contentMode;
     [self addSubview:tmpImageView];
@@ -181,7 +145,6 @@
     CGFloat w = self.scrollView.frame.size.width - kPhotoBrowserImageViewMargin * 2;
     CGFloat h = self.scrollView.frame.size.height;
     
-    
     [self.scrollView.subviews enumerateObjectsUsingBlock:^(MIBrowserImageView *obj, NSUInteger idx, BOOL *stop) {
         CGFloat x = kPhotoBrowserImageViewMargin + idx * (kPhotoBrowserImageViewMargin * 2 + w);
         obj.frame = CGRectMake(x, y, w, h);
@@ -189,8 +152,6 @@
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.subviews.count * self.scrollView.frame.size.width, 0);
     self.scrollView.contentOffset = CGPointMake(self.currentImageIndex * self.scrollView.frame.size.width, 0);
-    
-    
     if (!_hasShowedFirstView) {
         [self showFirstImage];
     }
@@ -207,6 +168,16 @@
        return  [self.delegate photoBrowser:self placeholderImageForIndex:self.currentImageIndex];
     }
     return nil;
+}
+
+- (CGRect)rectPhotoBrowserImageViewBrowserForIndex:(NSInteger)index {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(photoBrowserImageViewBrowserForIndex:)]) {
+        UIImageView *imageView = [self.delegate photoBrowserImageViewBrowserForIndex:index];
+        CGRect rect = [imageView convertRect:imageView.bounds toView:self];
+        return rect;
+    }else {
+        return CGRectZero;
+    }
 }
 
 

@@ -106,18 +106,13 @@
 
 #pragma mark - MIPhotoBrowserDelegate
 - (UIImage *)photoBrowser:(MIPhotoBrowser *)photoBrowser placeholderImageForIndex:(NSInteger)index{
-    
-    //    NSLog(@"photobrowser index = %d", index);
     UIImage *cachedImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:self.listModel.contentslist[index]];
-    NSLog(@"index:%@", @(index));
-    
     return cachedImage;
 }
-- (UIImageView *)photoBrowserImageViewBrowser {
-    KNBImageCollectionViewCell *cell = (KNBImageCollectionViewCell *)[self.imageCollectionView cellForItemAtIndexPath:self.imageIndexPath];
+- (UIImageView *)photoBrowserImageViewBrowserForIndex:(NSInteger)index {
+    KNBImageCollectionViewCell *cell = (KNBImageCollectionViewCell *)[self.imageCollectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:self.imageIndexPath.section]];
     return cell.articleImageView;
 }
-
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

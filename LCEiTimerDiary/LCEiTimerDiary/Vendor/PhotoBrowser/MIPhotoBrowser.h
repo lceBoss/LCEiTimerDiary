@@ -10,7 +10,7 @@
 @class MIPhotoBrowser;
 @protocol MIPhotoBrowserDelegate <NSObject>
 - (UIImage *)photoBrowser:(MIPhotoBrowser *)photoBrowser placeholderImageForIndex:(NSInteger)index;
-- (UIImageView *)photoBrowserImageViewBrowser;
+- (UIImageView *)photoBrowserImageViewBrowserForIndex:(NSInteger)index;
 @end
 @interface MIPhotoBrowser : UIView <UIScrollViewDelegate>
 @property(nonatomic, strong) UIView *sourceImagesContainerView;
