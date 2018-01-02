@@ -99,6 +99,8 @@
         _zoomingScrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
         _zoomingScrollView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
         _zoomingScrollView.contentSize = self.bounds.size;
+        _zoomingScrollView.showsVerticalScrollIndicator = NO;
+        _zoomingScrollView.showsHorizontalScrollIndicator = NO;
         UIImageView *zoomingImageView = [[UIImageView alloc] initWithImage:self.image];
         CGSize imageSize = zoomingImageView.image.size;
         CGFloat imageViewH = self.bounds.size.height;
@@ -122,8 +124,6 @@
     [self prepareForImageViewScale];
     [UIView animateWithDuration:0.5 animations:^{
         [self zoomWithScale:scale];
-        
-        
     } completion:^(BOOL finished) {
         if (scale == 1) {
             [self clear];

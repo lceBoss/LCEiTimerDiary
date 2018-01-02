@@ -12,6 +12,7 @@
 #define kPhotoBrowserImageViewMargin 10
 @interface MIPhotoBrowser ()
 @property(nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIPageControl *pageControl;
 @property(nonatomic, assign) BOOL hasShowedFirstView;
 @property(nonatomic, strong) UILabel *indexLabel;
 @end
@@ -50,10 +51,22 @@
         [imageView addGestureRecognizer:doubleTap];
         [self.scrollView addSubview:imageView];
     }
+    [self setupPageControl];
     [self setupImageOfImageViewForIndex:self.currentImageIndex];
+}
+- (void)setupPageControl {
+    UIPageControl *pageControl = [[UIPageControl alloc]init];
+    pageControl.frame = CGRectMake(0, self.bounds.size.height-60, self.bounds.size.width, 30);
+    pageControl.numberOfPages = self.imageCount;
+    pageControl.pageIndicatorTintColor = [UIColor whiteColor];
+    pageControl.currentPageIndicatorTintColor = [UIColor lceMainColor];
+    pageControl.userInteractionEnabled = NO;
+    self.pageControl = pageControl;
+    [self addSubview:pageControl];
 }
 
 - (void)setupImageOfImageViewForIndex:(NSInteger)index{
+    self.pageControl.currentPage = index;
     if (index > self.scrollView.subviews.count - 1) {
         NSLog(@"我又超了");
         return;
@@ -72,6 +85,7 @@
 - (void)photoClick:(UIGestureRecognizer *)gesture{
     
     self.scrollView.hidden = YES;
+    self.pageControl.hidden = YES;
     MIBrowserImageView *currentImageView = (MIBrowserImageView *)gesture.view;
     NSInteger currentIndex = currentImageView.tag;
     
@@ -181,8 +195,7 @@
 }
 
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     int index = (scrollView.contentOffset.x + self.scrollView.bounds.size.width * 0.5) / self.scrollView.bounds.size.width;
     
     // 有过缩放的图片在拖动一定距离后清除缩放
@@ -198,8 +211,6 @@
             }];
 //        }
     }
-    
-    
 //    if (!_willDisappear) {
 //        _indexLabel.text = [NSString stringWithFormat:@"%d/%ld", index + 1, (long)self.imageCount];
 //    }
