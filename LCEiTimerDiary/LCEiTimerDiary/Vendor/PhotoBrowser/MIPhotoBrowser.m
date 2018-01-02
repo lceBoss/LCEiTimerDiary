@@ -122,7 +122,7 @@
     CGRect targetTemp = [self.scrollView.subviews[self.currentImageIndex] bounds];
     self.scrollView.hidden = YES;
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.3 animations:^{
         tmpImageView.center = self.center;
         tmpImageView.bounds = CGRectMake(0, 0, targetTemp.size.width, targetTemp.size.height);
     } completion:^(BOOL finished) {

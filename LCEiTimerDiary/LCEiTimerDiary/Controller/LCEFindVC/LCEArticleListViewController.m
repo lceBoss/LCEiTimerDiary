@@ -154,7 +154,7 @@
 #pragma mark---- Setter && Getter
 - (SDCycleScrollView *)cycleScrollView
 {
-    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, LCE_SCREEN_WIDTH, LCE_SCREEN_WIDTH * 334 / 750) delegate:self placeholderImage:[UIImage imageNamed:@"icon_apply_livebroadcast"]];
+    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, LCE_SCREEN_WIDTH, LCE_SCREEN_WIDTH * 334 / 750) delegate:self placeholderImage:[UIImage imageNamed:@"icon_placeholder"]];
     _cycleScrollView.backgroundColor = [UIColor whiteColor];
     _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     _cycleScrollView.pageDotColor = [UIColor whiteColor];

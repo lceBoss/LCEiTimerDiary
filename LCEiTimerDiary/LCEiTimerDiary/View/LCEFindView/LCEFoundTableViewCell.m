@@ -84,7 +84,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     KNBImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"KNBImageCollectionViewCell" forIndexPath:indexPath];
     NSString *img_url = self.listModel.contentslist[indexPath.row];
-    [cell.articleImageView sd_setImageWithURL:[NSURL URLWithString:img_url] placeholderImage:[UIImage imageNamed:@"icon_tabbar_apply_no"]];
+    [cell.articleImageView sd_setImageWithURL:[NSURL URLWithString:img_url] placeholderImage:[UIImage imageNamed:@"icon_placeholder"]];
 
     return cell;
 }
