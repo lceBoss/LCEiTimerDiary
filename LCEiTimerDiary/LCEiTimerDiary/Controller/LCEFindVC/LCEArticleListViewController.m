@@ -158,7 +158,7 @@
     _cycleScrollView.backgroundColor = [UIColor whiteColor];
     _cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
     _cycleScrollView.pageDotColor = [UIColor whiteColor];
-    _cycleScrollView.currentPageDotColor = LCE_RGB(255, 94, 132);
+    _cycleScrollView.currentPageDotColor = [UIColor lceMainColor];
     _cycleScrollView.autoScrollTimeInterval = 3.5f;
     _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleToFill;
     _cycleScrollView.imageURLStringsGroup = self.advertImageArray;

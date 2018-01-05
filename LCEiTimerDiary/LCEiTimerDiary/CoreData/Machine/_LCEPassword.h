@@ -20,11 +20,16 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) LCEPasswordID *objectID;
 
+@property (nonatomic, strong, nullable) NSString* account;
+
 @property (nonatomic, strong, nullable) NSString* password;
 
 @end
 
 @interface _LCEPassword (CoreDataGeneratedPrimitiveAccessors)
+
+- (nullable NSString*)primitiveAccount;
+- (void)setPrimitiveAccount:(nullable NSString*)value;
 
 - (nullable NSString*)primitivePassword;
 - (void)setPrimitivePassword:(nullable NSString*)value;
@@ -32,6 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface LCEPasswordAttributes: NSObject 
++ (NSString *)account;
 + (NSString *)password;
 @end
 

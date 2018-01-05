@@ -38,20 +38,6 @@ static CGFloat lceCollectionViewCellHeight = 85;
     self.collectionView.frame = CGRectMake(0, 64, LCE_SCREEN_WIDTH, rowNums * lceCollectionViewCellHeight);
     [self.collectionView reloadData];
     
-    
-    LCEPasswordModel *model = [[LCEPasswordModel alloc] init];
-    model.password = @"妖狐";
-    
-    [LCEPasswordModel saveWithModel:model resultBlock:^(BOOL success) {
-        if (success) {
-            
-        }
-    }];
-    NSArray *dataArray = [LCEPasswordModel searchAll];
-    for (LCEPasswordModel *models in dataArray) {
-        NSLog(@"%@", models.password);
-    }
-    
 }
 
 #pragma mark - UICollectionViewDelegate
@@ -96,6 +82,9 @@ static CGFloat lceCollectionViewCellHeight = 85;
             [self.navigationController pushViewController:secrecyVC animated:YES];
         }else if (result == LCEAuthManageResultUserFallback) {
             NSLog(@"用户选择忘记密码");
+        }else if (result == LCEAuthManageResultNotEnrolled) {
+            LCESecrecyViewController *secrecyVC = [[LCESecrecyViewController alloc] init];
+            [self.navigationController pushViewController:secrecyVC animated:YES];
         }
     });
 }

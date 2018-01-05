@@ -61,6 +61,7 @@
     pageControl.pageIndicatorTintColor = [UIColor whiteColor];
     pageControl.currentPageIndicatorTintColor = [UIColor lceMainColor];
     pageControl.userInteractionEnabled = NO;
+    pageControl.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, 1);
     self.pageControl = pageControl;
     [self addSubview:pageControl];
 }

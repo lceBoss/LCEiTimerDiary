@@ -44,9 +44,9 @@
         view.layer.cornerRadius = 3;
         /*
 //        view.layer.backgroundColor = FSCalendarStandardScopeHandleColor.CGColor;
-         修改handleView颜色为粉红色 #####################################
+         修改handleView颜色为天蓝色 #####################################
          */
-        view.layer.backgroundColor = [UIColor colorWithRed:255 / 255.0 green:94 / 255.0 blue:132/255.0 alpha:1.0].CGColor;
+        view.layer.backgroundColor = [UIColor colorWithRed:59 / 255.0 green:156 / 255.0 blue:255 / 255.0 alpha:1.0].CGColor;
         
         [self addSubview:view];
         self.handleIndicator = view;

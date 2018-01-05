@@ -36,6 +36,14 @@ typedef void (^LCEMJHeaderLoadCompleteBlock)(NSInteger page);
 - (void)addleftBarItemImageName:(NSString *)imgName sel:(SEL)sel;
 
 /**
+ 添加左导航文字按钮
+
+ @param title 标题
+ @param sel sel
+ */
+- (void)addLeftBarItemTitle:(NSString *)title sel:(SEL)sel;
+
+/**
  *  添加导航右边按钮
  *
  *  @param title 标题

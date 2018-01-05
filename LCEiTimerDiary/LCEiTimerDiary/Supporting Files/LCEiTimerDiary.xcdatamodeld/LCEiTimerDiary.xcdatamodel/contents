@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="LCEAuth" representedClassName="LCEAuth" syncable="YES" codeGenerationType="class">
-        <attribute name="auth_id" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
     <entity name="LCEPassword" representedClassName="LCEPassword" syncable="YES" codeGenerationType="class">
+        <attribute name="account" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="LCEPassword" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="LCEAuth" positionX="-54" positionY="0" width="128" height="60"/>
+        <element name="LCEPassword" positionX="-63" positionY="-18" width="128" height="75"/>
     </elements>
 </model>

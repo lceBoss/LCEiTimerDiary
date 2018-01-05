@@ -32,11 +32,16 @@
 	return keyPaths;
 }
 
+@dynamic account;
+
 @dynamic password;
 
 @end
 
 @implementation LCEPasswordAttributes 
++ (NSString *)account {
+	return @"account";
+}
 + (NSString *)password {
 	return @"password";
 }

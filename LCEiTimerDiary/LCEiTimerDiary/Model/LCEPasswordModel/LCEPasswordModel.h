@@ -9,7 +9,9 @@
 #import "LCEBaseModel.h"
 
 @interface LCEPasswordModel : LCEBaseModel
-
+// 账号
+@property (nullable, nonatomic, strong) NSString *account;
+// 密码
 @property (nullable, nonatomic, strong) NSString *password;
 
 @end

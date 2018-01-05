@@ -75,6 +75,11 @@
     return @[ item, placeHolditem ];
 }
 
+- (void)addLeftBarItemTitle:(NSString *)title sel:(SEL)sel {
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:sel];
+    self.navigationItem.leftBarButtonItem = leftItem;
+}
+
 - (void)addRightBarItemTitle:(NSString *)title sel:(SEL)sel {
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:sel];
     self.navigationItem.rightBarButtonItem = rightItem;

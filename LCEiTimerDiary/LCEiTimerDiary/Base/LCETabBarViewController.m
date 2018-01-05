@@ -43,8 +43,8 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
     self.titleSelectColor = [UIColor lceMainColor];
     
     self.titlesArray = @[ @"首页", @"发现", @"应用", @"我的" ];
-    self.selectImgArray = @[ @"icon_tabbar_home", @"", @"icon_tabbar_apply", @"icon_tabbar_me" ];
-    self.unSelectImgArray = @[ @"icon_tabbar_home_no", @"", @"icon_tabbar_apply_no", @"icon_tabbar_me_no" ];
+    self.selectImgArray = @[ @"icon_tabbar_home", @"icon_tabbar_find", @"icon_tabbar_apply", @"icon_tabbar_me" ];
+    self.unSelectImgArray = @[ @"icon_tabbar_home_no", @"icon_tabbar_find_no", @"icon_tabbar_apply_no", @"icon_tabbar_me_no" ];
     self.buttonsArray = [NSMutableArray array];
     [self createViewControllers];
     [self.view addSubview:self.customTabBar];

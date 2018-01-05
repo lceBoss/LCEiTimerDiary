@@ -78,6 +78,10 @@
 		C3B6BC951FE9094900290744 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC8F1FE9094800290744 /* SDPhotoBrowser.m */; };
 		C3B6BC961FE9094900290744 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC901FE9094900290744 /* SDWaitingView.m */; };
 		C3B6BC971FE9094900290744 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC911FE9094900290744 /* SDBrowserImageView.m */; };
+		C3B6BC9A1FFE2D1500290744 /* LCESecrecyAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC991FFE2D1500290744 /* LCESecrecyAddView.m */; };
+		C3B6BC9E1FFF120300290744 /* LCEAddSecrecyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */; };
+		C3B6BCA21FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BCA01FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m */; };
+		C3B6BCA31FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */; };
 		C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */; };
 		C3DA4FDF1FB060B9007F9411 /* LCESecrecyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */; };
 		C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */; };
@@ -296,6 +300,13 @@
 		C3B6BC921FE9094900290744 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
 		C3B6BC931FE9094900290744 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
 		C3B6BC941FE9094900290744 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		C3B6BC981FFE2D1500290744 /* LCESecrecyAddView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyAddView.h; sourceTree = "<group>"; };
+		C3B6BC991FFE2D1500290744 /* LCESecrecyAddView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyAddView.m; sourceTree = "<group>"; };
+		C3B6BC9C1FFF120300290744 /* LCEAddSecrecyAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAddSecrecyAccountViewController.h; sourceTree = "<group>"; };
+		C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAddSecrecyAccountViewController.m; sourceTree = "<group>"; };
+		C3B6BC9F1FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAddSecrecyAccountTableViewCell.h; sourceTree = "<group>"; };
+		C3B6BCA01FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAddSecrecyAccountTableViewCell.m; sourceTree = "<group>"; };
+		C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCEAddSecrecyAccountTableViewCell.xib; sourceTree = "<group>"; };
 		C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LCEApply.plist; sourceTree = "<group>"; };
 		C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyViewController.h; sourceTree = "<group>"; };
 		C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyViewController.m; sourceTree = "<group>"; };
@@ -765,6 +776,8 @@
 				C38B1C6C1FA9ED85004FE401 /* LCEApplyViewController.m */,
 				C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */,
 				C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */,
+				C3B6BC9C1FFF120300290744 /* LCEAddSecrecyAccountViewController.h */,
+				C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */,
 			);
 			path = LCEApplyVC;
 			sourceTree = "<group>";
@@ -945,12 +958,25 @@
 			path = SDPhotoBrowser;
 			sourceTree = "<group>";
 		};
+		C3B6BC9B1FFF115600290744 /* LCESecrecyView */ = {
+			isa = PBXGroup;
+			children = (
+				C3B6BC981FFE2D1500290744 /* LCESecrecyAddView.h */,
+				C3B6BC991FFE2D1500290744 /* LCESecrecyAddView.m */,
+				C3B6BC9F1FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.h */,
+				C3B6BCA01FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m */,
+				C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */,
+			);
+			path = LCESecrecyView;
+			sourceTree = "<group>";
+		};
 		C3DA4FE01FB143BB007F9411 /* LCEApplyView */ = {
 			isa = PBXGroup;
 			children = (
 				C3DA4FE11FB14421007F9411 /* LCEApplyCollectionViewCell.h */,
 				C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */,
 				C3DA4FE31FB14421007F9411 /* LCEApplyCollectionViewCell.xib */,
+				C3B6BC9B1FFF115600290744 /* LCESecrecyView */,
 			);
 			path = LCEApplyView;
 			sourceTree = "<group>";
@@ -1122,6 +1148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38505101F7A2EF40009B64B /* Assets.xcassets in Resources */,
+				C3B6BCA31FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib in Resources */,
 				C3E1EC421FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib in Resources */,
 				C39889C71FE3725600219E3B /* KNBImageCollectionViewCell.xib in Resources */,
 				C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */,
@@ -1352,6 +1379,7 @@
 				C3E1EC391FA86AB8008E3E10 /* LCEMeSettingViewController.m in Sources */,
 				C38B1C771FAD8CD7004FE401 /* LCEBaseModel.m in Sources */,
 				C38B1C931FAD8DA6004FE401 /* TAAnimatedDotView.m in Sources */,
+				C3B6BC9E1FFF120300290744 /* LCEAddSecrecyAccountViewController.m in Sources */,
 				C385050E1F7A2EF40009B64B /* LCEiTimerDiary.xcdatamodeld in Sources */,
 				C38B1CC41FAD8DC2004FE401 /* FSCalendarEventIndicator.m in Sources */,
 				C38B1CBF1FAD8DC2004FE401 /* FSCalendarAnimator.m in Sources */,
@@ -1373,6 +1401,8 @@
 				C340EF791FE2137A007D6E75 /* NSString+Contain.m in Sources */,
 				C340EF761FE2137A007D6E75 /* NSString+Size.m in Sources */,
 				C38B1C951FAD8DA6004FE401 /* TAPageControl.m in Sources */,
+				C3B6BC9A1FFE2D1500290744 /* LCESecrecyAddView.m in Sources */,
+				C3B6BCA21FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m in Sources */,
 				C340EF831FE24DE6007D6E75 /* LCEUserInfoModel.m in Sources */,
 				C38B1CC11FAD8DC2004FE401 /* FSCalendarCell.m in Sources */,
 				C340EF771FE2137A007D6E75 /* GTMNSString+HTML.m in Sources */,
