@@ -774,10 +774,7 @@
 				C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */,
 				C38B1C6B1FA9ED85004FE401 /* LCEApplyViewController.h */,
 				C38B1C6C1FA9ED85004FE401 /* LCEApplyViewController.m */,
-				C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */,
-				C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */,
-				C3B6BC9C1FFF120300290744 /* LCEAddSecrecyAccountViewController.h */,
-				C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */,
+				C3B6BCA420030D5400290744 /* LCESecrecyVC */,
 			);
 			path = LCEApplyVC;
 			sourceTree = "<group>";
@@ -968,6 +965,17 @@
 				C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */,
 			);
 			path = LCESecrecyView;
+			sourceTree = "<group>";
+		};
+		C3B6BCA420030D5400290744 /* LCESecrecyVC */ = {
+			isa = PBXGroup;
+			children = (
+				C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */,
+				C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */,
+				C3B6BC9C1FFF120300290744 /* LCEAddSecrecyAccountViewController.h */,
+				C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */,
+			);
+			path = LCESecrecyVC;
 			sourceTree = "<group>";
 		};
 		C3DA4FE01FB143BB007F9411 /* LCEApplyView */ = {

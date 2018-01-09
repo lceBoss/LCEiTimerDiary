@@ -8,6 +8,10 @@
 
 #import "LCEBaseViewController.h"
 
+typedef void(^LCEAddSecrecyAccountViewControllerBlock)(void);
+
 @interface LCEAddSecrecyAccountViewController : LCEBaseViewController
+
+@property (nonatomic, copy) LCEAddSecrecyAccountViewControllerBlock refreshBlock;
 
 @end

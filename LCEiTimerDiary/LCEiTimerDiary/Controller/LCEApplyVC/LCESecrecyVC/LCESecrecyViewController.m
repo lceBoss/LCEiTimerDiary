@@ -11,6 +11,7 @@
 #import "LCESecrecyAddView.h"
 #import "LCEAddSecrecyAccountViewController.h"
 #import "LCENavigationController.h"
+#import <LCProgressHUD.h>
 
 @interface LCESecrecyViewController ()
 
@@ -38,6 +39,11 @@
     NSArray *dataArray = [LCEPasswordModel searchAll];
     [self.dataArray removeAllObjects];
     [self.dataArray addObjectsFromArray:dataArray];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+    });
+    
     [self.lceTableView reloadData];
 }
 
@@ -67,6 +73,10 @@
         _addView.addBlock = ^{
             LCEAddSecrecyAccountViewController *addSecrecyVC = [[LCEAddSecrecyAccountViewController alloc] init];
             LCENavigationController *navi = [[LCENavigationController alloc] initWithRootViewController:addSecrecyVC];
+            addSecrecyVC.refreshBlock = ^{
+                [LCProgressHUD showLoading:@""];
+                [weakSelf searchAllAccount];
+            };
             [weakSelf.navigationController presentViewController:navi animated:YES completion:nil];
         };
     }

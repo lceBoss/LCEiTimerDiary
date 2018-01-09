@@ -38,7 +38,7 @@
     [self.addButton mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(weakSelf);
         make.centerX.mas_equalTo(weakSelf);
-        make.size.mas_equalTo(CGSizeMake(50, 50));
+        make.size.mas_equalTo(CGSizeMake(60, 60));
     }];
     
     [super updateConstraints];
@@ -49,7 +49,7 @@
 - (UIButton *)addButton {
     if (!_addButton) {
         _addButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_addButton setBackgroundImage:[UIImage imageNamed:@"icon_apply_frozen"] forState:UIControlStateNormal];
+        [_addButton setBackgroundImage:[UIImage imageNamed:@"btn_password_add"] forState:UIControlStateNormal];
         [_addButton addTarget:self action:@selector(clickAddButton:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _addButton;

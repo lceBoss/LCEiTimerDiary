@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface LCEAddSecrecyAccountTableViewCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextField *contentTextField;
 

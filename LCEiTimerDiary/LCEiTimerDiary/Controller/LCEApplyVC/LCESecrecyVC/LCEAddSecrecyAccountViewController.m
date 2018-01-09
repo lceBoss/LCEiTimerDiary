@@ -8,8 +8,12 @@
 
 #import "LCEAddSecrecyAccountViewController.h"
 #import "LCEAddSecrecyAccountTableViewCell.h"
+#import "LCEPasswordModel.h"
 
-@interface LCEAddSecrecyAccountViewController ()
+@interface LCEAddSecrecyAccountViewController ()<UITextFieldDelegate>
+
+@property (nonatomic, strong) NSString *accountText;
+@property (nonatomic, strong) NSString *passwordText;
 
 @end
 
@@ -31,7 +35,19 @@
 }
 // 保存
 - (void)clickSaveAddAccount:(UIBarButtonItem *)sender {
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [self.view endEditing:YES];
+    LCEPasswordModel *model = [[LCEPasswordModel alloc] init];
+    model.account = self.accountText;
+    model.password = self.passwordText;
+    LCE_WS(weakSelf);
+    [LCEPasswordModel saveWithModel:model resultBlock:^(BOOL success) {
+        if (success) {
+            if (weakSelf.refreshBlock) {
+                weakSelf.refreshBlock();
+            }
+            [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
+        }
+    }];
 }
 
 #pragma mark - UITableViewDataSource && Delegate
@@ -44,14 +60,33 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LCEAddSecrecyAccountTableViewCell" owner:self options:nil] firstObject];
     }
+    cell.contentTextField.delegate = self;
     if (indexPath.row == 0) {
         cell.titleLabel.text = @"用户";
         cell.contentTextField.placeholder = @"账号";
-    }else if (indexPath.row == 1) {
+        cell.contentTextField.tag = indexPath.row;
+    }else if (indexPath.row  == 1) {
         cell.titleLabel.text = @"密码";
         cell.contentTextField.placeholder = @"密码";
+        cell.contentTextField.tag = indexPath.row;
     }
     return cell;
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if (textField.tag == 0) {
+        self.accountText = [NSString stringWithFormat:@"%@%@", textField.text, string];
+    }else {
+        self.passwordText = [NSString stringWithFormat:@"%@%@", textField.text, string];
+    }
+    BOOL isDelToNull = range.location == 0 && [string isEqualToString:@""];
+    if (isNullStr(self.accountText) || isNullStr(self.passwordText) || isDelToNull) {
+        self.navigationItem.rightBarButtonItem.enabled = NO;
+    }else {
+        self.navigationItem.rightBarButtonItem.enabled = YES;
+    }
+    return YES;
+}
+
 
 @end
