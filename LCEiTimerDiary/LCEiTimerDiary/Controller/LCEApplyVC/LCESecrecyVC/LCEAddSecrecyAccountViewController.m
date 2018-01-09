@@ -31,6 +31,7 @@
 #pragma mark - Action
 // 取消
 - (void)clickCancelAddAccount:(UIBarButtonItem *)sender {
+    [self.view endEditing:YES];
     [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 // 保存
@@ -72,6 +73,8 @@
     }
     return cell;
 }
+
+#pragma mark - UITextFieldDelegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if (textField.tag == 0) {

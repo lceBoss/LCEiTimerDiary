@@ -31,7 +31,9 @@
 
 // 主题色 天蓝色 3b9cff
 + (UIColor *)lceMainColor;
-
+// 背景色  b2b2b2
 + (UIColor *)lceBgColor;
+// （cell）分隔线的颜色 C9CACF
++ (UIColor *)lceLineColor;
 
 @end

@@ -12,6 +12,7 @@
 #import "LCEAddSecrecyAccountViewController.h"
 #import "LCENavigationController.h"
 #import <LCProgressHUD.h>
+#import "LCESecrecyTableViewCell.h"
 
 @interface LCESecrecyViewController ()
 
@@ -39,13 +40,29 @@
     NSArray *dataArray = [LCEPasswordModel searchAll];
     [self.dataArray removeAllObjects];
     [self.dataArray addObjectsFromArray:dataArray];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [LCProgressHUD hide];
-    });
-    
+    [self showRefreshAnimation];
     [self.lceTableView reloadData];
 }
+
+- (void)deleteSelectAccountWithModels:(NSArray *)models {
+    for (LCEPasswordModel *model in models) {
+//        [LCEPasswordModel deleteWithModel:model];
+        NSArray *result = [LCEPasswordModel search];
+        NSInteger index = [self.dataArray indexOfObject:model];
+        [LCEPasswordModel deleteWithModel:result[index]];
+        [self.dataArray removeObject:model];
+    }
+    [self showRefreshAnimation];
+    [self.lceTableView reloadData];
+}
+
+- (void)showRefreshAnimation {
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+    });
+}
+
 
 #pragma mark - UITableViewCellDataSource & Delegate
 
@@ -54,14 +71,26 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    LCESecrecyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCESecrecyTableViewCell"];
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"LCESecrecyTableViewCell" owner:self options:nil] firstObject];
+    }
     LCEPasswordModel *pwdModel = self.dataArray[indexPath.row];
-    cell.textLabel.text = pwdModel.account;
+    cell.accountLabel.text = pwdModel.account;
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+
+- (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //添加一个删除按钮
+    LCEPasswordModel *model = self.dataArray[indexPath.row];
+    UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:(UITableViewRowActionStyleDestructive) title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        [self deleteSelectAccountWithModels:@[model]];
+    }];
+    return @[deleteAction];
 }
 
 #pragma mark - Setter
@@ -74,7 +103,6 @@
             LCEAddSecrecyAccountViewController *addSecrecyVC = [[LCEAddSecrecyAccountViewController alloc] init];
             LCENavigationController *navi = [[LCENavigationController alloc] initWithRootViewController:addSecrecyVC];
             addSecrecyVC.refreshBlock = ^{
-                [LCProgressHUD showLoading:@""];
                 [weakSelf searchAllAccount];
             };
             [weakSelf.navigationController presentViewController:navi animated:YES completion:nil];

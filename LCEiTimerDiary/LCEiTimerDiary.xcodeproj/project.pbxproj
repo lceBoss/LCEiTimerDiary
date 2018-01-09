@@ -33,7 +33,6 @@
 		C38505451F7A3A9C0009B64B /* LCEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38505441F7A3A9C0009B64B /* LCEBaseViewController.m */; };
 		C385058A1F7A3C1E0009B64B /* LCETabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38505891F7A3C1E0009B64B /* LCETabBarViewController.m */; };
 		C38B1C6D1FA9ED85004FE401 /* LCEApplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1C6C1FA9ED85004FE401 /* LCEApplyViewController.m */; };
-		C38B1C771FAD8CD7004FE401 /* LCEBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1C761FAD8CD7004FE401 /* LCEBaseModel.m */; };
 		C38B1C801FAD8D6C004FE401 /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1C7C1FAD8D6C004FE401 /* EXTRuntimeExtensions.m */; };
 		C38B1C811FAD8D6C004FE401 /* MTLManagedObjectAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1C7F1FAD8D6C004FE401 /* MTLManagedObjectAdapter.m */; };
 		C38B1C921FAD8DA6004FE401 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1C851FAD8DA6004FE401 /* TAAbstractDotView.m */; };
@@ -93,6 +92,9 @@
 		C3E1EC391FA86AB8008E3E10 /* LCEMeSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1EC381FA86AB8008E3E10 /* LCEMeSettingViewController.m */; };
 		C3E1EC411FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E1EC3F1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m */; };
 		C3E1EC421FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E1EC401FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib */; };
+		C3F1801C2004A78F003F85BF /* LCESecrecyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1801A2004A78F003F85BF /* LCESecrecyTableViewCell.m */; };
+		C3F1801D2004A78F003F85BF /* LCESecrecyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1801B2004A78F003F85BF /* LCESecrecyTableViewCell.xib */; };
+		C3F180202004BF9C003F85BF /* LCEBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1801E2004BF9C003F85BF /* LCEBaseModel.m */; };
 		D026B2FC07BE8560DFA846DD /* libPods-LCEiTimerDiaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */; };
 		EC5DBABECEE6870FAE98B44B /* libPods-LCEiTimerDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */; };
 /* End PBXBuildFile section */
@@ -211,8 +213,6 @@
 		C38505891F7A3C1E0009B64B /* LCETabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCETabBarViewController.m; sourceTree = "<group>"; };
 		C38B1C6B1FA9ED85004FE401 /* LCEApplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEApplyViewController.h; sourceTree = "<group>"; };
 		C38B1C6C1FA9ED85004FE401 /* LCEApplyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEApplyViewController.m; sourceTree = "<group>"; };
-		C38B1C751FAD8CD7004FE401 /* LCEBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEBaseModel.h; sourceTree = "<group>"; };
-		C38B1C761FAD8CD7004FE401 /* LCEBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEBaseModel.m; sourceTree = "<group>"; };
 		C38B1C7A1FAD8D6C004FE401 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		C38B1C7B1FAD8D6C004FE401 /* EXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTRuntimeExtensions.h; sourceTree = "<group>"; };
 		C38B1C7C1FAD8D6C004FE401 /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
@@ -327,6 +327,11 @@
 		C3E1EC3E1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEMeSettingTableViewCell.h; sourceTree = "<group>"; };
 		C3E1EC3F1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEMeSettingTableViewCell.m; sourceTree = "<group>"; };
 		C3E1EC401FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCEMeSettingTableViewCell.xib; sourceTree = "<group>"; };
+		C3F180192004A78F003F85BF /* LCESecrecyTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyTableViewCell.h; sourceTree = "<group>"; };
+		C3F1801A2004A78F003F85BF /* LCESecrecyTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyTableViewCell.m; sourceTree = "<group>"; };
+		C3F1801B2004A78F003F85BF /* LCESecrecyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCESecrecyTableViewCell.xib; sourceTree = "<group>"; };
+		C3F1801E2004BF9C003F85BF /* LCEBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCEBaseModel.m; sourceTree = "<group>"; };
+		C3F1801F2004BF9C003F85BF /* LCEBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEBaseModel.h; sourceTree = "<group>"; };
 		D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -496,8 +501,8 @@
 		C385051E1F7A2EF40009B64B /* LCEiTimerDiaryTests */ = {
 			isa = PBXGroup;
 			children = (
-				C385051F1F7A2EF40009B64B /* LCEiTimerDiaryTests.m */,
 				C38505211F7A2EF40009B64B /* Info.plist */,
+				C385051F1F7A2EF40009B64B /* LCEiTimerDiaryTests.m */,
 				C340EF7E1FE24B8D007D6E75 /* LCEUserInfoTests.m */,
 			);
 			path = LCEiTimerDiaryTests;
@@ -515,8 +520,8 @@
 		C38505381F7A39880009B64B /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				C38B1C751FAD8CD7004FE401 /* LCEBaseModel.h */,
-				C38B1C761FAD8CD7004FE401 /* LCEBaseModel.m */,
+				C3F1801F2004BF9C003F85BF /* LCEBaseModel.h */,
+				C3F1801E2004BF9C003F85BF /* LCEBaseModel.m */,
 				C38B1CCB1FAD9369004FE401 /* LCEBaseRequest.h */,
 				C38B1CCC1FAD9369004FE401 /* LCEBaseRequest.m */,
 				C38B1CCD1FAD9369004FE401 /* LCEBaseRequestAccessory.h */,
@@ -960,6 +965,9 @@
 			children = (
 				C3B6BC981FFE2D1500290744 /* LCESecrecyAddView.h */,
 				C3B6BC991FFE2D1500290744 /* LCESecrecyAddView.m */,
+				C3F180192004A78F003F85BF /* LCESecrecyTableViewCell.h */,
+				C3F1801A2004A78F003F85BF /* LCESecrecyTableViewCell.m */,
+				C3F1801B2004A78F003F85BF /* LCESecrecyTableViewCell.xib */,
 				C3B6BC9F1FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.h */,
 				C3B6BCA01FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m */,
 				C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */,
@@ -1111,6 +1119,7 @@
 		C38504F81F7A2EF30009B64B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LCE;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "妖狐小子";
 				TargetAttributes = {
@@ -1162,6 +1171,7 @@
 				C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */,
 				C39889D11FE3A1BA00219E3B /* LCEFoundTableViewCell.xib in Resources */,
 				C38B1CC91FAD8DC2004FE401 /* Info.plist in Resources */,
+				C3F1801D2004A78F003F85BF /* LCESecrecyTableViewCell.xib in Resources */,
 				C3DA4FE51FB14421007F9411 /* LCEApplyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1385,7 +1395,6 @@
 				C38505451F7A3A9C0009B64B /* LCEBaseViewController.m in Sources */,
 				C340EF781FE2137A007D6E75 /* NSString+HTML.m in Sources */,
 				C3E1EC391FA86AB8008E3E10 /* LCEMeSettingViewController.m in Sources */,
-				C38B1C771FAD8CD7004FE401 /* LCEBaseModel.m in Sources */,
 				C38B1C931FAD8DA6004FE401 /* TAAnimatedDotView.m in Sources */,
 				C3B6BC9E1FFF120300290744 /* LCEAddSecrecyAccountViewController.m in Sources */,
 				C385050E1F7A2EF40009B64B /* LCEiTimerDiary.xcdatamodeld in Sources */,
@@ -1400,6 +1409,8 @@
 				C38505161F7A2EF40009B64B /* main.m in Sources */,
 				C38B1CBD1FAD8DC2004FE401 /* FSCalendar+IBExtension.m in Sources */,
 				C38B1C921FAD8DA6004FE401 /* TAAbstractDotView.m in Sources */,
+				C3F1801C2004A78F003F85BF /* LCESecrecyTableViewCell.m in Sources */,
+				C3F180202004BF9C003F85BF /* LCEBaseModel.m in Sources */,
 				C38B1CBC1FAD8DC2004FE401 /* FSCalendar+Deprecated.m in Sources */,
 				C3E1EC411FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m in Sources */,
 				C3B6BC951FE9094900290744 /* SDPhotoBrowser.m in Sources */,

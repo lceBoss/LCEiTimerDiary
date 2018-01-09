@@ -30,6 +30,15 @@
 + (NSArray *)searchWithPredicate:(NSPredicate *)dicate
                  sortDescription:(NSSortDescriptor *)sortDes
                             page:(NSInteger)page;
+
+/**
+ * search后未进行转换
+ */
++ (NSArray *)search;
++ (NSArray *)searchKey:(id)key;
++ (NSArray *)searchKey:(id)key ascending:(BOOL)ascending;
++ (NSArray *)searchKey:(id)key value:(id)value;
+
 /**
  * 转换为model模型
  */

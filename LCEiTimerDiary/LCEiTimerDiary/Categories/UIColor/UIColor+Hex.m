@@ -29,4 +29,8 @@
     return [UIColor colorWithRed:242 / 255.0 green:242 / 255.0 blue:242 / 255.0 alpha:1.0];
 }
 
++ (UIColor *)lceLineColor {
+    return [UIColor colorWithRed:201 / 255.0 green:202 / 255.0 blue:207 / 255.0 alpha:1.0];
+}
+
 @end
