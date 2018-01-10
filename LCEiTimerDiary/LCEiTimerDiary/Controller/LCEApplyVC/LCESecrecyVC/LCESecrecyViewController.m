@@ -13,6 +13,7 @@
 #import "LCENavigationController.h"
 #import <LCProgressHUD.h>
 #import "LCESecrecyTableViewCell.h"
+#import "LCESecrecyDetailViewController.h"
 
 @interface LCESecrecyViewController ()
 
@@ -46,11 +47,10 @@
 
 - (void)deleteSelectAccountWithModels:(NSArray *)models {
     for (LCEPasswordModel *model in models) {
-//        [LCEPasswordModel deleteWithModel:model];
         NSArray *result = [LCEPasswordModel search];
         NSInteger index = [self.dataArray indexOfObject:model];
         [LCEPasswordModel deleteWithModel:result[index]];
-        [self.dataArray removeObject:model];
+        [self.dataArray removeObjectAtIndex:index];
     }
     [self showRefreshAnimation];
     [self.lceTableView reloadData];
@@ -58,7 +58,7 @@
 
 - (void)showRefreshAnimation {
     [LCProgressHUD showLoading:@""];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LCProgressHUD hide];
     });
 }
@@ -81,7 +81,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    LCEPasswordModel *model = self.dataArray[indexPath.row];
+    LCESecrecyDetailViewController *detailVC = [[LCESecrecyDetailViewController alloc] init];
+    detailVC.pwdModel = model;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {

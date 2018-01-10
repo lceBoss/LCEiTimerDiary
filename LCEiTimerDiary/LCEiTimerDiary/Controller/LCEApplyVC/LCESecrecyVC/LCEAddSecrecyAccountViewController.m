@@ -77,17 +77,22 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    if (textField.tag == 0) {
-        self.accountText = [NSString stringWithFormat:@"%@%@", textField.text, string];
-    }else {
-        self.passwordText = [NSString stringWithFormat:@"%@%@", textField.text, string];
-    }
     BOOL isDelToNull = range.location == 0 && [string isEqualToString:@""];
+    if (textField.tag == 0) {
+        self.accountText = isDelToNull ? @"" : [NSString stringWithFormat:@"%@%@", textField.text, string];
+    }else {
+        self.passwordText = isDelToNull ? @"" : [NSString stringWithFormat:@"%@%@", textField.text, string];
+    }
     if (isNullStr(self.accountText) || isNullStr(self.passwordText) || isDelToNull) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
     }else {
         self.navigationItem.rightBarButtonItem.enabled = YES;
     }
+    return YES;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
     return YES;
 }
 

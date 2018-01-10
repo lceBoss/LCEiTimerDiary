@@ -81,6 +81,7 @@
 		C3B6BC9E1FFF120300290744 /* LCEAddSecrecyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */; };
 		C3B6BCA21FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BCA01FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m */; };
 		C3B6BCA31FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */; };
+		C3D427B22005FB1F0041A997 /* LCESecrecyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D427B12005FB1F0041A997 /* LCESecrecyDetailViewController.m */; };
 		C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */; };
 		C3DA4FDF1FB060B9007F9411 /* LCESecrecyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */; };
 		C3DA4FE41FB14421007F9411 /* LCEApplyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */; };
@@ -307,6 +308,8 @@
 		C3B6BC9F1FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAddSecrecyAccountTableViewCell.h; sourceTree = "<group>"; };
 		C3B6BCA01FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAddSecrecyAccountTableViewCell.m; sourceTree = "<group>"; };
 		C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCEAddSecrecyAccountTableViewCell.xib; sourceTree = "<group>"; };
+		C3D427B02005FB1F0041A997 /* LCESecrecyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyDetailViewController.h; sourceTree = "<group>"; };
+		C3D427B12005FB1F0041A997 /* LCESecrecyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyDetailViewController.m; sourceTree = "<group>"; };
 		C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LCEApply.plist; sourceTree = "<group>"; };
 		C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyViewController.h; sourceTree = "<group>"; };
 		C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyViewController.m; sourceTree = "<group>"; };
@@ -982,6 +985,8 @@
 				C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */,
 				C3B6BC9C1FFF120300290744 /* LCEAddSecrecyAccountViewController.h */,
 				C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */,
+				C3D427B02005FB1F0041A997 /* LCESecrecyDetailViewController.h */,
+				C3D427B12005FB1F0041A997 /* LCESecrecyDetailViewController.m */,
 			);
 			path = LCESecrecyVC;
 			sourceTree = "<group>";
@@ -1362,6 +1367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3B6BC971FE9094900290744 /* SDBrowserImageView.m in Sources */,
+				C3D427B22005FB1F0041A997 /* LCESecrecyDetailViewController.m in Sources */,
 				C38B1C6D1FA9ED85004FE401 /* LCEApplyViewController.m in Sources */,
 				C340EF7D1FE2491E007D6E75 /* LCEUserInfoApi.m in Sources */,
 				C39889BD1FE3703700219E3B /* LCENewArticleListModel.m in Sources */,
