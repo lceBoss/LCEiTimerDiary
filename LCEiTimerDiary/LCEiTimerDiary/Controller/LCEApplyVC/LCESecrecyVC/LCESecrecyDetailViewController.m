@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"账号详情";
+    self.title = @"账户详情";
     [self.view addSubview:self.lceTableView];
 }
 

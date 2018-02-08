@@ -66,7 +66,7 @@ static CGFloat lceCollectionViewCellHeight = 85;
     NSDictionary *info = self.dataArray[indexPath.row];
     NSString *name = info[@"controller_name"];
     Class cls = NSClassFromString(name);
-    if ([name isEqualToString:@"LCESecrecyViewController"]) { //项目top10
+    if ([name isEqualToString:@"LCESecrecyViewController"]) {
         [[LCEAuthManage shareInstance] startAuthenticateWithDelegate:self];
         return;
     }

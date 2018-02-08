@@ -15,9 +15,11 @@
 #import "LCESecrecyTableViewCell.h"
 #import "LCESecrecyDetailViewController.h"
 
-@interface LCESecrecyViewController ()
+@interface LCESecrecyViewController () <LCESecrecyTableViewCellDelegate>
 
 @property (nonatomic, strong) LCESecrecyAddView *addView;
+//选中的models
+@property (nonatomic, strong) NSMutableArray *selectModels;
 
 @end
 
@@ -28,13 +30,46 @@
     self.title = @"账户与密码";
     [self.view addSubview:self.lceTableView];
     self.lceTableView.tableHeaderView = self.addView;
-    [self addRightBarItemTitle:@"编辑" sel:@selector(rightBarItemAddCipher)];
+    [self setupNavigationItemStatusWithEdit:NO];
     [self searchAllAccount];
 }
 
 #pragma mark - Action
-- (void)rightBarItemAddCipher {
-    
+- (void)rightBarItemAddCipher:(UIBarButtonItem *)barItem {
+    if ([barItem.title isEqualToString:@"编辑"]) {
+        [self setupNavigationItemStatusWithEdit:YES];
+        self.navigationItem.leftBarButtonItem.enabled = NO;
+        [self.lceTableView setEditing:YES animated:YES];
+        
+    }else {
+        [self setupNavigationItemStatusWithEdit:NO];
+        self.navigationItem.leftBarButtonItem.enabled = YES;
+        [self.lceTableView setEditing:NO animated:YES];
+        [self.selectModels removeAllObjects];
+    }
+    [self.lceTableView reloadData];
+}
+
+- (void)deleteAccountAndPassword:(UIBarButtonItem *)barItem {
+    if ([barItem.title isEqualToString:@"删除"]) {
+        [self.lceTableView setEditing:NO animated:YES];
+        // 按理来说弹出提示框，确认是否删除
+        [self deleteSelectAccountWithModels:self.selectModels];
+        [self.selectModels removeAllObjects];
+        [self setupNavigationItemStatusWithEdit:NO];
+    }else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+}
+
+- (void)setupNavigationItemStatusWithEdit:(BOOL)isEdit {
+    if (isEdit) {
+        [self addLeftBarItemTitle:@"删除" sel:@selector(deleteAccountAndPassword:)];
+        [self addRightBarItemTitle:@"取消" sel:@selector(rightBarItemAddCipher:)];
+    }else {
+        [self addleftBarItemImageName:@"icon_navi_return" sel:@selector(deleteAccountAndPassword:)];
+        [self addRightBarItemTitle:@"编辑" sel:@selector(rightBarItemAddCipher:)];
+    }
 }
 
 - (void)searchAllAccount {
@@ -74,8 +109,15 @@
     LCESecrecyTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCESecrecyTableViewCell"];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LCESecrecyTableViewCell" owner:self options:nil] firstObject];
+        cell.delegate = self;
     }
+    cell.isSelect = NO;
+    cell.edit = self.lceTableView.editing;
     LCEPasswordModel *pwdModel = self.dataArray[indexPath.row];
+    if ([self.selectModels containsObject:pwdModel]) {
+        cell.isSelect = YES;
+    }
+    cell.indexPathRow = indexPath.row;
     cell.accountLabel.text = pwdModel.account;
     return cell;
 }
@@ -87,6 +129,14 @@
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewCellEditingStyleInsert;
+}
+
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     //添加一个删除按钮
     LCEPasswordModel *model = self.dataArray[indexPath.row];
@@ -94,6 +144,19 @@
         [self deleteSelectAccountWithModels:@[model]];
     }];
     return @[deleteAction];
+}
+
+#pragma mark - LCESecrecyTableViewCellDelegate
+- (void)secrecyTableViewCell:(LCESecrecyTableViewCell *)cell selectIndex:(NSInteger)index selectStatus:(BOOL)isSelect {
+    LCEPasswordModel *pwdModel = self.dataArray[index];
+    if (isSelect) {
+        [self.selectModels addObject:pwdModel];
+    }else {
+        [self.selectModels removeObject:pwdModel];
+    }
+    if (self.selectModels.count != 0) {
+        self.navigationItem.leftBarButtonItem.enabled = YES;
+    }
 }
 
 #pragma mark - Setter
@@ -112,6 +175,13 @@
         };
     }
     return _addView;
+}
+
+- (NSMutableArray *)selectModels {
+    if (!_selectModels) {
+        _selectModels = [NSMutableArray array];
+    }
+    return _selectModels;
 }
 
 

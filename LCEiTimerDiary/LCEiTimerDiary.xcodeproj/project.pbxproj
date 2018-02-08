@@ -983,10 +983,10 @@
 			children = (
 				C3DA4FDD1FB060B9007F9411 /* LCESecrecyViewController.h */,
 				C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */,
-				C3B6BC9C1FFF120300290744 /* LCEAddSecrecyAccountViewController.h */,
-				C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */,
 				C3D427B02005FB1F0041A997 /* LCESecrecyDetailViewController.h */,
 				C3D427B12005FB1F0041A997 /* LCESecrecyDetailViewController.m */,
+				C3B6BC9C1FFF120300290744 /* LCEAddSecrecyAccountViewController.h */,
+				C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */,
 			);
 			path = LCESecrecyVC;
 			sourceTree = "<group>";

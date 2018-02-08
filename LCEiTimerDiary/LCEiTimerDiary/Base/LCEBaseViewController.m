@@ -60,7 +60,7 @@
 }
 
 - (void)addleftBarItemImageName:(NSString *)imgName sel:(SEL)sel {
-    NSArray *items = [self barButtonImageName:imgName sel:sel leftEdge:-10];
+    NSArray *items = [self barButtonImageName:imgName sel:sel leftEdge:-12];
     self.navigationItem.leftBarButtonItems = items;
 }
 
