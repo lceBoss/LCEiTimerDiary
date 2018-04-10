@@ -23,7 +23,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     if (self.navigationController.viewControllers.count > 1) {
         [self addleftBarItemImageName:@"icon_navi_return" sel:@selector(leftBarButtonItemAction:)];
-        CGRect newFrame = CGRectMake(0, 64, LCE_SCREEN_WIDTH, LCE_SCREEN_HEIGHT - 64);
+        CGRect newFrame = CGRectMake(0, LCE_NAV_HEIGHT, LCE_SCREEN_WIDTH, LCE_SCREEN_HEIGHT - LCE_NAV_HEIGHT);
         self.lceTableView.frame = newFrame;
         self.lceGroupTableView.frame = newFrame;
     }
@@ -94,10 +94,13 @@
 
 - (UITableView *)lceTableView {
     if (!_lceTableView) {
-        CGRect frame = CGRectMake(0, 64, LCE_SCREEN_WIDTH, LCE_SCREEN_HEIGHT - 64);
+        CGRect frame = CGRectMake(0, LCE_NAV_HEIGHT, LCE_SCREEN_WIDTH, LCE_SCREEN_HEIGHT - LCE_NAV_HEIGHT);
         _lceTableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
         _lceTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _lceTableView.backgroundColor = [UIColor lceBgColor];
+        _lceTableView.estimatedRowHeight = 0;
+        _lceTableView.estimatedSectionHeaderHeight = 0;
+        _lceTableView.estimatedSectionFooterHeight = 0;
         _lceTableView.delegate = self;
         _lceTableView.dataSource = self;
     }
@@ -106,10 +109,13 @@
 
 - (UITableView *)lceGroupTableView {
     if (!_lceGroupTableView) {
-        CGRect frame = CGRectMake(0, 64, LCE_SCREEN_WIDTH, LCE_SCREEN_HEIGHT - 64);
+        CGRect frame = CGRectMake(0, LCE_NAV_HEIGHT, LCE_SCREEN_WIDTH, LCE_SCREEN_HEIGHT - LCE_NAV_HEIGHT);
         _lceGroupTableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
         _lceGroupTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _lceGroupTableView.backgroundColor = [UIColor lceBgColor];
+        _lceGroupTableView.estimatedRowHeight = 0;
+        _lceGroupTableView.estimatedSectionHeaderHeight = 0;
+        _lceGroupTableView.estimatedSectionFooterHeight = 0;
         _lceGroupTableView.delegate = self;
         _lceGroupTableView.dataSource = self;
         _lceGroupTableView.sectionFooterHeight = 0.1;

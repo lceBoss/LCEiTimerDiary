@@ -64,7 +64,7 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"frame"]) {
-        self.customTabBar.frame = CGRectMake(0, self.view.frame.size.height - 49, LCE_SCREEN_WIDTH, 49);
+        self.customTabBar.frame = CGRectMake(0, self.view.frame.size.height - LCE_TAB_HEIGHT, LCE_SCREEN_WIDTH, LCE_TAB_HEIGHT);
     }
 }
 
@@ -85,10 +85,10 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
         [button setImage:[UIImage imageNamed:self.selectImgArray[i]] forState:UIControlStateSelected];
         button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 10, 0);
         CGFloat buttonWith = LCE_SCREEN_WIDTH / selectImgCount;
-        button.frame = CGRectMake(buttonWith * i, 0, buttonWith, 49);
+        button.frame = CGRectMake(buttonWith * i, 0, buttonWith, LCE_TAB_HEIGHT);
         button.adjustsImageWhenHighlighted = NO;
         
-        CGRect titleLabelFrame = CGRectMake(0, 29, buttonWith, 20);
+        CGRect titleLabelFrame = CGRectMake(0, LCE_TAB_HEIGHT * 29 / 49, buttonWith, 20);
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleLabelFrame];
         titleLabel.tag = LCETabBarButtonTitleLabelTag;
         titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -113,7 +113,7 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
 
 - (UIView *)customTabBar {
     if (!_customTabBar) {
-        _customTabBar = [[UIView alloc] initWithFrame:CGRectMake(0, LCE_SCREEN_HEIGHT - 49, LCE_SCREEN_WIDTH, 49)];
+        _customTabBar = [[UIView alloc] initWithFrame:CGRectMake(0, LCE_SCREEN_HEIGHT - LCE_TAB_HEIGHT, LCE_SCREEN_WIDTH, LCE_TAB_HEIGHT)];
         _customTabBar.backgroundColor = LCE_RGB(248, 248, 248);
         _customTabBar.layer.shadowColor = LCE_RGB(230, 230, 230).CGColor;
         _customTabBar.layer.shadowRadius = 0.5;

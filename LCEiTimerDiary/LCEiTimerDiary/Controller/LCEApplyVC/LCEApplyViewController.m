@@ -35,7 +35,7 @@ static CGFloat lceCollectionViewCellHeight = 85;
     [self.dataArray addObjectsFromArray:applyArray];
     
     NSInteger rowNums = ceilf(self.dataArray.count / 4.0); //向上取整
-    self.collectionView.frame = CGRectMake(0, 64, LCE_SCREEN_WIDTH, rowNums * lceCollectionViewCellHeight);
+    self.collectionView.frame = CGRectMake(0, LCE_NAV_HEIGHT, LCE_SCREEN_WIDTH, rowNums * lceCollectionViewCellHeight);
     [self.collectionView reloadData];
     
 }

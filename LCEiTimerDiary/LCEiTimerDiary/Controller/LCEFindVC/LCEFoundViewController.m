@@ -26,7 +26,9 @@
     self.edgesForExtendedLayout = UIRectEdgeAll;
     self.view.backgroundColor = [UIColor whiteColor];
     [self addChildViewController:self.magicController];
+    self.magicController.magicView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_magicController.view];
+    self.magicController.view.frame = CGRectMake(0, 0, LCE_SCREEN_WIDTH, LCE_SCREEN_HEIGHT - LCE_TAB_HEIGHT);
     [self.view setNeedsUpdateConstraints];
     [_magicController.magicView reloadData];
 }
@@ -83,8 +85,8 @@
         _magicController.magicView.sliderColor = [UIColor lceMainColor];
         _magicController.magicView.switchStyle = VTSwitchStyleDefault;
         _magicController.magicView.layoutStyle = VTLayoutStyleDefault;
-        _magicController.magicView.navigationHeight = 44.f;
-        _magicController.magicView.againstStatusBar = NO;
+        _magicController.magicView.navigationHeight = LCE_ISIPHONEX ? 46.f : 44.f;
+        _magicController.magicView.againstStatusBar = LCE_ISIPHONEX ? YES : NO;
         _magicController.magicView.sliderExtension = 8.0;
         _magicController.magicView.itemScale = 1.13;
         _magicController.magicView.sliderHeight = 2.f;

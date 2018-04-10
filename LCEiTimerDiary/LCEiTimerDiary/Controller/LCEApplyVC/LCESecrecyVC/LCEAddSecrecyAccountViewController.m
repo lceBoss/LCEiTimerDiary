@@ -60,17 +60,16 @@
     LCEAddSecrecyAccountTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCEAddSecrecyAccountTableViewCell"];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"LCEAddSecrecyAccountTableViewCell" owner:self options:nil] firstObject];
+        cell.contentTextField.delegate = self;
     }
-    cell.contentTextField.delegate = self;
     if (indexPath.row == 0) {
         cell.titleLabel.text = @"用户";
         cell.contentTextField.placeholder = @"账号";
-        cell.contentTextField.tag = indexPath.row;
     }else if (indexPath.row  == 1) {
         cell.titleLabel.text = @"密码";
         cell.contentTextField.placeholder = @"密码";
-        cell.contentTextField.tag = indexPath.row;
     }
+    cell.contentTextField.tag = indexPath.row;
     return cell;
 }
 

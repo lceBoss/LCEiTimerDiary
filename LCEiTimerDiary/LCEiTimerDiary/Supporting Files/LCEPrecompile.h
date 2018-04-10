@@ -52,6 +52,18 @@ return instance;                          \
 //设备屏幕宽度
 #define LCE_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 
+//状态栏高度
+#define LCE_STATUS_BAR_H [[UIApplication sharedApplication] statusBarFrame].size.height;
+
+// 导航栏高度
+#define LCE_NAV_HEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height + self.navigationController.navigationBar.frame.size.height)
+
+//tabar高度
+#define LCE_TAB_HEIGHT (LCE_ISIPHONEX ? (49.f+34.f) : 49.f)
+
+//判断是否是iphoneX
+#define LCE_ISIPHONEX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size)) : NO)
+
 //沙盒路径
 #define LCE_PATH_SANDBOX (NSHomeDirectory())
 #define LCE_PATH_DOCUMENTS (NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0])
