@@ -78,8 +78,13 @@
 //    if ([self highQualityImageURLForIndex:index]) {
 //        [imageView setImageWithURL:[self highQualityImageURLForIndex:index] placeholderImage:[self placeholderImageForIndex:index]];
 //    } else {
-    imageView.image = [self placeholderImageForIndex:index];
-//    }
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_async(queue, ^{
+            UIImage *image = [self placeholderImageForIndex:index];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                imageView.image = image;
+            });
+    });
     imageView.hasLoadedImage = YES;
 }
 
