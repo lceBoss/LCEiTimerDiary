@@ -7,6 +7,7 @@
 //
 
 #import "LCENavigationController.h"
+#import "LCEBaseViewController.h"
 
 @interface LCENavigationController ()<UIGestureRecognizerDelegate>
 
@@ -26,6 +27,15 @@
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
+
+//#pragma mark - UINavigationControllerDelegate
+//- (void)pushViewController:(UIViewController *)viewController
+//                  animated:(BOOL)animated {
+//    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
+//        self.interactivePopGestureRecognizer.enabled = NO;
+//    
+//    [super pushViewController:viewController animated:animated];
+//}
 
 
 @end

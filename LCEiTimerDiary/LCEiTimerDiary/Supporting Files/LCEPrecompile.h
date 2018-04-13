@@ -53,10 +53,10 @@ return instance;                          \
 #define LCE_SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 
 //状态栏高度
-#define LCE_STATUS_BAR_H [[UIApplication sharedApplication] statusBarFrame].size.height;
+#define LCE_STATUS_BAR_H [[UIApplication sharedApplication] statusBarFrame].size.height
 
 // 导航栏高度
-#define LCE_NAV_HEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height + self.navigationController.navigationBar.frame.size.height)
+#define LCE_NAV_HEIGHT (LCE_STATUS_BAR_H + 44.f)
 
 //tabar高度
 #define LCE_TAB_HEIGHT (LCE_ISIPHONEX ? (49.f+34.f) : 49.f)

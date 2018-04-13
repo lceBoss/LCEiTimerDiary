@@ -81,6 +81,9 @@
 		C3B6BC9E1FFF120300290744 /* LCEAddSecrecyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BC9D1FFF120300290744 /* LCEAddSecrecyAccountViewController.m */; };
 		C3B6BCA21FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6BCA01FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m */; };
 		C3B6BCA31FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */; };
+		C3C9B8BB20808D4C0052A9FA /* UIBarButtonItem+SXCreate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C9B8B320808D4B0052A9FA /* UIBarButtonItem+SXCreate.m */; };
+		C3C9B8BC20808D4C0052A9FA /* NSObject+SXRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C9B8B820808D4B0052A9FA /* NSObject+SXRuntime.m */; };
+		C3C9B8BD20808D4C0052A9FA /* UINavigation+SXFixSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C9B8B920808D4C0052A9FA /* UINavigation+SXFixSpace.m */; };
 		C3D427B22005FB1F0041A997 /* LCESecrecyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D427B12005FB1F0041A997 /* LCESecrecyDetailViewController.m */; };
 		C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */; };
 		C3DA4FDF1FB060B9007F9411 /* LCESecrecyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DA4FDE1FB060B9007F9411 /* LCESecrecyViewController.m */; };
@@ -308,6 +311,12 @@
 		C3B6BC9F1FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEAddSecrecyAccountTableViewCell.h; sourceTree = "<group>"; };
 		C3B6BCA01FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEAddSecrecyAccountTableViewCell.m; sourceTree = "<group>"; };
 		C3B6BCA11FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCEAddSecrecyAccountTableViewCell.xib; sourceTree = "<group>"; };
+		C3C9B8B320808D4B0052A9FA /* UIBarButtonItem+SXCreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+SXCreate.m"; sourceTree = "<group>"; };
+		C3C9B8B520808D4B0052A9FA /* UINavigation+SXFixSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigation+SXFixSpace.h"; sourceTree = "<group>"; };
+		C3C9B8B620808D4B0052A9FA /* NSObject+SXRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SXRuntime.h"; sourceTree = "<group>"; };
+		C3C9B8B720808D4B0052A9FA /* UIBarButtonItem+SXCreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+SXCreate.h"; sourceTree = "<group>"; };
+		C3C9B8B820808D4B0052A9FA /* NSObject+SXRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SXRuntime.m"; sourceTree = "<group>"; };
+		C3C9B8B920808D4C0052A9FA /* UINavigation+SXFixSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigation+SXFixSpace.m"; sourceTree = "<group>"; };
 		C3D427B02005FB1F0041A997 /* LCESecrecyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESecrecyDetailViewController.h; sourceTree = "<group>"; };
 		C3D427B12005FB1F0041A997 /* LCESecrecyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESecrecyDetailViewController.m; sourceTree = "<group>"; };
 		C3DA4FDB1FB05DB1007F9411 /* LCEApply.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LCEApply.plist; sourceTree = "<group>"; };
@@ -606,6 +615,7 @@
 		C385053E1F7A39FF0009B64B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C3C9B8B220808CB80052A9FA /* UINavigationSXFixSpace */,
 				C39889AC1FE36C0900219E3B /* LCEFoundDataManger */,
 				C3598B391FC69AB500B0E524 /* LCEAuthentication */,
 				C38B1CD51FAD9427004FE401 /* LCEUserInfo */,
@@ -991,6 +1001,19 @@
 			path = LCESecrecyVC;
 			sourceTree = "<group>";
 		};
+		C3C9B8B220808CB80052A9FA /* UINavigationSXFixSpace */ = {
+			isa = PBXGroup;
+			children = (
+				C3C9B8B620808D4B0052A9FA /* NSObject+SXRuntime.h */,
+				C3C9B8B820808D4B0052A9FA /* NSObject+SXRuntime.m */,
+				C3C9B8B720808D4B0052A9FA /* UIBarButtonItem+SXCreate.h */,
+				C3C9B8B320808D4B0052A9FA /* UIBarButtonItem+SXCreate.m */,
+				C3C9B8B520808D4B0052A9FA /* UINavigation+SXFixSpace.h */,
+				C3C9B8B920808D4C0052A9FA /* UINavigation+SXFixSpace.m */,
+			);
+			path = UINavigationSXFixSpace;
+			sourceTree = "<group>";
+		};
 		C3DA4FE01FB143BB007F9411 /* LCEApplyView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1367,6 +1390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3B6BC971FE9094900290744 /* SDBrowserImageView.m in Sources */,
+				C3C9B8BD20808D4C0052A9FA /* UINavigation+SXFixSpace.m in Sources */,
 				C3D427B22005FB1F0041A997 /* LCESecrecyDetailViewController.m in Sources */,
 				C38B1C6D1FA9ED85004FE401 /* LCEApplyViewController.m in Sources */,
 				C340EF7D1FE2491E007D6E75 /* LCEUserInfoApi.m in Sources */,
@@ -1427,6 +1451,7 @@
 				C340EF761FE2137A007D6E75 /* NSString+Size.m in Sources */,
 				C38B1C951FAD8DA6004FE401 /* TAPageControl.m in Sources */,
 				C3B6BC9A1FFE2D1500290744 /* LCESecrecyAddView.m in Sources */,
+				C3C9B8BC20808D4C0052A9FA /* NSObject+SXRuntime.m in Sources */,
 				C3B6BCA21FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.m in Sources */,
 				C340EF831FE24DE6007D6E75 /* LCEUserInfoModel.m in Sources */,
 				C38B1CC11FAD8DC2004FE401 /* FSCalendarCell.m in Sources */,
@@ -1439,6 +1464,7 @@
 				C3E1EC2F1FA80F69008E3E10 /* LCEMeViewController.m in Sources */,
 				C385058A1F7A3C1E0009B64B /* LCETabBarViewController.m in Sources */,
 				C38505051F7A2EF30009B64B /* AppDelegate.m in Sources */,
+				C3C9B8BB20808D4C0052A9FA /* UIBarButtonItem+SXCreate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

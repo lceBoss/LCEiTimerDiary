@@ -7,6 +7,7 @@
 //
 
 #import "LCEBaseViewController.h"
+#import "UIBarButtonItem+SXCreate.h"
 
 @interface LCEBaseViewController ()
 
@@ -55,13 +56,17 @@
 }
 
 - (void)addRightBarItemImageName:(NSString *)imgName sel:(SEL)sel {
-    NSArray *items = [self barButtonImageName:imgName sel:sel leftEdge:8];
-    self.navigationItem.rightBarButtonItems = items;
+//    NSArray *items = [self barButtonImageName:imgName sel:sel leftEdge:8];
+//    self.navigationItem.rightBarButtonItems = items;
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:sel image:[UIImage imageNamed:imgName] imageEdgeInsets:UIEdgeInsetsMake(0, 10, 0, 0)];
 }
 
 - (void)addleftBarItemImageName:(NSString *)imgName sel:(SEL)sel {
-    NSArray *items = [self barButtonImageName:imgName sel:sel leftEdge:-12];
-    self.navigationItem.leftBarButtonItems = items;
+//    NSArray *items = [self barButtonImageName:imgName sel:sel leftEdge:-12];
+//    self.navigationItem.leftBarButtonItems = items;
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:sel image:[UIImage imageNamed:imgName] imageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 12)];
 }
 
 - (NSArray *)barButtonImageName:(NSString *)imgName sel:(SEL)sel leftEdge:(CGFloat)edge {
@@ -70,6 +75,7 @@
     [backBtn setImageEdgeInsets:UIEdgeInsetsMake(0, edge, 0, 0)];
     [backBtn setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
     [backBtn addTarget:self action:sel forControlEvents:UIControlEventTouchUpInside];
+    backBtn.backgroundColor = [UIColor redColor];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     UIBarButtonItem *placeHolditem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
     return @[ item, placeHolditem ];
@@ -82,7 +88,8 @@
 
 - (void)addRightBarItemTitle:(NSString *)title sel:(SEL)sel {
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:sel];
-    self.navigationItem.rightBarButtonItem = rightItem;
+    UIBarButtonItem *placeHolditem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.rightBarButtonItems = @[rightItem, placeHolditem];
 }
 
 #pragma mark - UIBarButtonItemAction
