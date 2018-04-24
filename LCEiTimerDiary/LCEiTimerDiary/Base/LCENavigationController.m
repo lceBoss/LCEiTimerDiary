@@ -9,7 +9,7 @@
 #import "LCENavigationController.h"
 #import "LCEBaseViewController.h"
 
-@interface LCENavigationController ()<UIGestureRecognizerDelegate>
+@interface LCENavigationController ()<UIGestureRecognizerDelegate, UINavigationControllerDelegate>
 
 @end
 
@@ -20,6 +20,7 @@
     LCE_WS(weakSelf);
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.interactivePopGestureRecognizer.delegate = weakSelf;
+        self.delegate = weakSelf;
     }
 }
 
@@ -28,14 +29,19 @@
     return UIStatusBarStyleLightContent;
 }
 
-//#pragma mark - UINavigationControllerDelegate
-//- (void)pushViewController:(UIViewController *)viewController
-//                  animated:(BOOL)animated {
-//    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)])
-//        self.interactivePopGestureRecognizer.enabled = NO;
-//    
-//    [super pushViewController:viewController animated:animated];
-//}
+#pragma mark - UINavigationControllerDelegate
+
+- (void)navigationController:(UINavigationController *)navigationController
+       didShowViewController:(UIViewController *)viewController
+                    animated:(BOOL)animate {
+    // Enable the gesture again once the new controller is shown
+    if (navigationController.childViewControllers.count < 2) {
+        // tabBarViewController 根视图 关闭左滑手势
+        self.interactivePopGestureRecognizer.enabled = NO;
+    }else {
+        self.interactivePopGestureRecognizer.enabled = YES;
+    }
+}
 
 
 @end

@@ -15,6 +15,7 @@
 #import "SDCycleScrollView.h"
 #import "VTMagic.h"
 #import <SDWebImage/SDImageCache.h>
+#import "LCEWebViewController.h"
 
 
 @interface LCEArticleListViewController () <SDCycleScrollViewDelegate, LCEFoundTableViewCellDelegate>
@@ -39,7 +40,7 @@
     [self.advertImageArray removeAllObjects];
     [self.advertUrlArray removeAllObjects];
     [self.advertImageArray addObjectsFromArray:@[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333172339&di=82765ca8d13400de64983e98f8bd6c5e&imgtype=0&src=http%3A%2F%2Fimage.cnwest.com%2Fattachement%2Fjpg%2Fsite1%2F20151107%2F001372d89ff017a7c0752f.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333316917&di=51bc8be08b3dc6c0772684f6521de61d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F48540923dd54564eb2c1a903b8de9c82d1584f67.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513334071292&di=8ff43ed352bc47b8f5ecc7464d9e9a96&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D890c50c9db00baa1ae214ff82f79d367%2Fcc11728b4710b912decd6bdbc9fdfc0392452282.jpg"]];
-    [self.advertUrlArray addObjectsFromArray:@[@"", @"", @""]];
+    [self.advertUrlArray addObjectsFromArray:@[@"https://www.baidu.com", @"https://www.baidu.com", @"https://www.baidu.com"]];
     self.lceTableView.tableHeaderView = self.cycleScrollView;
 //    LCE_WS(weakSelf);
 //    [self addMJRefreshFootView:^(NSInteger page) {
@@ -113,8 +114,12 @@
 #pragma mark---- SDCycleScrollViewDelegate
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
-    
-
+    NSString *url = self.advertUrlArray[index];
+    if (!isNullStr(url)) {
+        LCEWebViewController *webVC = [[LCEWebViewController alloc] init];
+        webVC.urlString = url;
+        [self.navigationController pushViewController:webVC animated:YES];
+    }
 }
 
 

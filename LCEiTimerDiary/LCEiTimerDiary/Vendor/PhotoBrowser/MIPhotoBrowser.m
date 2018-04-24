@@ -8,6 +8,7 @@
 
 #import "MIPhotoBrowser.h"
 #import "MIBrowserImageView.h"
+#import <LCProgressHUD.h>
 
 #define kPhotoBrowserImageViewMargin 10
 @interface MIPhotoBrowser ()
@@ -80,10 +81,10 @@
 //    } else {
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     dispatch_async(queue, ^{
-            UIImage *image = [self placeholderImageForIndex:index];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                imageView.image = image;
-            });
+        UIImage *image = [self placeholderImageForIndex:index];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            imageView.image = image;
+        });
     });
     imageView.hasLoadedImage = YES;
 }

@@ -62,6 +62,10 @@ const NSInteger LCETabBarButtonTitleLabelTag = 666;
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"frame"]) {
         self.customTabBar.frame = CGRectMake(0, self.view.frame.size.height - LCE_TAB_HEIGHT, LCE_SCREEN_WIDTH, LCE_TAB_HEIGHT);
