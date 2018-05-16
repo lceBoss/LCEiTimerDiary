@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 #import "LCEUserInfoApi.h"
 #import "LCEUserInfoModel.h"
+#import "LCEStreetSnapImageApi.h"
+#import "LCESearchImageModel.h"
 
 @interface LCEUserInfoTests : XCTestCase
 
@@ -39,6 +41,34 @@
         
         LCEUserInfoModel *model = [LCEUserInfoModel changeResponseJSONObject:request.responseJSONObject[@"data"]];
         NSLog(@"%@", model);
+        [expectation fulfill];
+        
+    } failure:^(__kindof YTKBaseRequest *request) {
+        XCTAssertNotNil(request, @"request nil");
+    }];
+    
+    [self waitForExpectationsWithTimeout:15 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
+- (void)testImageApi {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"UserInfo request"];
+    LCEStreetSnapImageApi *api = [[LCEStreetSnapImageApi alloc] initWithKeyword:@"街拍" page:1];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
+        
+        NSLog(@"====%@", request.responseJSONObject);
+        XCTAssertNotNil(request.responseJSONObject, @"request.responseJSONObject nil");
+        XCTAssertNotNil(request, @"request nil");
+        XCTAssertEqual(request.responseStatusCode, 200, @"status != 200");
+        
+        NSArray *dataArray = [LCESearchImageModel changeResponseJSONObject:request.responseJSONObject[@"data"]];
+        
+        LCESearchImageModel *imageModel = dataArray[0];
+        NSLog(@"%@", imageModel.title);
+        
         [expectation fulfill];
         
     } failure:^(__kindof YTKBaseRequest *request) {

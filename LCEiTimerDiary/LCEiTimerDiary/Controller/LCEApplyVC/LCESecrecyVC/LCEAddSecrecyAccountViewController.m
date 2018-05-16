@@ -77,11 +77,13 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     BOOL isDelToNull = range.location == 0 && [string isEqualToString:@""];
+    NSString *textStr = [NSString stringWithFormat:@"%@", [textField.text stringByReplacingCharactersInRange:range withString:string]];
     if (textField.tag == 0) {
-        self.accountText = isDelToNull ? @"" : [NSString stringWithFormat:@"%@%@", textField.text, string];
+        self.accountText = isDelToNull ? @"" : textStr;
     }else {
-        self.passwordText = isDelToNull ? @"" : [NSString stringWithFormat:@"%@%@", textField.text, string];
+        self.passwordText = isDelToNull ? @"" : textStr;
     }
+    
     if (isNullStr(self.accountText) || isNullStr(self.passwordText) || isDelToNull) {
         self.navigationItem.rightBarButtonItem.enabled = NO;
     }else {

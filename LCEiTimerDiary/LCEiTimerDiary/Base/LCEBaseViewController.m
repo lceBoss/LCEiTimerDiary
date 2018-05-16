@@ -87,9 +87,12 @@
 }
 
 - (void)addRightBarItemTitle:(NSString *)title sel:(SEL)sel {
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:sel];
-    UIBarButtonItem *placeHolditem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
-    self.navigationItem.rightBarButtonItems = @[rightItem, placeHolditem];
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStylePlain target:self action:sel];
+//    UIBarButtonItem *placeHolditem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil];
+//    self.navigationItem.rightBarButtonItems = @[rightItem, placeHolditem];
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithTarget:self action:sel title:title font:[UIFont systemFontOfSize:17] titleColor:[UIColor whiteColor] highlightedColor:[UIColor whiteColor] titleEdgeInsets:UIEdgeInsetsZero];
+
 }
 
 #pragma mark - UIBarButtonItemAction

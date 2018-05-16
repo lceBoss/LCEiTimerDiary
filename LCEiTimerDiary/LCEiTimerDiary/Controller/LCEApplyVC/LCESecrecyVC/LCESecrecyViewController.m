@@ -14,12 +14,15 @@
 #import <LCProgressHUD.h>
 #import "LCESecrecyTableViewCell.h"
 #import "LCESecrecyDetailViewController.h"
+#import "LCEAlertRemind.h"
 
 @interface LCESecrecyViewController () <LCESecrecyTableViewCellDelegate>
 
 @property (nonatomic, strong) LCESecrecyAddView *addView;
-//选中的models
+// 选中的models
 @property (nonatomic, strong) NSMutableArray *selectModels;
+// 是否编辑
+@property (nonatomic, assign) BOOL isEdit;
 
 @end
 
@@ -30,19 +33,22 @@
     self.title = @"账户与密码";
     [self.view addSubview:self.lceTableView];
     self.lceTableView.tableHeaderView = self.addView;
-    [self setupNavigationItemStatusWithEdit:NO];
+    self.isEdit = NO;
+    [self setupNavigationItemStatus];
     [self searchAllAccount];
 }
 
 #pragma mark - Action
 - (void)rightBarItemAddCipher:(UIBarButtonItem *)barItem {
-    if ([barItem.title isEqualToString:@"编辑"]) {
-        [self setupNavigationItemStatusWithEdit:YES];
+    if (!self.isEdit) {
+        self.isEdit = YES;
+        [self setupNavigationItemStatus];
         self.navigationItem.leftBarButtonItem.enabled = NO;
         [self.lceTableView setEditing:YES animated:YES];
         
     }else {
-        [self setupNavigationItemStatusWithEdit:NO];
+        self.isEdit = NO;
+        [self setupNavigationItemStatus];
         self.navigationItem.leftBarButtonItem.enabled = YES;
         [self.lceTableView setEditing:NO animated:YES];
         [self.selectModels removeAllObjects];
@@ -51,19 +57,36 @@
 }
 
 - (void)deleteAccountAndPassword:(UIBarButtonItem *)barItem {
-    if ([barItem.title isEqualToString:@"删除"]) {
+    if (self.isEdit) {
+        self.isEdit = NO;
         [self.lceTableView setEditing:NO animated:YES];
         // 按理来说弹出提示框，确认是否删除
-        [self deleteSelectAccountWithModels:self.selectModels];
-        [self.selectModels removeAllObjects];
-        [self setupNavigationItemStatusWithEdit:NO];
+        [self showAlertRemind];
     }else {
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
+- (void)showAlertRemind {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"您确定要删除所选密码吗？" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"删除"
+                                                              style:UIAlertActionStyleDestructive
+                                                            handler:^(UIAlertAction *_Nonnull action) {
+                                                                [self deleteSelectAccountWithModels:self.selectModels];
+                                                            }];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消"
+                                                       style:UIAlertActionStyleCancel
+                                                     handler:^(UIAlertAction *action) {
+//                                                         NSLog(@"点击了取消按钮");
+                                                         self.isEdit = YES;
+                                                     }];
+    [alertController addAction:deleteAction];
+    [alertController addAction:cancelAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
 
-- (void)setupNavigationItemStatusWithEdit:(BOOL)isEdit {
-    if (isEdit) {
+- (void)setupNavigationItemStatus {
+    if (self.isEdit) {
+        [self.lceTableView reloadData];
         [self addLeftBarItemTitle:@"删除" sel:@selector(deleteAccountAndPassword:)];
         [self addRightBarItemTitle:@"取消" sel:@selector(rightBarItemAddCipher:)];
     }else {
@@ -88,6 +111,8 @@
         [self.dataArray removeObjectAtIndex:index];
     }
     [self showRefreshAnimation];
+    [self.selectModels removeAllObjects];
+    [self setupNavigationItemStatus];
     [self.lceTableView reloadData];
 }
 
@@ -139,9 +164,14 @@
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
     //添加一个删除按钮
+    LCE_WS(weakSelf);
     LCEPasswordModel *model = self.dataArray[indexPath.row];
     UITableViewRowAction *deleteAction = [UITableViewRowAction rowActionWithStyle:(UITableViewRowActionStyleDestructive) title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        [self deleteSelectAccountWithModels:@[model]];
+        [LCEAlertRemind alterWithTitle:@"" message:@"您确定要删除此密码吗？" buttonTitles:@[@"确定", @"取消"] handler:^(NSInteger index, NSString *title) {
+            if (index == 0) {
+                [weakSelf deleteSelectAccountWithModels:@[model]];
+            }
+        }];
     }];
     return @[deleteAction];
 }
@@ -153,6 +183,9 @@
         [self.selectModels addObject:pwdModel];
     }else {
         [self.selectModels removeObject:pwdModel];
+        if (self.selectModels.count <= 0) {
+            self.navigationItem.leftBarButtonItem.enabled = NO;
+        }
     }
     if (self.selectModels.count != 0) {
         self.navigationItem.leftBarButtonItem.enabled = YES;

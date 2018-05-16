@@ -33,6 +33,7 @@
         [button setImage:higeLightedImage forState:UIControlStateHighlighted];
     }
     [button sizeToFit];
+    /*############################* 按钮的宽固定 ############################*/
 //    if (button.bounds.size.width < 40) {
 //        CGFloat width = 40 / button.bounds.size.height * button.bounds.size.width;
 //        button.bounds = CGRectMake(0, 0, width, 40);
@@ -43,6 +44,7 @@
 //    }
 //
     button.bounds = CGRectMake(0, 0, 40, 44);
+    /*#####################################################################*/
     button.imageEdgeInsets = imageEdgeInsets;
     return [[UIBarButtonItem alloc] initWithCustomView:button];
     
@@ -71,7 +73,9 @@
     button.titleLabel.font = font?font:nil;
     [button setTitleColor:titleColor?titleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [button setTitleColor:highlightedColor?highlightedColor:nil forState:UIControlStateHighlighted];
-    
+    /*####################  添加UIBarButtonItem禁用状态的字体颜色  ####################*/
+    [button setTitleColor:LCE_RGBA(255, 255, 255, 0.6) forState:UIControlStateDisabled];
+    /*#############################################################################*/
     [button sizeToFit];
     if (button.bounds.size.width < 40) {
         CGFloat width = 40 / button.bounds.size.height * button.bounds.size.width;
