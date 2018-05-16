@@ -102,6 +102,9 @@
 		C3F1801D2004A78F003F85BF /* LCESecrecyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F1801B2004A78F003F85BF /* LCESecrecyTableViewCell.xib */; };
 		C3F180202004BF9C003F85BF /* LCEBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F1801E2004BF9C003F85BF /* LCEBaseModel.m */; };
 		C3F5137320ABFC33002F4940 /* LCESearchImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F5137220ABFC33002F4940 /* LCESearchImageModel.m */; };
+		C3F5137720AC0787002F4940 /* LCEImageSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F5137620AC0787002F4940 /* LCEImageSearchViewController.m */; };
+		C3F5137C20AC1013002F4940 /* LCEImageSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F5137A20AC1013002F4940 /* LCEImageSearchTableViewCell.m */; };
+		C3F5137D20AC1013002F4940 /* LCEImageSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3F5137B20AC1013002F4940 /* LCEImageSearchTableViewCell.xib */; };
 		D026B2FC07BE8560DFA846DD /* libPods-LCEiTimerDiaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */; };
 		EC5DBABECEE6870FAE98B44B /* libPods-LCEiTimerDiary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */; };
 /* End PBXBuildFile section */
@@ -352,6 +355,11 @@
 		C3F1801F2004BF9C003F85BF /* LCEBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCEBaseModel.h; sourceTree = "<group>"; };
 		C3F5137120ABFC33002F4940 /* LCESearchImageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESearchImageModel.h; sourceTree = "<group>"; };
 		C3F5137220ABFC33002F4940 /* LCESearchImageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESearchImageModel.m; sourceTree = "<group>"; };
+		C3F5137520AC0787002F4940 /* LCEImageSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEImageSearchViewController.h; sourceTree = "<group>"; };
+		C3F5137620AC0787002F4940 /* LCEImageSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEImageSearchViewController.m; sourceTree = "<group>"; };
+		C3F5137920AC1013002F4940 /* LCEImageSearchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEImageSearchTableViewCell.h; sourceTree = "<group>"; };
+		C3F5137A20AC1013002F4940 /* LCEImageSearchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEImageSearchTableViewCell.m; sourceTree = "<group>"; };
+		C3F5137B20AC1013002F4940 /* LCEImageSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCEImageSearchTableViewCell.xib; sourceTree = "<group>"; };
 		D1B13E293AA71984EF9A2723 /* libPods-LCEiTimerDiaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D630C70F8B47E6B3E19F9854 /* libPods-LCEiTimerDiary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LCEiTimerDiary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -827,6 +835,7 @@
 				C38B1C6B1FA9ED85004FE401 /* LCEApplyViewController.h */,
 				C38B1C6C1FA9ED85004FE401 /* LCEApplyViewController.m */,
 				C3B6BCA420030D5400290744 /* LCESecrecyVC */,
+				C3F5137420AC0741002F4940 /* LCEImageSearchVC */,
 			);
 			path = LCEApplyVC;
 			sourceTree = "<group>";
@@ -1041,6 +1050,7 @@
 				C3DA4FE21FB14421007F9411 /* LCEApplyCollectionViewCell.m */,
 				C3DA4FE31FB14421007F9411 /* LCEApplyCollectionViewCell.xib */,
 				C3B6BC9B1FFF115600290744 /* LCESecrecyView */,
+				C3F5137820AC0FE6002F4940 /* LCEImageSearchView */,
 			);
 			path = LCEApplyView;
 			sourceTree = "<group>";
@@ -1089,6 +1099,25 @@
 				C3F5137220ABFC33002F4940 /* LCESearchImageModel.m */,
 			);
 			path = LCESearchImageModel;
+			sourceTree = "<group>";
+		};
+		C3F5137420AC0741002F4940 /* LCEImageSearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				C3F5137520AC0787002F4940 /* LCEImageSearchViewController.h */,
+				C3F5137620AC0787002F4940 /* LCEImageSearchViewController.m */,
+			);
+			path = LCEImageSearchVC;
+			sourceTree = "<group>";
+		};
+		C3F5137820AC0FE6002F4940 /* LCEImageSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				C3F5137920AC1013002F4940 /* LCEImageSearchTableViewCell.h */,
+				C3F5137A20AC1013002F4940 /* LCEImageSearchTableViewCell.m */,
+				C3F5137B20AC1013002F4940 /* LCEImageSearchTableViewCell.xib */,
+			);
+			path = LCEImageSearchView;
 			sourceTree = "<group>";
 		};
 		FD5B7AA9E607AD216431A9A1 /* Frameworks */ = {
@@ -1229,6 +1258,7 @@
 				C39889D11FE3A1BA00219E3B /* LCEFoundTableViewCell.xib in Resources */,
 				C38B1CC91FAD8DC2004FE401 /* Info.plist in Resources */,
 				C3F1801D2004A78F003F85BF /* LCESecrecyTableViewCell.xib in Resources */,
+				C3F5137D20AC1013002F4940 /* LCEImageSearchTableViewCell.xib in Resources */,
 				C3DA4FE51FB14421007F9411 /* LCEApplyCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1441,6 +1471,7 @@
 				C359C7681F7A43AF00D9D8BA /* LCEHomeViewController.m in Sources */,
 				C38B1CC51FAD8DC2004FE401 /* FSCalendarFlowLayout.m in Sources */,
 				C3711483208ECB6B00DCE6B4 /* LCEWebViewController.m in Sources */,
+				C3F5137C20AC1013002F4940 /* LCEImageSearchTableViewCell.m in Sources */,
 				C39889CC1FE3737500219E3B /* LCEArticleCategoryModel.m in Sources */,
 				C38B1C961FAD8DA6004FE401 /* SDCollectionViewCell.m in Sources */,
 				C38B1CD81FAD9427004FE401 /* LCEUserInfo.m in Sources */,
@@ -1455,6 +1486,7 @@
 				C38505451F7A3A9C0009B64B /* LCEBaseViewController.m in Sources */,
 				C340EF781FE2137A007D6E75 /* NSString+HTML.m in Sources */,
 				C3E1EC391FA86AB8008E3E10 /* LCEMeSettingViewController.m in Sources */,
+				C3F5137720AC0787002F4940 /* LCEImageSearchViewController.m in Sources */,
 				C38B1C931FAD8DA6004FE401 /* TAAnimatedDotView.m in Sources */,
 				C3B6BC9E1FFF120300290744 /* LCEAddSecrecyAccountViewController.m in Sources */,
 				C385050E1F7A2EF40009B64B /* LCEiTimerDiary.xcdatamodeld in Sources */,

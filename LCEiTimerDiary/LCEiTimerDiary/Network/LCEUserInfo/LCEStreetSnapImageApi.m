@@ -33,7 +33,7 @@
 
 - (id)requestArgument {
     NSDictionary *dic = @{ @"keyword" : _keyword,
-                           @"page" : @(_page)
+                           @"page" : @(_page),
                            };
     return dic;
 }

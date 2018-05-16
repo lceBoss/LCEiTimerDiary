@@ -10,5 +10,13 @@
 		<key>controller_name</key>
 		<string>LCESecrecyViewController</string>
 	</dict>
+	<dict>
+		<key>icon</key>
+		<string>icon_apply_college</string>
+		<key>type_title</key>
+		<string>头条搜图</string>
+		<key>controller_name</key>
+		<string>LCEImageSearchViewController</string>
+	</dict>
 </array>
 </plist>

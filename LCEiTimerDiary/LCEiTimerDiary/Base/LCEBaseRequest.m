@@ -50,6 +50,12 @@
     return YTKRequestMethodPOST;
 }
 
+// 请求头验证  相当于（curl -u xiaobei:python -i <url>）
+- (NSArray<NSString *> *)requestAuthorizationHeaderFieldArray {
+    // 此处返回的是用户名和密码
+    return @[ @"xiaobei", @"python"];
+}
+
 - (YTKRequestSerializerType)requestSerializerType {
     return YTKRequestSerializerTypeJSON;
 }
