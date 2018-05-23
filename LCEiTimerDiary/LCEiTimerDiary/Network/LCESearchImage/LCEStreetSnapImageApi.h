@@ -15,7 +15,7 @@
 
  @param keyword 搜索关键词
  @param page 分页
- @return 
+ @return self
  */
 - (instancetype)initWithKeyword:(NSString *)keyword page:(NSInteger)page;
 

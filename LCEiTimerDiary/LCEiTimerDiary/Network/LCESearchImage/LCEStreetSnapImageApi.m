@@ -14,7 +14,7 @@
 }
 
 - (instancetype)initWithKeyword:(NSString *)keyword page:(NSInteger)page {
-    if ([super init]) {
+    if (self = [super init]) {
         _keyword = keyword;
         _page = page;
     }
