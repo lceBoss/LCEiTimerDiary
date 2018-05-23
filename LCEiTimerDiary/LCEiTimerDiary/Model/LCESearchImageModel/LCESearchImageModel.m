@@ -10,4 +10,9 @@
 
 @implementation LCESearchImageModel
 
+- (nullable NSArray *)searchImages {
+    NSArray *imgList = [self.image_urls componentsSeparatedByString:@","];
+    return imgList;
+}
+
 @end

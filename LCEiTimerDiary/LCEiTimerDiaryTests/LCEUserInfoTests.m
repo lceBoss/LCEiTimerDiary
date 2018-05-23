@@ -56,7 +56,7 @@
 
 - (void)testImageApi {
     XCTestExpectation *expectation = [self expectationWithDescription:@"UserInfo request"];
-    LCEStreetSnapImageApi *api = [[LCEStreetSnapImageApi alloc] initWithKeyword:@"街拍" page:1];
+    LCEStreetSnapImageApi *api = [[LCEStreetSnapImageApi alloc] initWithKeyword:@"街拍" page:2];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
         
         NSLog(@"====%@", request.responseJSONObject);

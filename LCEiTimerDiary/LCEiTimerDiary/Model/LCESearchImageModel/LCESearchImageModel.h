@@ -18,4 +18,6 @@
 @property (nonatomic, strong) NSString *image_urls;
 @property (nonatomic, strong) NSString *create_date;
 
+- (NSArray *)searchImages;
+
 @end
