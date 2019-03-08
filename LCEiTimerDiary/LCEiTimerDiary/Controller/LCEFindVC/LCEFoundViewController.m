@@ -9,6 +9,8 @@
 #import "LCEFoundViewController.h"
 #import "LCEArticleListViewController.h"
 #import "VTMagic.h"
+#import "LCESearchImageTagListApi.h"
+#import "LCESearchImageTagModel.h"
 
 
 @interface LCEFoundViewController () <VTMagicViewDataSource, VTMagicViewDelegate>
@@ -26,9 +28,9 @@
     self.edgesForExtendedLayout = UIRectEdgeAll;
     self.view.backgroundColor = [UIColor whiteColor];
     [self addChildViewController:self.magicController];
-    self.magicController.magicView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_magicController.view];
     self.magicController.view.frame = CGRectMake(0, 0, LCE_SCREEN_WIDTH, LCE_SCREEN_HEIGHT - LCE_TAB_HEIGHT);
+    [self requestGetSearchImageKeyword];
     [self.view setNeedsUpdateConstraints];
     [_magicController.magicView reloadData];
 }
@@ -37,7 +39,6 @@
     [super viewWillAppear:animated];
     [self initializeTableView];
 }
-
 
 /**
  初始化表格结构
@@ -48,7 +49,11 @@
 
 #pragma mark - VTMagicViewDataSource
 - (NSArray<NSString *> *)menuTitlesForMagicView:(VTMagicView *)magicView {
-    return @[@"小北", @"妖狐小子"];
+    NSMutableArray *tagArray = [NSMutableArray array];
+    for (LCESearchImageTagModel *tagModel in self.dataArray) {
+        [tagArray addObject:tagModel.keyword];
+    }
+    return tagArray;
 }
 
 - (UIButton *)magicView:(VTMagicView *)magicView menuItemAtIndex:(NSUInteger)itemIndex {
@@ -69,6 +74,11 @@
     if (!articleListVC) {
         articleListVC = [[LCEArticleListViewController alloc] init];
     }
+    LCESearchImageTagModel *model = self.dataArray[pageIndex];
+    LCEArticleCategoryModel *cateModel = [[LCEArticleCategoryModel alloc] init];
+    cateModel.name = model.keyword;
+    cateModel.category_id = pageIndex;
+    articleListVC.categoryModel = cateModel;
     return articleListVC;
 }
 
@@ -97,6 +107,24 @@
     }
     return _magicController;
 }
+
+#pragma mark - Network
+- (void)requestGetSearchImageKeyword {
+    LCESearchImageTagListApi *api = [[LCESearchImageTagListApi alloc] init];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
+        if (request.responseStatusCode == 200) {
+            NSArray *dataArray = [LCESearchImageTagModel changeResponseJSONObject:request.responseJSONObject[@"data"]];
+            [self.dataArray removeAllObjects];
+            [self.dataArray addObjectsFromArray:dataArray];
+            [self.magicController.magicView reloadData];
+        }
+    } failure:^(__kindof YTKBaseRequest *request) {
+
+    }];
+}
+
+
+
 
 
 @end

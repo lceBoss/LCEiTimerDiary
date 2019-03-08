@@ -43,6 +43,15 @@ return instance;                          \
 #define LCE_RGBA(r, g, b, a) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
 #define LCE_RGB(r, g, b) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1.0]
 
+//判断是否是iphoneX XS
+#define IS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size)) : NO)
+// 判断iPHoneXR
+#define IS_IPHONE_XR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+// 判断iPhoneXs_Max
+#define IS_IPHONE_Xs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+// X、XR、XS、XS_MAX系列
+#define LCE_ISIPHONEX ((IS_IPHONE_X == YES || IS_IPHONE_XR == YES || IS_IPHONE_Xs_Max == YES) ? YES : NO)
+
 //屏幕大小
 #define LCE_SCREEN_BOUNDS [[UIScreen mainScreen] bounds]
 
@@ -60,9 +69,6 @@ return instance;                          \
 
 //tabar高度
 #define LCE_TAB_HEIGHT (LCE_ISIPHONEX ? (49.f+34.f) : 49.f)
-
-//判断是否是iphoneX
-#define LCE_ISIPHONEX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size)) : NO)
 
 //沙盒路径
 #define LCE_PATH_SANDBOX (NSHomeDirectory())

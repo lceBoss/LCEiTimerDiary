@@ -38,7 +38,7 @@
         XCTAssertEqual(request.responseStatusCode, 200, @"status != 200");
         NSArray *dataArray = [LCESearchImageTagModel changeResponseJSONObject:request.responseJSONObject[@"data"]];
         LCESearchImageTagModel *model = dataArray[0];
-        NSLog(@"%@", model.keyword);
+        NSLog(@"%@", model.category_key);
         [expectation fulfill];
         
     } failure:^(__kindof YTKBaseRequest *request) {
@@ -53,7 +53,7 @@
 
 - (void)testImageApi {
     XCTestExpectation *expectation = [self expectationWithDescription:@"UserInfo request"];
-    LCEStreetSnapImageApi *api = [[LCEStreetSnapImageApi alloc] initWithKeyword:@"街拍" page:2];
+    LCEStreetSnapImageApi *api = [[LCEStreetSnapImageApi alloc] initWithKeyword:@"街拍" page:1];
     [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
         
         NSLog(@"====%@", request.responseJSONObject);

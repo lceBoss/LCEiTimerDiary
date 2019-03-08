@@ -13,6 +13,16 @@
 		C307E62A1FDEB7A8000C70FF /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C307E6291FDEB7A8000C70FF /* CoreData.framework */; };
 		C307E6481FDF6CC2000C70FF /* LCEPasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E6471FDF6CC2000C70FF /* LCEPasswordModel.m */; };
 		C307E6581FDFE296000C70FF /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = C307E6561FDFE296000C70FF /* NSString+MD5.m */; };
+		C30A759A222D3A9D00A831CA /* LCESearchImageTagListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C33BD66E20B55C26009550FB /* LCESearchImageTagListApi.m */; };
+		C30A759B222D3AA300A831CA /* LCEStreetSnapImageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B6524820AAE2860084E82B /* LCEStreetSnapImageApi.m */; };
+		C30A759C222D3AAC00A831CA /* LCESearchImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C3F5137220ABFC33002F4940 /* LCESearchImageModel.m */; };
+		C30A759D222D3AAF00A831CA /* LCESearchImageTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C33BD67320B56361009550FB /* LCESearchImageTagModel.m */; };
+		C30A75A0222E272F00A831CA /* LCEChooseSpecView.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A759F222E272F00A831CA /* LCEChooseSpecView.m */; };
+		C30A75A1222E272F00A831CA /* LCEChooseSpecView.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A759F222E272F00A831CA /* LCEChooseSpecView.m */; };
+		C30A75A3222E274E00A831CA /* LCEChooseSpecView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30A75A2222E274E00A831CA /* LCEChooseSpecView.xib */; };
+		C30A75A4222E274E00A831CA /* LCEChooseSpecView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C30A75A2222E274E00A831CA /* LCEChooseSpecView.xib */; };
+		C30A75A7222E61AF00A831CA /* LCEGoodsMaskWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A75A6222E61AF00A831CA /* LCEGoodsMaskWindow.m */; };
+		C30A75A8222E61AF00A831CA /* LCEGoodsMaskWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C30A75A6222E61AF00A831CA /* LCEGoodsMaskWindow.m */; };
 		C33BD66F20B55C26009550FB /* LCESearchImageTagListApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C33BD66E20B55C26009550FB /* LCESearchImageTagListApi.m */; };
 		C33BD67120B55D69009550FB /* LCESearchImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C33BD67020B55D69009550FB /* LCESearchImageTests.m */; };
 		C33BD67420B56361009550FB /* LCESearchImageTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C33BD67320B56361009550FB /* LCESearchImageTagModel.m */; };
@@ -63,7 +73,6 @@
 		C38B1CC51FAD8DC2004FE401 /* FSCalendarFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CB01FAD8DC1004FE401 /* FSCalendarFlowLayout.m */; };
 		C38B1CC61FAD8DC2004FE401 /* FSCalendarHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CB21FAD8DC1004FE401 /* FSCalendarHeader.m */; };
 		C38B1CC81FAD8DC2004FE401 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CB61FAD8DC1004FE401 /* FSCalendarStickyHeader.m */; };
-		C38B1CC91FAD8DC2004FE401 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C38B1CB71FAD8DC1004FE401 /* Info.plist */; };
 		C38B1CCA1FAD8DC2004FE401 /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CB91FAD8DC1004FE401 /* UIView+FSExtension.m */; };
 		C38B1CCF1FAD936A004FE401 /* LCEBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CCC1FAD9369004FE401 /* LCEBaseRequest.m */; };
 		C38B1CD01FAD936A004FE401 /* LCEBaseRequestAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = C38B1CCE1FAD9369004FE401 /* LCEBaseRequestAccessory.m */; };
@@ -146,6 +155,11 @@
 		C307E6471FDF6CC2000C70FF /* LCEPasswordModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEPasswordModel.m; sourceTree = "<group>"; };
 		C307E6561FDFE296000C70FF /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		C307E6571FDFE296000C70FF /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		C30A759E222E272F00A831CA /* LCEChooseSpecView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEChooseSpecView.h; sourceTree = "<group>"; };
+		C30A759F222E272F00A831CA /* LCEChooseSpecView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEChooseSpecView.m; sourceTree = "<group>"; };
+		C30A75A2222E274E00A831CA /* LCEChooseSpecView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCEChooseSpecView.xib; sourceTree = "<group>"; };
+		C30A75A5222E61AF00A831CA /* LCEGoodsMaskWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCEGoodsMaskWindow.h; sourceTree = "<group>"; };
+		C30A75A6222E61AF00A831CA /* LCEGoodsMaskWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCEGoodsMaskWindow.m; sourceTree = "<group>"; };
 		C33BD66D20B55C26009550FB /* LCESearchImageTagListApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCESearchImageTagListApi.h; sourceTree = "<group>"; };
 		C33BD66E20B55C26009550FB /* LCESearchImageTagListApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESearchImageTagListApi.m; sourceTree = "<group>"; };
 		C33BD67020B55D69009550FB /* LCESearchImageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCESearchImageTests.m; sourceTree = "<group>"; };
@@ -1107,6 +1121,11 @@
 				C3E1EC3E1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.h */,
 				C3E1EC3F1FA95AA3008E3E10 /* LCEMeSettingTableViewCell.m */,
 				C3E1EC401FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib */,
+				C30A759E222E272F00A831CA /* LCEChooseSpecView.h */,
+				C30A759F222E272F00A831CA /* LCEChooseSpecView.m */,
+				C30A75A2222E274E00A831CA /* LCEChooseSpecView.xib */,
+				C30A75A5222E61AF00A831CA /* LCEGoodsMaskWindow.h */,
+				C30A75A6222E61AF00A831CA /* LCEGoodsMaskWindow.m */,
 			);
 			path = LCEMeView;
 			sourceTree = "<group>";
@@ -1165,9 +1184,8 @@
 				C38504FC1F7A2EF30009B64B /* Sources */,
 				C38504FD1F7A2EF30009B64B /* Frameworks */,
 				C38504FE1F7A2EF30009B64B /* Resources */,
-				9B101AAE8A625AD2988E7BF1 /* [CP] Embed Pods Frameworks */,
-				5762A295F605BCDD0C496837 /* [CP] Copy Pods Resources */,
 				C307E6161FDEB601000C70FF /* ShellScript */,
+				EB21752FC5E3131554579F93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1186,8 +1204,6 @@
 				C38505171F7A2EF40009B64B /* Sources */,
 				C38505181F7A2EF40009B64B /* Frameworks */,
 				C38505191F7A2EF40009B64B /* Resources */,
-				0F1C2343BB5A78CED8187640 /* [CP] Embed Pods Frameworks */,
-				0C487AF8F870E9961E71A174 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1207,8 +1223,6 @@
 				C38505221F7A2EF40009B64B /* Sources */,
 				C38505231F7A2EF40009B64B /* Frameworks */,
 				C38505241F7A2EF40009B64B /* Resources */,
-				218D21C9572B9C4F0F8E964B /* [CP] Embed Pods Frameworks */,
-				9AA39060B975C9A99CB6DA2A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1274,10 +1288,10 @@
 				C38505101F7A2EF40009B64B /* Assets.xcassets in Resources */,
 				C3B6BCA31FFF1E1000290744 /* LCEAddSecrecyAccountTableViewCell.xib in Resources */,
 				C3E1EC421FA95AA3008E3E10 /* LCEMeSettingTableViewCell.xib in Resources */,
+				C30A75A3222E274E00A831CA /* LCEChooseSpecView.xib in Resources */,
 				C39889C71FE3725600219E3B /* KNBImageCollectionViewCell.xib in Resources */,
 				C3DA4FDC1FB05DB1007F9411 /* LCEApply.plist in Resources */,
 				C39889D11FE3A1BA00219E3B /* LCEFoundTableViewCell.xib in Resources */,
-				C38B1CC91FAD8DC2004FE401 /* Info.plist in Resources */,
 				C3F1801D2004A78F003F85BF /* LCESecrecyTableViewCell.xib in Resources */,
 				C3F5137D20AC1013002F4940 /* LCEImageSearchTableViewCell.xib in Resources */,
 				C3DA4FE51FB14421007F9411 /* LCEApplyCollectionViewCell.xib in Resources */,
@@ -1288,6 +1302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30A75A4222E274E00A831CA /* LCEChooseSpecView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,70 +1316,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0C487AF8F870E9961E71A174 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0F1C2343BB5A78CED8187640 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiaryTests/Pods-LCEiTimerDiaryTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		218D21C9572B9C4F0F8E964B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiaryUITests/Pods-LCEiTimerDiaryUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5762A295F605BCDD0C496837 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary-resources.sh",
-				"${PODS_ROOT}/LCProgressHUD/LCProgressHUD/LCProgressHUD.bundle",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		778CB637F8DD2F3A82929443 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1381,36 +1332,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9AA39060B975C9A99CB6DA2A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiaryUITests/Pods-LCEiTimerDiaryUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9B101AAE8A625AD2988E7BF1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B4DD253F39178BD866633699 /* [CP] Check Pods Manifest.lock */ = {
@@ -1462,6 +1383,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EB21752FC5E3131554579F93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary-resources.sh",
+				"${PODS_ROOT}/LCProgressHUD/LCProgressHUD/LCProgressHUD.bundle",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SensorsAnalyticsSDK/SensorsAnalyticsSDK/SensorsAnalyticsSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LCProgressHUD.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SensorsAnalyticsSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LCEiTimerDiary/Pods-LCEiTimerDiary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1490,6 +1433,7 @@
 				C38B1C941FAD8DA6004FE401 /* TADotView.m in Sources */,
 				C39889BA1FE3701D00219E3B /* LCEFoundTableViewCell.m in Sources */,
 				C359C7681F7A43AF00D9D8BA /* LCEHomeViewController.m in Sources */,
+				C30A75A0222E272F00A831CA /* LCEChooseSpecView.m in Sources */,
 				C38B1CC51FAD8DC2004FE401 /* FSCalendarFlowLayout.m in Sources */,
 				C3711483208ECB6B00DCE6B4 /* LCEWebViewController.m in Sources */,
 				C3F5137C20AC1013002F4940 /* LCEImageSearchTableViewCell.m in Sources */,
@@ -1552,6 +1496,7 @@
 				C371148E2090225300DCE6B4 /* LCEAlertRemind.m in Sources */,
 				C38505051F7A2EF30009B64B /* AppDelegate.m in Sources */,
 				C3C9B8BB20808D4C0052A9FA /* UIBarButtonItem+SXCreate.m in Sources */,
+				C30A75A7222E61AF00A831CA /* LCEGoodsMaskWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1559,8 +1504,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30A759A222D3A9D00A831CA /* LCESearchImageTagListApi.m in Sources */,
+				C30A75A8222E61AF00A831CA /* LCEGoodsMaskWindow.m in Sources */,
+				C30A75A1222E272F00A831CA /* LCEChooseSpecView.m in Sources */,
 				C38505201F7A2EF40009B64B /* LCEiTimerDiaryTests.m in Sources */,
 				C33BD67120B55D69009550FB /* LCESearchImageTests.m in Sources */,
+				C30A759D222D3AAF00A831CA /* LCESearchImageTagModel.m in Sources */,
+				C30A759B222D3AA300A831CA /* LCEStreetSnapImageApi.m in Sources */,
+				C30A759C222D3AAC00A831CA /* LCESearchImageModel.m in Sources */,
 				C340EF7F1FE24B8D007D6E75 /* LCEUserInfoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

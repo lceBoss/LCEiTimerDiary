@@ -9,21 +9,23 @@
 #import "LCEArticleListViewController.h"
 #import <UIImageView+WebCache.h>
 #import "LCEArticleDataManager.h"
-#import "LCEFoundTableViewCell.h"
 #import "KNBImageCollectionViewCell.h"
 #import "LCENewArticleListModel.h"
 #import "SDCycleScrollView.h"
 #import "VTMagic.h"
 #import <SDWebImage/SDImageCache.h>
 #import "LCEWebViewController.h"
+#import "LCEStreetSnapImageApi.h"
+#import "LCESearchImageModel.h"
+#import "LCEImageSearchTableViewCell.h"
 
 
-@interface LCEArticleListViewController () <SDCycleScrollViewDelegate, LCEFoundTableViewCellDelegate>
+@interface LCEArticleListViewController () <SDCycleScrollViewDelegate, LCEImageSearchTableViewCellDelegate>
 
 @property (nonatomic, strong) NSMutableArray *advertImageArray; // advert图片地址url
 @property (nonatomic, strong) NSMutableArray *advertUrlArray;   // advert链接url
 @property (nonatomic, strong) SDCycleScrollView *cycleScrollView;
-@property (nonatomic, strong) NSMutableArray *articleImageArrs;
+@property (nonatomic, strong) NSMutableArray *searchImageArrs;
 
 @end
 
@@ -39,16 +41,18 @@
     self.lceTableView.backgroundColor = [UIColor whiteColor];
     [self.advertImageArray removeAllObjects];
     [self.advertUrlArray removeAllObjects];
-    [self.advertImageArray addObjectsFromArray:@[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333172339&di=82765ca8d13400de64983e98f8bd6c5e&imgtype=0&src=http%3A%2F%2Fimage.cnwest.com%2Fattachement%2Fjpg%2Fsite1%2F20151107%2F001372d89ff017a7c0752f.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333316917&di=51bc8be08b3dc6c0772684f6521de61d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F48540923dd54564eb2c1a903b8de9c82d1584f67.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513334071292&di=8ff43ed352bc47b8f5ecc7464d9e9a96&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D890c50c9db00baa1ae214ff82f79d367%2Fcc11728b4710b912decd6bdbc9fdfc0392452282.jpg"]];
+    [self.advertImageArray addObjectsFromArray:@[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551711243629&di=f7b18bbcd42cea3e9f42c1e973b7eece&imgtype=0&src=http%3A%2F%2Fpic2.16pic.com%2F00%2F55%2F40%2F16pic_5540749_b.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333316917&di=51bc8be08b3dc6c0772684f6521de61d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F48540923dd54564eb2c1a903b8de9c82d1584f67.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513334071292&di=8ff43ed352bc47b8f5ecc7464d9e9a96&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D890c50c9db00baa1ae214ff82f79d367%2Fcc11728b4710b912decd6bdbc9fdfc0392452282.jpg"]];
     [self.advertUrlArray addObjectsFromArray:@[@"https://www.baidu.com", @"https://www.baidu.com", @"https://www.baidu.com"]];
     self.lceTableView.tableHeaderView = self.cycleScrollView;
-//    LCE_WS(weakSelf);
-//    [self addMJRefreshFootView:^(NSInteger page) {
+    LCE_WS(weakSelf);
+    [self addMJRefreshFootView:^(NSInteger page) {
 //        [weakSelf requestArticleListWithCategoryId:weakSelf.categoryModel.category_id withPage:page];
-//    }];
-//    [self addMJRefreshHeadView:^(NSInteger page) {
+        [weakSelf requestImageSearchWithKeyword:weakSelf.categoryModel.name page:weakSelf.categoryModel.category_id];
+    }];
+    [self addMJRefreshHeadView:^(NSInteger page) {
 //        [weakSelf requestArticleListWithCategoryId:weakSelf.categoryModel.category_id withPage:1];
-//    }];
+        [weakSelf requestImageSearchWithKeyword:weakSelf.categoryModel.name page:1];
+    }];
     
 }
 
@@ -76,40 +80,67 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LCEFoundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCEFoundTableViewCell"];
+//    LCEFoundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCEFoundTableViewCell"];
+//    if (cell == nil) {
+//        cell = [[[NSBundle mainBundle] loadNibNamed:@"LCEFoundTableViewCell" owner:self options:nil] lastObject];
+//        cell.delegate = self;
+//    }
+//    cell.imageCollectionView.tag = indexPath.row;
+//    LCENewArticleListModel *listModel = self.dataArray[indexPath.row];
+//    cell.listModel = listModel;
+//    [self.articleImageArrs removeAllObjects];
+//    [self.articleImageArrs addObjectsFromArray:listModel.contentslist];
+//    //文章图片
+//    [cell setupImageCollectionView]; //设置图片collectionview的布局
+//    return cell;
+    
+    LCEImageSearchTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LCEImageSearchTableViewCell"];
     if (cell == nil) {
-        cell = [[[NSBundle mainBundle] loadNibNamed:@"LCEFoundTableViewCell" owner:self options:nil] lastObject];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"LCEImageSearchTableViewCell" owner:self options:nil] firstObject];
         cell.delegate = self;
     }
+    
     cell.imageCollectionView.tag = indexPath.row;
-    LCENewArticleListModel *listModel = self.dataArray[indexPath.row];
+    LCESearchImageModel *listModel = self.dataArray[indexPath.row];
     cell.listModel = listModel;
-    [self.articleImageArrs removeAllObjects];
-    [self.articleImageArrs addObjectsFromArray:listModel.contentslist];
+    [self.searchImageArrs removeAllObjects];
+    [self.searchImageArrs addObjectsFromArray:listModel.searchImages];
     //文章图片
     [cell setupImageCollectionView]; //设置图片collectionview的布局
     return cell;
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.articleImageArrs.count == 0) {
-        return 125;
-    } else if (self.articleImageArrs.count == 1) {
-        return LCE_SCREEN_WIDTH * 340 / 702 + 120;
-    } else if (self.articleImageArrs.count == 2) {
-        return (LCE_SCREEN_WIDTH - 24 - 5) / 2 + 125;
-    } else {
-        return (LCE_SCREEN_WIDTH - 24 - 2 * 5) / 3 + 125;
+//    if (self.articleImageArrs.count == 0) {
+//        return 125;
+//    } else if (self.articleImageArrs.count == 1) {
+//        return LCE_SCREEN_WIDTH * 340 / 702 + 120;
+//    } else if (self.articleImageArrs.count == 2) {
+//        return (LCE_SCREEN_WIDTH - 24 - 5) / 2 + 125;
+//    } else {
+//        return (LCE_SCREEN_WIDTH - 24 - 2 * 5) / 3 + 125;
+//    }
+    
+    if (self.searchImageArrs.count == 0) {
+        return 104;
     }
+    // 向上取整 分母图片个数需是浮点数
+    NSInteger rowNums = ceilf(self.searchImageArrs.count / 3.0);
+    NSInteger itemHeight = (LCE_SCREEN_WIDTH - 24 - 2 * 5) / 3;
+    return itemHeight * rowNums + (rowNums - 1) * 5 + 104;
+    
 }
 
-#pragma mark - LCEFoundTableViewCellDelegate
-- (void)foundTableViewCell:(LCEFoundTableViewCell *)cell selectCellIndex:(NSInteger)cellIndex imageIndex:(NSInteger)imageIndex {
+#pragma mark - LCEImageSearchTableViewCellDelegate
+- (void)searchImageTableViewCell:(LCEImageSearchTableViewCell *)cell selectCellIndex:(NSInteger)cellIndex imageIndex:(NSInteger)imageIndex {
     
-    
-    NSLog(@"点击了第%@行，第%@张图片", @(cellIndex), @(imageIndex));
-
 }
+
+//#pragma mark - LCEFoundTableViewCellDelegate
+//- (void)foundTableViewCell:(LCEFoundTableViewCell *)cell selectCellIndex:(NSInteger)cellIndex imageIndex:(NSInteger)imageIndex {
+//    NSLog(@"点击了第%@行，第%@张图片", @(cellIndex), @(imageIndex));
+//}
 
 #pragma mark---- SDCycleScrollViewDelegate
 
@@ -138,7 +169,8 @@
     if (self.dataArray.count && currentStamp - _categoryModel.lastTime < 60 * 60) {
         return;
     }
-    [self requestArticleListWithCategoryId:self.categoryModel.category_id withPage:self.requestPage];
+    [self requestImageSearchWithKeyword:self.categoryModel.name page:self.requestPage];
+//    [self requestArticleListWithCategoryId:self.categoryModel.category_id withPage:self.requestPage];
 }
 
 - (void)savePageInfo
@@ -189,31 +221,50 @@
     return _advertUrlArray;
 }
 
-- (NSMutableArray *)articleImageArrs
+- (NSMutableArray *)searchImageArrs
 {
-    if (!_articleImageArrs) {
-        _articleImageArrs = [NSMutableArray array];
+    if (!_searchImageArrs) {
+        _searchImageArrs = [NSMutableArray array];
     }
-    return _articleImageArrs;
+    return _searchImageArrs;
 }
 
-#pragma mark---- Network && Request
-
-- (void)requestArticleListWithCategoryId:(NSInteger)category_id withPage:(NSInteger)page
-{
-    
-    LCENewArticleListModel *model1 = [[LCENewArticleListModel alloc] init];
-    model1.contentslist = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333363139&di=f27ad633e9e4650182e1179850b856d0&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D0a2709cf7cc6a7efad2ba0659593c524%2Fcf1b9d16fdfaaf511ee82daf865494eef01f7a93.jpg"];
-    LCENewArticleListModel *model2 = [[LCENewArticleListModel alloc] init];
-    model2.contentslist = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333637507&di=a5b2de179c0e23d937a8de58475dc7b0&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D2966021298%2C3341101515%26fm%3D214%26gp%3D0.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333847960&di=8b2d66fd1257177496bafb403cfcc8e8&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201312%2F05%2F20131205172454_j2VU3.jpeg"];
-    LCENewArticleListModel *model3 = [[LCENewArticleListModel alloc] init];
-    model3.contentslist = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333767549&di=3fa93254ab2c11726c39dfa2bf439339&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201312%2F05%2F20131205172501_cMAKT.jpeg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333847961&di=f69424e9282828f05abecc26f4c4042c&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201312%2F05%2F20131205172458_ymi34.jpeg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333847960&di=db3da49c5e2d74518d2221ef02cb8ada&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201312%2F05%2F20131205172443_WAJR5.jpeg"];
-    if (page == 1) {
-        [self.dataArray removeAllObjects];
-    }
-    [self.dataArray addObjectsFromArray:@[model1, model2, model3]];
-    self.categoryModel.lastTime = [[NSDate date] timeIntervalSince1970];
-    [self.lceTableView reloadData];
+#pragma mark - Request
+- (void)requestImageSearchWithKeyword:(NSString *)keyword page:(NSInteger)page {
+    LCEStreetSnapImageApi *api = [[LCEStreetSnapImageApi alloc] initWithKeyword:keyword page:page];
+    [api startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
+        if (request.responseStatusCode == 200) {
+            NSArray *dataArray = [LCESearchImageModel changeResponseJSONObject:request.responseJSONObject[@"data"]];
+            if (page == 1) {
+                [self.dataArray removeAllObjects];
+            }
+            [self.dataArray addObjectsFromArray:dataArray];
+            self.categoryModel.lastTime = [[NSDate date] timeIntervalSince1970];
+            [self requestSuccess:YES requestEnd:dataArray.count < 10];
+        }else {
+            [self requestSuccess:NO requestEnd:YES];
+        }
+    } failure:^(__kindof YTKBaseRequest *request) {
+        [self requestSuccess:NO requestEnd:YES];
+    }];
 }
+
+//- (void)requestArticleListWithCategoryId:(NSInteger)category_id withPage:(NSInteger)page
+//{
+//
+//    LCENewArticleListModel *model1 = [[LCENewArticleListModel alloc] init];
+//    model1.contentslist = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333363139&di=f27ad633e9e4650182e1179850b856d0&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dshijue1%252C0%252C0%252C294%252C40%2Fsign%3D0a2709cf7cc6a7efad2ba0659593c524%2Fcf1b9d16fdfaaf511ee82daf865494eef01f7a93.jpg"];
+//    LCENewArticleListModel *model2 = [[LCENewArticleListModel alloc] init];
+//    model2.contentslist = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333637507&di=a5b2de179c0e23d937a8de58475dc7b0&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D2966021298%2C3341101515%26fm%3D214%26gp%3D0.jpg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333847960&di=8b2d66fd1257177496bafb403cfcc8e8&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201312%2F05%2F20131205172454_j2VU3.jpeg"];
+//    LCENewArticleListModel *model3 = [[LCENewArticleListModel alloc] init];
+//    model3.contentslist = @[@"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333767549&di=3fa93254ab2c11726c39dfa2bf439339&imgtype=0&src=http%3A%2F%2Fimg5.duitang.com%2Fuploads%2Fitem%2F201312%2F05%2F20131205172501_cMAKT.jpeg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333847961&di=f69424e9282828f05abecc26f4c4042c&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201312%2F05%2F20131205172458_ymi34.jpeg", @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1513333847960&di=db3da49c5e2d74518d2221ef02cb8ada&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201312%2F05%2F20131205172443_WAJR5.jpeg"];
+//    if (page == 1) {
+//        [self.dataArray removeAllObjects];
+//    }
+//    [self.dataArray addObjectsFromArray:@[model1, model2, model3]];
+//    self.categoryModel.lastTime = [[NSDate date] timeIntervalSince1970];
+//    [self.lceTableView reloadData];
+//    [self requestSuccess:YES requestEnd:YES];
+//}
 
 @end

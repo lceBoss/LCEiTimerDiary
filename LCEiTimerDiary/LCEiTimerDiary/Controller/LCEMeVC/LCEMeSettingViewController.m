@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"我的设置";
+    self.title = @"设置";
     [self.view addSubview:self.lceTableView];
 }
 

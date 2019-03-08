@@ -10,6 +10,10 @@
 #import "LCEHomeViewController.h"
 #import "LCEAppManager.h"
 #import <MagicalRecord/MagicalRecord.h>
+//#import "SensorsAnalyticsSDK.h"
+
+//#define SA_SERVER_URL @"YOUR_SERVER_URL"
+//#define SA_DEBUG_MODE SensorsAnalyticsDebugOnly
 
 @interface AppDelegate ()
 
@@ -39,6 +43,19 @@
     [navBar setTitleTextAttributes:attribute];
     [navBar setTintColor:[UIColor whiteColor]];
     [navBar setBarTintColor:LCE_NAV_COLOR];
+    
+    
+//    [SensorsAnalyticsSDK sharedInstanceWithServerURL:SA_SERVER_URL
+//                                    andLaunchOptions:launchOptions
+//                                        andDebugMode:SA_DEBUG_MODE];
+//    // 设置公共属性示例代码
+//    [[SensorsAnalyticsSDK sharedInstance] registerSuperProperties:@{@"appName": @"iTimer"}];
+//    [[SensorsAnalyticsSDK sharedInstance] enableTrackScreenOrientation:YES]; // CoreMotion 采集屏幕方向
+//    [[SensorsAnalyticsSDK sharedInstance] enableTrackGPSLocation:YES];
+//    [[SensorsAnalyticsSDK sharedInstance] enableAutoTrack:SensorsAnalyticsEventTypeAppStart |
+//     SensorsAnalyticsEventTypeAppEnd |
+//     SensorsAnalyticsEventTypeAppViewScreen |
+//     SensorsAnalyticsEventTypeAppClick];
     
     // 配置文件
     [LCEAppManager shareInstance];

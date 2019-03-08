@@ -13,6 +13,7 @@ target 'LCEiTimerDiary' do
     pod 'MJRefresh'
     pod 'LCProgressHUD'
     pod 'VTMagic'
+    pod 'SensorsAnalyticsSDK'
 
   target 'LCEiTimerDiaryTests' do
     inherit! :search_paths
